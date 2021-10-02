@@ -12,13 +12,6 @@ ledswitch = 0
 def dashboard():
     return render_template('dashboard.html')
 
-@app.route('/switchled', methods=['GET','POST'])
-def switchled():
-    global ledswitch
-    ledswitch = not(ledswitch)
-    grovepiinterface.set_led_digitalport_value(7,ledswitch)
-    return jsonify({'message':'Success: light turned on'})
-
 # CAMERA CODE (Not Sure how it works)
 def gen(camera):
     """Video streaming generator function."""
