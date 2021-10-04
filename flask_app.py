@@ -2,10 +2,10 @@ from flask import Flask, render_template, session, request, redirect, url_for, j
 from interfaces import grovepiinterface
 from interfaces.camerainterface import *
 
+CAMERA = Camera() #make a global variable for the camera
+
 app = Flask(__name__) #Creates the Flask Server Object
 app.debug = True
-
-ledswitch = 0
 
 #Dashboard
 @app.route('/', methods=['GET','POST'])
@@ -24,7 +24,7 @@ def gen(camera):
 @app.route('/videofeed')
 def videofeed():
     """Video streaming route. Put this in the src attribute of an img tag."""
-    return Response(gen(Camera()), mimetype='multipart/x-mixed-replace; boundary=frame') #not actually sure what this code does    
+    return Response(gen(CAMERA), mimetype='multipart/x-mixed-replace; boundary=frame') #not actually sure what this code does    
 
 #main method called web server application
 if __name__ == '__main__':

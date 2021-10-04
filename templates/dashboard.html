@@ -24,7 +24,7 @@
 {% block content %}
     <h1>GrovePi Dashboard</h1>
     <p>
-        <button type="button" class="btn btn-danger" onClick="AJAX_request('/switchled','POST');">Switch LED</button>
+        <button type="button" class="btn btn-danger">Switch LED</button>
     </p>    
     <div style="max-width:640px; max-height:480px;">
         <div id="videofeed"><img src="{{ url_for('videofeed') }}" width="100%" height=""></div>

@@ -2,7 +2,10 @@ import grovepi
 import grove_rgb_lcd
 import datetime
 import time
-import urlrequest
+try:
+    import urlrequest                    
+except ImportError: #could be being called from flask file
+    pass #must be trying to run from the web server.
 from di_sensors.easy_mutex import ifMutexAcquire, ifMutexRelease 
 from di_sensors.temp_hum_press import TempHumPress
 import json
@@ -12,7 +15,7 @@ USEMUTEX = True #avoid threading issues
 # ------------------------ DEVICES -----------------------------
 # Turn on the led using digital port (1 or 0)
 def set_led_digitalport_value(port,value=3):
-    ifMutexAcquire(USEMUTEX)
+    ifMutexAcquire(USEMUTEX) #if calling functions from a web server, we need to be careful of threads
     try:
         grovepi.pinMode(port,"OUTPUT") #should be in initialise
         grovepi.digitalWrite(port,value)
@@ -61,6 +64,23 @@ def read_ultra_digitalport(port):
     distance = grovepi.ultrasonicRead(port)
     return distance 
 
+# Read water flow sensor
+def read_waterflow_digitalport(port):
+    period = 2000
+    grovepi.flowEnable(port,period)
+    waterflow = grovepi.flowRead()
+    #THIS MAY NEED TO RUN OVER 10 SECONDS TO GET A PROPER WATER FLOW
+    grovepi.flowDisable()
+    return waterflow
+
+# Read the PH Level
+def read_ph_analogueport(port):
+    adc_ref = 5 #Reference voltage of ADC is 5v
+    grovepi.pinMode(port,"INPUT")
+    sensor_value = grovepi.analogRead(port)
+    ph = 7 - 1000 * (float)(sensor_value) * adc_ref / 59.16 / 1023
+    return ph
+
 # Read Button return 0 or 1 
 def read_button_digitalport(port):
     grovepi.pinMode(port,"INPUT")
@@ -69,16 +89,25 @@ def read_button_digitalport(port):
 
 # Read temp (0 - 50 degrees Celsius) and humidity (20% - 90%)
 def read_temp_humidity_sensor_digitalport(port):
+    grovepi.pinMode(port,"INPUT")
     temp_humidity_list = grovepi.dht(port,0)
     return temp_humidity_list #[temp,hum] = read_temp_humidity_sensor_digitalport(4) - break into parts
 
 # Read sound sensor returns analogue value 0 - 1023 loudness - to translate to decibels you need identify the distance
 def read_sound_analogueport(port):
+    grovepi.pinMode(port,"INPUT")
     sound = grovepi.analogRead(port)
     return sound
 
+# Read the moisture sensor
+def read_moisture_analogueport(port):
+    grovepi.pinMode(port,"INPUT")
+    moisture = grovepi.analogRead(port)
+    return moisture
+
 # Read light sensor returns analogue value 0 - 1023 - not sure how to translate into lux
 def read_light_analogueport(port):
+    grovepi.pinMode(port,"INPUT")
     light = grovepi.analogRead(port)
     return light
 
@@ -93,9 +122,9 @@ def read_rotation_analogueport(port):
     data = [voltage,degrees]
     return data
 
-#only execute the below block if this is the execution point
-if __name__ == '__main__':
-    [voltage,degrees] = read_rotation_analogueport(2)
+# --------------------------------------------------------------------------------
+# an example of how to send data to the server.
+def send_data_to_server():
     [temp,hum] = read_temp_humidity_sensor_digitalport(2)
     dictofvalues = {"temp":temp,"hum":hum}
     url = "https://nielbrad.pythonanywhere.com/uploadhistory"
@@ -103,6 +132,14 @@ if __name__ == '__main__':
     response = urlrequest.sendurlrequest(url, dictofvalues)
     print(response)
     dict = json.loads(response)
-    set_led_digitalport_value(7,dict['led'])
-    set_buzzer_digitalport(3, value=0)
-    
+    return
+
+# ---------------------------------------------------------------------------------
+#only execute the below block if this is the execution point
+if __name__ == '__main__':
+    starttime = time.time()
+    endtime = starttime + 5
+    while time.time() < endtime:
+        distance = read_ultra_digitalport(8)
+        time.sleep(1)
+        print(distance)
