@@ -141,4 +141,16 @@ def send_data_to_server():
 #only execute the below block if this is the execution point
 if __name__ == '__main__':
     send_data_to_server()
+
+
+#PLACE IN FLASK ON PYTHON
+'''# update the users location and access time
+@app.route('/uploadhistory', methods=['GET','POST'])
+def uploadhistory():
+    resultsdict = {"message":""}
+    if request.method == "POST":
+        temp = request.form.get('temp')
+        hum = request.form.get('hum')
+        resultsdict = {"message":"It is very hot"}
+    return jsonify(resultsdict)'''
     
