@@ -14,7 +14,7 @@ USEMUTEX = True #avoid threading issues
 
 # ------------------------ DEVICES -----------------------------
 # Turn on the led using digital port (1 or 0)
-def set_led_digitalport_value(port,value=3):
+def set_led_digitalport_value(port,value=1):
     ifMutexAcquire(USEMUTEX) #if calling functions from a web server, we need to be careful of threads
     try:
         grovepi.pinMode(port,"OUTPUT") #should be in initialise
@@ -31,18 +31,18 @@ def set_digit_display_time_digitalport(port):
     grovepi.fourDigit_init(port)
     grovepi.fourDigit_on(port)
     grovepi.fourDigit_brightness(port,8)
-    time.sleep(0.5)
     now = datetime.datetime.now()
     grovepi.fourDigit_score(port,now.hour,now.minute)
     return
 
 # Display a number
 def set_digit_display_number_digitalport(number,port):
+    leading_zero = 0
     grovepi.pinMode(port,"OUTPUT")
     grovepi.fourDigit_init(port)
     grovepi.fourDigit_on(port)
     grovepi.fourDigit_brightness(port,8)
-    grovepi.fourDigit_number(number)
+    grovepi.fourDigit_number(port,number,leading_zero)
     return
 
 # OLED monitor - set_OLED_I2C1_RGBtuple_message((0,0,125),"It works!!")
@@ -62,6 +62,7 @@ def set_buzzer_digitalport(port, value=1):
 def read_ultra_digitalport(port):
     grovepi.pinMode(port,"INPUT")
     distance = grovepi.ultrasonicRead(port)
+    time.sleep(0.03)
     return distance 
 
 # Read water flow sensor
@@ -125,21 +126,19 @@ def read_rotation_analogueport(port):
 # --------------------------------------------------------------------------------
 # an example of how to send data to the server.
 def send_data_to_server():
-    [temp,hum] = read_temp_humidity_sensor_digitalport(2)
+    [temp,hum] = read_temp_humidity_sensor_digitalport(7)
     dictofvalues = {"temp":temp,"hum":hum}
+    print(dictofvalues)
     url = "https://nielbrad.pythonanywhere.com/uploadhistory"
     #url = "http://0.0.0.0:5000/handleurlrequest" #if server is running locally
     response = urlrequest.sendurlrequest(url, dictofvalues)
     print(response)
-    dict = json.loads(response)
+    resultsdict = json.loads(response)
+    #set_OLED_I2C1_RGBtuple_message((255,0,0), resultsdict['message'])
     return
 
 # ---------------------------------------------------------------------------------
 #only execute the below block if this is the execution point
 if __name__ == '__main__':
-    starttime = time.time()
-    endtime = starttime + 5
-    while time.time() < endtime:
-        distance = read_ultra_digitalport(8)
-        time.sleep(1)
-        print(distance)
+    send_data_to_server()
+    
