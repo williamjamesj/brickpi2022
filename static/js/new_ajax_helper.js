@@ -1,7 +1,7 @@
 //This ajax helper caters for files and does not require JQuery, an example of its use can be seen below:
 /*
   testinput = document.getElementById('testinput').value; //get data from form fields
-  testfile = document.getElementById("myfile").files[0];
+  testfile = document.getElementById("testfile").files[0];
   fd = new FormData(); //create a form object since one does not exist
   fd.append("testinput", testinput); //name and value
   fd.append("testfile", testfile);
