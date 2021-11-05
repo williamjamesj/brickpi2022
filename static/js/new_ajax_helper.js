@@ -5,10 +5,10 @@
   fd = new FormData(); //create a form object since one does not exist
   fd.append("testinput", testinput); //name and value
   fd.append("testfile", testfile);
-  new_ajax_helper('/test',fd); //send the formobject to the url, you can define a callback 
+  new_ajax_helper('/test',defaulthandler,fd); //send the formobject to the url, you can define a callback 
 */
 
-function new_ajax_helper(url, formobject=null, callback=defaulthandler, method='POST')
+function new_ajax_helper(url, callback=defaulthandler, formobject=null, method='POST')
 {
     //create a request object
     var xhr = new XMLHttpRequest();
@@ -18,8 +18,8 @@ function new_ajax_helper(url, formobject=null, callback=defaulthandler, method='
     {
         if (xhr.readyState == 4) //4 means data received
         {
-            results = JSON.parse(xhr.responseText); //change into a object
-            callback(results);
+            results = JSON.parse(xhr.responseText); //change JSON into a Javascript object
+            callback(results); //call the callback function
         }
     }
     xhr.send(formobject); //send the form data
