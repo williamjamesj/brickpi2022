@@ -1,5 +1,7 @@
 //This ajax helper caters for files and does not require JQuery, an example of its use can be seen below:
 /*
+  In pythonanywhere you will need to link it within the HTML: <script src='/static/js/new_ajax_helper.js'></script>
+
   testinput = document.getElementById('testinput').value; //get data from form fields
   testfile = document.getElementById("testfile").files[0];
   fd = new FormData(); //create a form object since one does not exist
