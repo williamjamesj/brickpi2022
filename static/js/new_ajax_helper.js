@@ -2,11 +2,11 @@
 /*
   In pythonanywhere you will need to link it within the HTML: <script src='/static/js/new_ajax_helper.js'></script>
 
-  testinput = document.getElementById('testinput').value; //get data from form fields
-  testfile = document.getElementById("testfile").files[0];
-  fd = new FormData(); //create a form object since one does not exist
-  fd.append("testinput", testinput); //name and value
-  fd.append("testfile", testfile);
+  testform = document.getElementById('testform'); //get the form element
+  var fd = new FormData(testform); //create a form object since one does not exist
+  
+  fd.append("testinput", testinput); //to add an individual variable use a key and value
+  
   new_ajax_helper('/test',defaulthandler,fd); //send the formobject to the url, you can define a callback 
 */
 
