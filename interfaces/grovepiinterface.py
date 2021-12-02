@@ -127,7 +127,8 @@ def read_rotation_analogueport(port):
 # an example of how to send data to the server.
 def send_data_to_server():
     [temp,hum] = read_temp_humidity_sensor_digitalport(7)
-    dictofvalues = {"temp":temp,"hum":hum}
+    now = time.time()
+    dictofvalues = {"temp":temp,"hum":hum, "time":now}
     print(dictofvalues)
     url = "https://nielbrad.pythonanywhere.com/uploadhistory"
     #url = "http://0.0.0.0:5000/handleurlrequest" #if server is running locally
@@ -140,7 +141,9 @@ def send_data_to_server():
 # ---------------------------------------------------------------------------------
 #only execute the below block if this is the execution point
 if __name__ == '__main__':
-    send_data_to_server()
+    for i in range(1000):
+        send_data_to_server()
+        time.sleep(2)
 
 
 #PLACE IN FLASK ON PYTHON

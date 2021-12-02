@@ -8,8 +8,9 @@ import json, time, datetime
 
 grovepiinterface.set_digit_display_time_digitalport(4)
 
+now = time.asctime(time.localtime(time.time()))
 [temp,hum] = grovepiinterface.read_temp_humidity_sensor_digitalport(7)
-dictofvalues = {"temp":temp,"hum":hum}
+dictofvalues = {"temp":temp,"hum":hum, "now":now }
 print(dictofvalues)
 
 url = "https://nielbrad.pythonanywhere.com/uploadhistory"
