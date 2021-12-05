@@ -1,4 +1,4 @@
-#To contract or expand sections use Control K Control 0
+#To contract or expand sections use Control K and then Control 0
 
 try:
     import brickpi3 # import the BrickPi3 drivers
@@ -33,7 +33,6 @@ class BrickPiInterface():
         self.imu_status = 0; self.Calibrated = False
         self.thread_running = False
         self.CurrentCommand = "stop" #when the device is ready for a new instruction it 
-
         return
 
     #------------------- Initialise Ports ---------------------------
@@ -63,11 +62,12 @@ class BrickPiInterface():
                     time.sleep(1)
                     self.config['thermal'] = SensorStatus.ENABLED
                 except Exception as error:
+                    self.log("Cannot initialise Thermal Sensor")
                     bp.set_sensor_type(self.thermal, bp.SENSOR_TYPE.NONE)
             if self.config['thermal'] == SensorStatus.ENABLED:
                 self.get_thermal_sensor() #do one read
                 if self.config['thermal'] < SensorStatus.DISABLED:
-                    print("STARTING THERMAL THREAD")
+                    print("STARTING THERMAL SENSOR THREAD")
                     self.__start_thermal_infrared_thread() #thread is started
                 else:
                     bp.set_sensor_type(self.thermal, bp.SENSOR_TYPE.NONE)
@@ -82,7 +82,7 @@ class BrickPiInterface():
                     time.sleep(1)
                     self.config['colour'] = SensorStatus.ENABLED #SensorStatus.ENABLED
                 except Exception as error:
-                    self.log("Colour Sensor not found")
+                    self.log("Cannot initialise Color Sensor")
 
         #set up ultrasonic
         self.config['ultra'] = SensorStatus.DISABLED; self.ultra = None
@@ -94,7 +94,7 @@ class BrickPiInterface():
                     time.sleep(1)
                     self.config['ultra'] = SensorStatus.ENABLED
                 except Exception as error:
-                    self.log("Ultrasonic Sensor not found")
+                    self.log("Cannot initialise Ultra Sonic Sensor")
 
         #set up imu
         self.config['imu'] = SensorStatus.DISABLED; self.imu = None
@@ -107,7 +107,7 @@ class BrickPiInterface():
                     self.config['imu'] = SensorStatus.ENABLED
                 except Exception as error:
                     self.config['imu'] = SensorStatus.DISABLED
-                    self.log("IMU sensor not found")
+                    self.log("Cannot initialise IMU Sensor")
         
         bp.set_motor_limits(self.mediummotor, 100, 600) #set power / speed limit 
         self.Configured = True #there is a 4 second delay - before robot is Configured
@@ -529,7 +529,7 @@ class BrickPiInterface():
         elapsedtime = time.time() - starttime
         return elapsedtime
 
-    #log out whatever !!!!!THIS IS NOT WORKING UNLESS FLASK LOG USED, DONT KNOW WHY!!!!!
+    #log out warnings
     def log(self, message):
         self.logger.info(message)
         return
@@ -583,6 +583,7 @@ class BrickPiInterface():
 #--------------------------------------------------------------------
 # Only execute if this is the main file, good for testing code
 if __name__ == '__main__':
+    logging.basicConfig(filename='logs/robot.log', level=logging.WARNING)
     ROBOT = BrickPiInterface(timelimit=20)  #20 second timelimit before
     bp = ROBOT.BP; bp.reset_all(); time.sleep(2)
     motorports = {'rightmotor':bp.PORT_D, 'leftmotor':bp.PORT_A, 'mediummotor':bp.PORT_B }
