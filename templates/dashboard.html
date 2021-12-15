@@ -1,37 +1,20 @@
 {% extends "layout.html" %}
-
-<style>
-#videofeed {
-    position: relative;
-    width: 45%;
-    min-width:300px;
-    min-height:300px;
-    padding-bottom: 25%;
-    float: left;
-    height: 0;
-    border:1px solid black;
-}
-
-#videofeed img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-}
-
-</style>
-
 {% block content %}
-    <h1>GrovePi Dashboard</h1>
-    <p>
-        <button type="button" class="btn btn-danger">Switch LED</button>
-    </p>    
-    <div style="max-width:640px; max-height:480px;">
-        <div id="videofeed"><img src="{{ url_for('videofeed') }}" width="100%" height=""></div>
+    <div class="page-header" id="banner">
+        <div class="row">
+            <h1>BrickPi Dashboard</h1>
+        </div>
     </div>
     <div class="row">
-        Testing
+        <button id="load" type="button" class="btn btn-success" onclick="loadrobot();">Load Robot</button>
+        <button id="shutdown" type="button" class="btn btn-danger" onclick="shutdownrobot();">Shutdown Robot</button>
+    </div>    
+    <div style="max-width:640px; max-height:480px;">
+        <!-- <div id="videofeed"><img src="{{ url_for('videofeed') }}" width="100%" height=""></div> -->
+    </div>
+    <div class="row" id="message">
     </div>
 {% endblock %}
 {% block scripts %}
+    <script src="/static/js/dashboard.js"></script> <!-- JSON HELPER -->
 {% endblock %}

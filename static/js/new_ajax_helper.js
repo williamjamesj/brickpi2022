@@ -4,9 +4,7 @@
 
   testform = document.getElementById('testform'); //get the form element
   var fd = new FormData(testform); //create a form object since one does not exist
-  
   fd.append("testinput", testinput); //to add an individual variable use a key and value
-  
   new_ajax_helper('/test',defaulthandler,fd); //send the formobject to the url, you can define a callback 
 */
 
@@ -29,5 +27,5 @@ function new_ajax_helper(url, callback=defaulthandler, formobject=null, method='
 
 function defaulthandler(results)
 {
-    console.log(results.data);
+    console.log(results);
 }
