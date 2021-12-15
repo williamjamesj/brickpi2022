@@ -1,19 +1,19 @@
 /* This is your dashboard javascript, it has been embedded into dashboard.html */
 
-//Load the BrickPi
+//Load the Robot
 function loadrobot()
 {
     alert("load");
-    new_ajax_helper('/brickpiload', printmessage);
+    new_ajax_helper('/robotload', printmessage);
     document.getElementById("shutdown").style.display = 'block';
     document.getElementById("load").style.display = 'none';
 }
 
-//Shutdown the BrickPi
+//Shutdown the Robot
 function shutdownrobot()
 {
     alert("shutdown");
-    new_ajax_helper('/brickpishutdown', printmessage);
+    new_ajax_helper('/robotshutdown', printmessage);
     document.getElementById("shutdown").style.display = 'none';
     document.getElementById("load").style.display = 'block';
 }
