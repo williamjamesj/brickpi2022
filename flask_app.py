@@ -22,6 +22,7 @@ def robotload():
     if not ROBOT: 
         ROBOT = robot.Robot(20, app.logger)
         ROBOT.configure_sensors() #defaults have been provided but you can 
+        ROBOT.rotate_power_degrees_IMU(30,30)
         sensordict = ROBOT.get_all_sensors()
     '''global DATABASE
     if not DATABASE:
@@ -61,10 +62,10 @@ def robotdashboard():
 
 #-CAMERA CODE-----------------------------------------------------------------------
 # Continually gets the frame from the pi camera
-def gen(camera):
+def gen(CAMERA):
     """Video streaming generator function."""
     while True:
-        frame = camera.get_frame()
+        frame = CAMERA.get_frame()
         if frame:
             yield (b'--frame\r\n'
                     b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n') 
@@ -72,6 +73,7 @@ def gen(camera):
 #embeds the videofeed by returning a continual stream as above
 @app.route('/videofeed')
 def videofeed():
+    global CAMERA
     """Video streaming route. Put this in the src attribute of an img tag."""
     return Response(gen(CAMERA), mimetype='multipart/x-mixed-replace; boundary=frame') #not actually sure what this code does    
 
@@ -80,16 +82,18 @@ def videofeed():
 @app.route('/robotshutdown', methods=['GET','POST'])
 def robotshutdown():
     log("SHUTDOWN THE ROBOT")
-    '''if ROBOT:
-        ROBOT.safe_exit()'''
+    global ROBOT
+    if ROBOT:
+        ROBOT.safe_exit(); ROBOT = None
     return jsonify({'message':'robot shutdown'})
 
 #Shut down the web server if necessary
 @app.route('/shutdown', methods=['GET','POST'])
 def shutdown():
     log("SHUTDOWN")
-    '''if ROBOT:
-        ROBOT.safe_exit()'''
+    global ROBOT
+    if ROBOT:
+        ROBOT.safe_exit(); ROBOT = None
     func = request.environ.get('werkzeug.server.shutdown'); func()
     return jsonify({'message':'shutdown web server'})
 

@@ -45,7 +45,7 @@ class BrickPiInterface():
         if motorports == None:
             motorports = {'rightmotor':bp.PORT_D, 'leftmotor':bp.PORT_A, 'mediummotor':bp.PORT_B }
         if sensorports == None:
-            sensorports = { 'thermal':bp.PORT_3,'colour':bp.PORT_2,'ultra':bp.PORT_4,'imu':1 }
+            sensorports = { 'thermal':bp.PORT_3,'colour':bp.PORT_2,'ultra':bp.PORT_1,'imu':1 }
         self.thread_running = False #end thread if its still running
         self.rightmotor = motorports['rightmotor']
         self.leftmotor = motorports['leftmotor']
@@ -67,7 +67,7 @@ class BrickPiInterface():
             if self.config['thermal'] == SensorStatus.ENABLED:
                 self.get_thermal_sensor() #do one read
                 if self.config['thermal'] < SensorStatus.DISABLED:
-                    print("STARTING THERMAL SENSOR THREAD")
+                    self.log("STARTING THERMAL SENSOR THREAD")
                     self.__start_thermal_infrared_thread() #thread is started
                 else:
                     bp.set_sensor_type(self.thermal, bp.SENSOR_TYPE.NONE)
@@ -289,7 +289,6 @@ class BrickPiInterface():
         except Exception as error:
             self.log("ULTRASONIC: " + str(error))
             self.config['ultra'] += 1
-            print("ERROR")
         finally:
             ifMutexRelease(USEMUTEX) 
         return distance
@@ -317,7 +316,7 @@ class BrickPiInterface():
         bp = self.BP
         while self.thread_running:
             self.update_thermal_sensor()
-        print("EXITING THERMAL THREAD")
+        self.log("EXITING THERMAL THREAD")
         bp.set_sensor_type(self.thermal, bp.SENSOR_TYPE.NONE) 
         return
 
@@ -461,6 +460,7 @@ class BrickPiInterface():
             lastrun = time.time()
             gyrospeed = self.get_gyro_sensor_IMU()[2] #rotate around z-axis
             totaldegreesrotated += (time.time() - lastrun)*gyrospeed
+            self.log(totaldegreesrotated)
         self.stop_all()
 
         data['action'] = self.CurrentCommand
@@ -469,7 +469,7 @@ class BrickPiInterface():
         return data
 
     #rotates the robot until faces targetheading - only works for a heading between 0 - 360
-    def rotate_power_heading_IMU(self, power, targetheading, marginoferror=3):
+    def rotate_power_heading_IMU(self, power, targetheading, marginoferror=5):
         if (self.config['imu'] >= SensorStatus.DISABLED):
             return
         self.interrupt_previous_command()
@@ -480,15 +480,19 @@ class BrickPiInterface():
         elif targetheading > 360:
             targetheading -= 360
         heading = self.get_compass_IMU()
+        time.sleep(0.3)
         if heading == targetheading:
             return
         symbol = '<'; limit = 0
         if heading < targetheading:
-            symbol = '<='; limit = targetheading-marginoferror; power = -power
+            symbol = '<='; limit = targetheading-marginoferror; 
         else:
-            symbol = '>='; limit = targetheading+marginoferror; 
+            symbol = '>='; limit = targetheading+marginoferror; power = -power
+        
+        self.log("Starting Heading: " + str(heading) + " with Power: " + str(power))
+
         expression = 'heading' + symbol + 'limit'
-        self.log('heading'+symbol+str(limit))
+        self.log('Rotating while ' + 'heading '+ symbol + " " + str(limit))
         
         elapsedtime = 0; starttime = time.time(); timelimit = starttime + self.timelimit
          
@@ -497,7 +501,7 @@ class BrickPiInterface():
         bp.set_motor_power(self.leftmotor, power)
         while (eval(expression) and (self.CurrentCommand == "rotate_power_heading") and (time.time() < timelimit) and (self.config['imu'] < SensorStatus.DISABLED)):
             heading = self.get_compass_IMU()
-            self.log("Current heading: " + str(heading))
+            print("Current heading: " + str(heading))
         self.stop_all()
         elapsedtime = time.time() - starttime
         return elapsedtime
@@ -583,16 +587,15 @@ class BrickPiInterface():
 #--------------------------------------------------------------------
 # Only execute if this is the main file, good for testing code
 if __name__ == '__main__':
-    logging.basicConfig(filename='logs/robot.log', level=logging.WARNING)
+    logging.basicConfig(filename='logs/robot.log', level=logging.INFO)
     ROBOT = BrickPiInterface(timelimit=20)  #20 second timelimit before
     bp = ROBOT.BP; bp.reset_all(); time.sleep(2)
     motorports = {'rightmotor':bp.PORT_D, 'leftmotor':bp.PORT_A, 'mediummotor':bp.PORT_B }
     sensorports = { 'thermal':bp.PORT_3,'colour':bp.PORT_2,'ultra':bp.PORT_1,'imu':1 }
     ROBOT.configure_sensors(motorports, sensorports) #This takes 4 seconds
-    ROBOT.log("HERE I AM")
     input("Press any key to test: ")
-    #print(ROBOT.rotate_power_degrees_IMU(30, 180, 0))
+    ROBOT.rotate_power_degrees_IMU(30, 30, 0)
     #ROBOT.move_power_time(50,3)
-    ROBOT.spin_medium_motor(-1800)
+    #ROBOT.spin_medium_motor(-1800)
     print(ROBOT.get_all_sensors())
     ROBOT.safe_exit()
