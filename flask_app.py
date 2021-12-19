@@ -38,8 +38,11 @@ def robotload():
 # Dashboard
 @app.route('/', methods=['GET','POST'])
 def robotdashboard():
-    #check to see if everything is loaded
-    return render_template('dashboard.html')
+    enabled = 0
+    global ROBOT
+    if ROBOT:
+        enabled = 1
+    return render_template('dashboard.html', robot_enabled = enabled )
 
 
 

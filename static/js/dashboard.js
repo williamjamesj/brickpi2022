@@ -32,7 +32,7 @@ function shutdown_robot()
 }
 
 //hide or show dashboard based on initial value from server on page load
-if (robot_enabled) {
+if (robot_enabled == 1) {
     show_dashboard();
 } else {
     hide_dashboard();
