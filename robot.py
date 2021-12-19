@@ -12,7 +12,6 @@ class Robot(BrickPiInterface):
         self.CurrentRoutine = "stop"
         return
         
-    #def configure_sensors(self, motorports=None, sensorports=None) -- this function resides in brickpiinterface.py -- as do most others
 
     #Create a function to move time and power which will stop if colour is detected or an object has been found
 
@@ -51,8 +50,8 @@ if __name__ == '__main__':
     ROBOT.rotate_power_degrees_IMU(20,-90)
     start = time.time()
     limit = start + 10
-    while (time.time() < limit):
+    '''while (time.time() < limit):
         compass = ROBOT.get_compass_IMU()
-        print(compass)
+        print(compass)'''
     sensordict = ROBOT.get_all_sensors()
     ROBOT.safe_exit()

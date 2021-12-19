@@ -26,10 +26,11 @@ def robotload():
         sensordict = ROBOT.get_all_sensors()
     '''global DATABASE
     if not DATABASE:
-        DATABASE = databaseinterface.Database('databases/test.sqlite', app.logger)
+        DATABASE = databaseinterface.Database('databases/test.sqlite', app.logger)'''
     global CAMERA
     if not CAMERA:
-        CAMERA = camerainterface.Camera()'''
+        log("Create Camera")
+        CAMERA = camerainterface.Camera()
     
     return jsonify({ 'message':'robot loaded' })
 
@@ -37,6 +38,7 @@ def robotload():
 # Dashboard
 @app.route('/', methods=['GET','POST'])
 def robotdashboard():
+    #check to see if everything is loaded
     return render_template('dashboard.html')
 
 

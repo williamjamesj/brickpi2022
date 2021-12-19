@@ -9,12 +9,16 @@
         <button id="load" type="button" class="btn btn-success" onclick="loadrobot();">Load Robot</button>
         <button id="shutdown" type="button" class="btn btn-danger" onclick="shutdownrobot();">Shutdown Robot</button>
     </div>    
-    <div style="max-width:640px; max-height:480px;">
-        <!-- <div id="videofeed"><img src="{{ url_for('videofeed') }}" width="100%" height=""></div> -->
+    <div class="row" id="dashboard">
+        <div id="videobox">
+            <div id="videofeed"><img src="{{ url_for('videofeed') }}" width="100%" height=""></div>
+        </div>
     </div>
     <div class="row" id="message">
     </div>
 {% endblock %}
 {% block scripts %}
-    <script src="/static/js/dashboard.js"></script> <!-- JSON HELPER -->
+    <script src="/static/js/dashboard.js">
+        robot_enabled = {{robot_enabled}}
+    </script> <!-- JSON HELPER -->
 {% endblock %}

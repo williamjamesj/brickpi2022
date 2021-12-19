@@ -17,6 +17,8 @@
 }
 #shutdown { display:none; }
 #load { display:block; }
+#videobox { max-width:640px; max-height:480px; float:left; }
+
 .btn { max-width:150px; }
 .container { margin-top:20px; }
 .row h1 { padding-left:0px !important; }

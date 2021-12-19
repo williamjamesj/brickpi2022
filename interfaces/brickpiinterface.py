@@ -594,8 +594,8 @@ if __name__ == '__main__':
     sensorports = { 'thermal':bp.PORT_3,'colour':bp.PORT_2,'ultra':bp.PORT_1,'imu':1 }
     ROBOT.configure_sensors(motorports, sensorports) #This takes 4 seconds
     input("Press any key to test: ")
-    ROBOT.rotate_power_degrees_IMU(30, 30, 0)
-    #ROBOT.move_power_time(50,3)
-    #ROBOT.spin_medium_motor(-1800)
+    ROBOT.rotate_power_degrees_IMU(30, 90, 0)
+    ROBOT.move_power_time(50,3)
+    ROBOT.spin_medium_motor(-1800)
     print(ROBOT.get_all_sensors())
     ROBOT.safe_exit()
