@@ -31,7 +31,6 @@ def robotload():
     if not CAMERA:
         log("Create Camera")
         CAMERA = camerainterface.Camera()
-    
     return jsonify({ 'message':'robot loaded' })
 
 #-YOUR FLASK CODE------------------------------------------------------------------------
