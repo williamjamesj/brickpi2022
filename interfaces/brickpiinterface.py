@@ -103,10 +103,11 @@ class BrickPiInterface():
             if self.imu:    
                 try:
                     self.imu = InertialMeasurementUnit()
-                    time.sleep(1)
+                    time.sleep(0.5)
                     self.config['imu'] = SensorStatus.ENABLED
                 except Exception as error:
-                    self.config['imu'] = SensorStatus.DISABLED
+                    #try to reconfig
+                    self.reconfig_IMU()
                     self.log("Cannot initialise IMU Sensor")
         
         bp.set_motor_limits(self.mediummotor, 100, 600) #set power / speed limit 
@@ -143,6 +144,9 @@ class BrickPiInterface():
         self.imu_status = 0
         elapsed = 0; start = time.time()
         timelimit = start + timelimit #maximum of 20 seconds to calibrate compass sensor
+
+        self.BP.set_motor_power(self.rightmotor, 30)
+        self.BP.set_motor_power(self.leftmotor, -30)
         while self.imu_status != 3 and time.time() < timelimit:
             newtime = time.time()
             newelapsed = int(newtime - start)
@@ -159,6 +163,7 @@ class BrickPiInterface():
                 self.config['imu'] += 1
             finally:
                 ifMutexRelease(USEMUTEX)
+        self.stop_all()
         if self.imu_status == 3:
             self.log("IMU Compass Sensor has been calibrated")
             self.Calibrated = True
@@ -168,7 +173,7 @@ class BrickPiInterface():
             return 
         return
 
-    #hopefull this is an emergency reconfigure of the IMU Sensor
+    #hopefully this is an emergency reconfigure of the IMU Sensor
     def reconfig_IMU(self):
         ifMutexAcquire(USEMUTEX)
         try:
@@ -469,7 +474,7 @@ class BrickPiInterface():
         return data
 
     #rotates the robot until faces targetheading - only works for a heading between 0 - 360
-    def rotate_power_heading_IMU(self, power, targetheading, marginoferror=5):
+    def rotate_power_heading_IMU(self, power, targetheading, marginoferror=8):
         if (self.config['imu'] >= SensorStatus.DISABLED):
             return
         self.interrupt_previous_command()
@@ -501,7 +506,7 @@ class BrickPiInterface():
         bp.set_motor_power(self.leftmotor, power)
         while (eval(expression) and (self.CurrentCommand == "rotate_power_heading") and (time.time() < timelimit) and (self.config['imu'] < SensorStatus.DISABLED)):
             heading = self.get_compass_IMU()
-            print("Current heading: " + str(heading))
+            self.log("Current heading: " + str(heading))
         self.stop_all()
         elapsedtime = time.time() - starttime
         return elapsedtime
@@ -593,9 +598,9 @@ if __name__ == '__main__':
     motorports = {'rightmotor':bp.PORT_D, 'leftmotor':bp.PORT_A, 'mediummotor':bp.PORT_B }
     sensorports = { 'thermal':bp.PORT_3,'colour':bp.PORT_2,'ultra':bp.PORT_1,'imu':1 }
     ROBOT.configure_sensors(motorports, sensorports) #This takes 4 seconds
+    ROBOT.reconfig_IMU()
+    ROBOT.calibrate_imu()
     input("Press any key to test: ")
-    ROBOT.rotate_power_degrees_IMU(30, 90, 0)
-    ROBOT.move_power_time(50,3)
-    ROBOT.spin_medium_motor(-1800)
+    ROBOT.rotate_power_heading_IMU(25,0)
     print(ROBOT.get_all_sensors())
     ROBOT.safe_exit()

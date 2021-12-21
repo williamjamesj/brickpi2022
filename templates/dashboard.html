@@ -8,17 +8,16 @@
     <div class="row">
         <button id="load" type="button" class="btn btn-success" onclick="load_robot();">Load Robot</button>
         <button id="shutdown" type="button" class="btn btn-danger" onclick="shutdown_robot();">Shutdown Robot</button>
-    </div>    
-    <div class="row" id="dashboard">
+    </div>   
+    <div id="dashboard">
         <div id="videobox">
-            <div id="videofeed"><img src="{{ url_for('videofeed') }}" width="100%" height=""></div>
+            <div id="videofeed"><img src="{{ url_for('videofeed') }}" width=100% ></div>
         </div>
-        <div id="turtlebox" class="jxgbox"></div>
-    </div>
-    <div class="row" id="message">
+        <div id="map"><div id="box" class="jxgbox"></div></div>
+        <div id="message"></div>
     </div>
 {% endblock %}
 {% block scripts %}
-    <script>robot_enabled = {{robot_enabled}}</script>
+    <script> robot_enabled = {{robot_enabled}}; </script>
     <script src="/static/js/dashboard.js"></script> <!-- JSON HELPER -->
 {% endblock %}

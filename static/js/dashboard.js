@@ -3,32 +3,33 @@
 //Load the Robot
 function load_robot()
 {
-    alert("load");
-    new_ajax_helper('/robotload', printmessage);
-    show_dashbaord
-}
-
-//show the dashboard
-function show_dashboard()
-{
-    document.getElementById("shutdown").style.display = 'block';
     document.getElementById("load").style.display = 'none';
-    document.getElementById("dashboard").style.display = 'block';
-}
-
-//hide the dashboard
-function hide_dashboard()
-{
-    document.getElementById("shutdown").style.display = 'none';
-    document.getElementById("load").style.display = 'block';
-    document.getElementById("dashboard").style.display = 'none';
+    new_ajax_helper('/robotload', show_dashboard);
 }
 
 //Shutdown the Robot
 function shutdown_robot()
 {
-    new_ajax_helper('/robotshutdown', printmessage);
+    document.getElementById("shutdown").style.display = 'none';
+    new_ajax_helper('/robotshutdown', hide_dashboard);
+}
 
+//show the dashboard
+function show_dashboard(results)
+{
+    alert("Waiting");
+    document.getElementById("load").style.display = 'none';
+    document.getElementById("shutdown").style.display = 'block';
+    document.getElementById("dashboard").style.display = 'block';
+    document.getElementById("message").innerText = JSON.stringify(results.message);
+}
+
+//hide the dashboard
+function hide_dashboard(results)
+{
+    document.getElementById("shutdown").style.display = 'none';
+    document.getElementById("load").style.display = 'block';
+    document.getElementById("dashboard").style.display = 'none';
 }
 
 //hide or show dashboard based on initial value from server on page load

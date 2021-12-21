@@ -1,92 +1,52 @@
 INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 236-468-704
-INFO:werkzeug:192.168.1.104 - - [19/Dec/2021 17:00:01] "[37mGET / HTTP/1.1[0m" 200 -
-INFO:werkzeug:192.168.1.104 - - [19/Dec/2021 17:00:01] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Debugger PIN: 178-849-081
+INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:00:49] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:00:49] "[37mGET /videofeed HTTP/1.1[0m" 204 -
+INFO:flask_app:LOADING CAMERA
 INFO:flask_app:LOADING THE ROBOT
 INFO:flask_app:STARTING THERMAL SENSOR THREAD
-INFO:flask_app:0.001964271068572998
-INFO:flask_app:0.0006073862314224243
-INFO:flask_app:0.010703474283218384
-INFO:flask_app:0.18931522965431213
-INFO:flask_app:0.8185866475105286
-INFO:flask_app:1.5915198475122452
-INFO:flask_app:2.706600084900856
-INFO:flask_app:4.020798102021217
-INFO:flask_app:5.479244962334633
-INFO:flask_app:7.070275902748108
-INFO:flask_app:8.768109381198883
-INFO:flask_app:10.482573330402374
-INFO:flask_app:12.227706357836723
-INFO:flask_app:14.10265539586544
-INFO:flask_app:15.819915488362312
-INFO:flask_app:17.48063112795353
-INFO:flask_app:19.012286990880966
-INFO:flask_app:20.66070693731308
-INFO:flask_app:22.228031635284424
-INFO:flask_app:23.707899510860443
-INFO:flask_app:25.226429402828217
-INFO:flask_app:26.74577832221985
-INFO:flask_app:28.288611233234406
-INFO:flask_app:Create Camera
-INFO:werkzeug:192.168.1.104 - - [19/Dec/2021 17:00:10] "[37mPOST /robotload HTTP/1.1[0m" 200 -
-INFO:flask_app:SHUTDOWN THE ROBOT
+INFO:flask_app:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:00:56] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:02] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:05] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:09] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:09] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:12] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:12] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:16] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:16] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:16] "[37mGET /static/css/theme.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:16] "[37mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:16] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:16] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:16] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:flask_app:SHUT DOWN EVERYTHING
 INFO:flask_app:EXITING THERMAL THREAD
 INFO:flask_app:Exiting
-INFO:werkzeug:192.168.1.104 - - [19/Dec/2021 17:00:27] "[37mPOST /robotshutdown HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:22] "[37mPOST /robotshutdown HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
 INFO:flask_app:LOADING THE ROBOT
 INFO:flask_app:STARTING THERMAL SENSOR THREAD
-INFO:flask_app:-0.0009694099426269531
-INFO:flask_app:-0.0019244253635406494
-INFO:flask_app:-0.0019244253635406494
-INFO:flask_app:0.024330347776412964
-INFO:flask_app:0.12411066889762878
-INFO:flask_app:0.5069109201431274
-INFO:flask_app:1.349595546722412
-INFO:flask_app:2.413580074906349
-INFO:flask_app:3.8551809191703796
-INFO:flask_app:5.598195090889931
-INFO:flask_app:7.526137873530388
-INFO:flask_app:9.444665282964706
-INFO:flask_app:11.387527883052826
-INFO:flask_app:13.39222927391529
-INFO:flask_app:15.23437012732029
-INFO:flask_app:16.908955588936806
-INFO:flask_app:18.560028210282326
-INFO:flask_app:20.4199520945549
-INFO:flask_app:22.327797830104828
-INFO:flask_app:24.187153667211533
-INFO:flask_app:25.896242439746857
-INFO:flask_app:27.72879022359848
 INFO:flask_app:ULTRASONIC: get_sensor error: Invalid sensor data
-INFO:werkzeug:192.168.1.104 - - [19/Dec/2021 17:00:40] "[37mPOST /robotload HTTP/1.1[0m" 200 -
-INFO:flask_app:SHUTDOWN THE ROBOT
+INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:29] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:SHUT DOWN EVERYTHING
 INFO:flask_app:EXITING THERMAL THREAD
 INFO:flask_app:Exiting
-INFO:werkzeug:192.168.1.104 - - [19/Dec/2021 17:00:47] "[37mPOST /robotshutdown HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:53] "[37mPOST /robotshutdown HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
 INFO:flask_app:LOADING THE ROBOT
 INFO:flask_app:STARTING THERMAL SENSOR THREAD
-INFO:flask_app:0.00147952139377594
-INFO:flask_app:-0.00046296417713165283
-INFO:flask_app:0.006453394889831543
-INFO:flask_app:0.12392593920230865
-INFO:flask_app:0.3842557817697525
-INFO:flask_app:1.0569075793027878
-INFO:flask_app:2.074135348200798
-INFO:flask_app:3.4047017097473145
-INFO:flask_app:4.947300523519516
-INFO:flask_app:6.856628015637398
-INFO:flask_app:9.055464342236519
-INFO:flask_app:11.045449927449226
-INFO:flask_app:12.940051034092903
-INFO:flask_app:14.9030110090971
-INFO:flask_app:16.65727762877941
-INFO:flask_app:18.390999644994736
-INFO:flask_app:20.088900834321976
-INFO:flask_app:21.779152527451515
-INFO:flask_app:23.709405794739723
-INFO:flask_app:25.31891317665577
-INFO:flask_app:27.115840911865234
 INFO:flask_app:ULTRASONIC: get_sensor error: Invalid sensor data
-INFO:werkzeug:192.168.1.104 - - [19/Dec/2021 17:00:56] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:02:00] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/MyProject/interfaces/brickpiinterface.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 178-849-081

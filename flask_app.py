@@ -2,7 +2,7 @@ from flask import Flask, render_template, session, request, redirect, url_for, j
 from interfaces import databaseinterface, camerainterface
 import robot
 from global_vars import *
-import logging
+import logging, time
 
 #Creates the Flask Server Object
 app = Flask(__name__); app.debug = True
@@ -17,30 +17,27 @@ def log(message):
 @app.route('/robotload', methods=['GET','POST'])
 def robotload():
     sensordict = None
-    log("LOADING THE ROBOT")
+    global CAMERA
+    if not CAMERA:
+        log("LOADING CAMERA")
+        CAMERA = camerainterface.Camera()
+        time.sleep(1)
     global ROBOT
     if not ROBOT: 
+        log("LOADING THE ROBOT")
         ROBOT = robot.Robot(20, app.logger)
         ROBOT.configure_sensors() #defaults have been provided but you can 
-        ROBOT.rotate_power_degrees_IMU(30,30)
         sensordict = ROBOT.get_all_sensors()
     '''global DATABASE
     if not DATABASE:
         DATABASE = databaseinterface.Database('databases/test.sqlite', app.logger)'''
-    global CAMERA
-    if not CAMERA:
-        log("Create Camera")
-        CAMERA = camerainterface.Camera()
-    return jsonify({ 'message':'robot loaded' })
+    return jsonify({ 'message':sensordict })
 
 #-YOUR FLASK CODE------------------------------------------------------------------------
 # Dashboard
 @app.route('/', methods=['GET','POST'])
 def robotdashboard():
-    enabled = 0
-    global ROBOT
-    if ROBOT:
-        enabled = 1
+    enabled = int(ROBOT != None)
     return render_template('dashboard.html', robot_enabled = enabled )
 
 
@@ -66,10 +63,10 @@ def robotdashboard():
 
 #-CAMERA CODE-----------------------------------------------------------------------
 # Continually gets the frame from the pi camera
-def gen(CAMERA):
+def gen(cam):
     """Video streaming generator function."""
     while True:
-        frame = CAMERA.get_frame()
+        frame = cam.get_frame()
         if frame:
             yield (b'--frame\r\n'
                     b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n') 
@@ -77,27 +74,34 @@ def gen(CAMERA):
 #embeds the videofeed by returning a continual stream as above
 @app.route('/videofeed')
 def videofeed():
+    log("READING CAMERA")
     global CAMERA
-    """Video streaming route. Put this in the src attribute of an img tag."""
-    return Response(gen(CAMERA), mimetype='multipart/x-mixed-replace; boundary=frame') #not actually sure what this code does    
-
+    if CAMERA:
+        """Video streaming route. Put this in the src attribute of an img tag."""
+        return Response(gen(CAMERA), mimetype='multipart/x-mixed-replace; boundary=frame') #not actually sure what this code does    
+    else:
+        return '', 204
 #----------------------------------------------------------------------------
-#Shutdown the ROBOT incase anything not working
-@app.route('/robotshutdown', methods=['GET','POST'])
-def robotshutdown():
-    log("SHUTDOWN THE ROBOT")
+#Shutdown the robot, camera and database
+def shutdowneverything():
+    log("SHUT DOWN EVERYTHING")
     global ROBOT
     if ROBOT:
         ROBOT.safe_exit(); ROBOT = None
+    global CAMERA
+    if CAMERA:
+        CAMERA = None
+    return
+
+@app.route('/robotshutdown', methods=['GET','POST'])
+def robotshutdown():
+    shutdowneverything()
     return jsonify({'message':'robot shutdown'})
 
 #Shut down the web server if necessary
 @app.route('/shutdown', methods=['GET','POST'])
 def shutdown():
-    log("SHUTDOWN")
-    global ROBOT
-    if ROBOT:
-        ROBOT.safe_exit(); ROBOT = None
+    shutdowneverything()
     func = request.environ.get('werkzeug.server.shutdown'); func()
     return jsonify({'message':'shutdown web server'})
 
