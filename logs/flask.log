@@ -1,52 +1,143 @@
 INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 178-849-081
-INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:00:49] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Debugger PIN: 166-531-193
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:18:37] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:18:37] "[37mGET /dashboard HTTP/1.1[0m" 200 -
 INFO:flask_app:READING CAMERA
-INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:00:49] "[37mGET /videofeed HTTP/1.1[0m" 204 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:18:37] "[37mGET /videofeed HTTP/1.1[0m" 204 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:18:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:18:40] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:18:40] "[37mGET /static/css/theme.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:18:40] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:18:40] "[37mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:18:40] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:18:40] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:18:40] "[37mGET /videofeed HTTP/1.1[0m" 204 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:18:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:18:50] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:18:50] "[37mGET /videofeed HTTP/1.1[0m" 204 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:18:54] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:18:54] "[37mGET /static/css/theme.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:18:54] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:18:54] "[37mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:18:54] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:18:54] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:18:54] "[37mGET /videofeed HTTP/1.1[0m" 204 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:18:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
 INFO:flask_app:LOADING CAMERA
 INFO:flask_app:LOADING THE ROBOT
 INFO:flask_app:STARTING THERMAL SENSOR THREAD
-INFO:flask_app:ULTRASONIC: get_sensor error: Invalid sensor data
-INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:00:56] "[37mPOST /robotload HTTP/1.1[0m" 200 -
-INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:02] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:19:08] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:19:19] "[37mGET /dashboard HTTP/1.1[0m" 200 -
 INFO:flask_app:READING CAMERA
-INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:05] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:09] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:19:21] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:19:51] "[37mGET /dashboard HTTP/1.1[0m" 200 -
 INFO:flask_app:READING CAMERA
-INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:09] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:12] "[37mGET / HTTP/1.1[0m" 200 -
-INFO:flask_app:READING CAMERA
-INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:12] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:16] "[37mGET / HTTP/1.1[0m" 200 -
-INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:16] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
-INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:16] "[37mGET /static/css/theme.css HTTP/1.1[0m" 200 -
-INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:16] "[37mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 200 -
-INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:16] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
-INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:16] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
-INFO:flask_app:READING CAMERA
-INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:16] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-INFO:flask_app:SHUT DOWN EVERYTHING
-INFO:flask_app:EXITING THERMAL THREAD
-INFO:flask_app:Exiting
-INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:22] "[37mPOST /robotshutdown HTTP/1.1[0m" 200 -
-INFO:flask_app:LOADING CAMERA
-INFO:flask_app:LOADING THE ROBOT
-INFO:flask_app:STARTING THERMAL SENSOR THREAD
-INFO:flask_app:ULTRASONIC: get_sensor error: Invalid sensor data
-INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:29] "[37mPOST /robotload HTTP/1.1[0m" 200 -
-INFO:flask_app:SHUT DOWN EVERYTHING
-INFO:flask_app:EXITING THERMAL THREAD
-INFO:flask_app:Exiting
-INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:01:53] "[37mPOST /robotshutdown HTTP/1.1[0m" 200 -
-INFO:flask_app:LOADING CAMERA
-INFO:flask_app:LOADING THE ROBOT
-INFO:flask_app:STARTING THERMAL SENSOR THREAD
-INFO:flask_app:ULTRASONIC: get_sensor error: Invalid sensor data
-INFO:werkzeug:192.168.1.104 - - [21/Dec/2021 20:02:00] "[37mPOST /robotload HTTP/1.1[0m" 200 -
-INFO:werkzeug: * Detected change in '/home/pi/Desktop/MyProject/interfaces/brickpiinterface.py', reloading
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:19:51] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:19:53] "[31m[1mPOST /robotshutdown HTTP/1.1[0m" 405 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:21:08] "[31m[1mPOST /shutdown HTTP/1.1[0m" 405 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/MyProject/flask_app.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 178-849-081
+INFO:werkzeug: * Debugger PIN: 166-531-193
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:22:08] "[31m[1mPOST /shutdown HTTP/1.1[0m" 405 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:22:41] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:22:41] "[37mGET /videofeed HTTP/1.1[0m" 204 -
+INFO:flask_app:LOADING CAMERA
+INFO:flask_app:LOADING THE ROBOT
+INFO:flask_app:STARTING THERMAL SENSOR THREAD
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:22:48] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:SHUT DOWN EVERYTHING
+INFO:flask_app:EXITING THERMAL THREAD
+INFO:flask_app:Exiting
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:22:54] "[37mPOST /robotshutdown HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:flask_app:LOADING THE ROBOT
+INFO:flask_app:STARTING THERMAL SENSOR THREAD
+INFO:flask_app:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:23:11] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:23:19] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:23:21] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:flask_app:SHUT DOWN EVERYTHING
+INFO:flask_app:EXITING THERMAL THREAD
+INFO:flask_app:Exiting
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:23:27] "[37mPOST /robotshutdown HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:flask_app:LOADING THE ROBOT
+INFO:flask_app:STARTING THERMAL SENSOR THREAD
+INFO:flask_app:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:23:34] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:SHUT DOWN EVERYTHING
+INFO:flask_app:EXITING THERMAL THREAD
+INFO:flask_app:Exiting
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:23:42] "[37mPOST /robotshutdown HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:24:54] "[31m[1mPOST /shutdown HTTP/1.1[0m" 405 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:25:01] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:25:01] "[37mGET /videofeed HTTP/1.1[0m" 204 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:25:03] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:25:03] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:25:03] "[37mGET /static/css/theme.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:25:03] "[37mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:25:03] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:25:03] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:25:03] "[37mGET /videofeed HTTP/1.1[0m" 204 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:25:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:25:07] "[31m[1mPOST /shutdown HTTP/1.1[0m" 405 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:25:23] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:25:23] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:25:23] "[37mGET /videofeed HTTP/1.1[0m" 204 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:25:26] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:25:26] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:flask_app:[{'name': 'admin', 'permission': 'admin', 'userid': 1, 'password': 'admin', 'email': 'admin@admin'}]
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:25:33] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:25:33] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:25:33] "[37mGET /videofeed HTTP/1.1[0m" 204 -
+INFO:flask_app:LOADING CAMERA
+INFO:flask_app:LOADING THE ROBOT
+INFO:flask_app:STARTING THERMAL SENSOR THREAD
+INFO:flask_app:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:25:43] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:25:54] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:flask_app:SHUT DOWN EVERYTHING
+INFO:flask_app:EXITING THERMAL THREAD
+INFO:flask_app:Exiting
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:26:14] "[37mPOST /robotshutdown HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:26:18] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:26:19] "[37mGET /static/css/theme.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:26:19] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:26:19] "[37mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:26:19] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:26:19] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:26:19] "[37mGET /videofeed HTTP/1.1[0m" 204 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:26:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:26:22] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:26:22] "[37mGET /static/css/theme.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:26:22] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:26:23] "[37mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:26:23] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:26:23] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:26:23] "[37mGET /videofeed HTTP/1.1[0m" 204 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:26:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:flask_app:LOADING CAMERA
+INFO:flask_app:LOADING THE ROBOT
+INFO:flask_app:STARTING THERMAL SENSOR THREAD
+INFO:flask_app:Cannot initialise IMU Sensor now trying to reconfig
+INFO:flask_app:IMU RECONFIG HAS FAILED'int' object has no attribute 'BNO055'
+INFO:flask_app:COLOUR: get_sensor error: Invalid sensor data
+INFO:flask_app:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:26:31] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.1.104 - - [26/Dec/2021 20:26:34] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA

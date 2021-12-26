@@ -10,22 +10,26 @@ function load_robot()
 //Shutdown the Robot
 function shutdown_robot()
 {
-    document.getElementById("shutdown").style.display = 'none';
-    new_ajax_helper('/robotshutdown', hide_dashboard);
+    hide_dashboard()
+    new_ajax_helper('/robotshutdown', showloadbutton);
+}
+
+function showloadbutton()
+{
+    document.getElementById("load").style.display = 'block';
 }
 
 //show the dashboard
 function show_dashboard(results)
 {
-    alert("Waiting");
     document.getElementById("load").style.display = 'none';
     document.getElementById("shutdown").style.display = 'block';
     document.getElementById("dashboard").style.display = 'block';
-    document.getElementById("message").innerText = JSON.stringify(results.message);
+    document.getElementById("message").innerText = JSON.stringify(results);
 }
 
 //hide the dashboard
-function hide_dashboard(results)
+function hide_dashboard()
 {
     document.getElementById("shutdown").style.display = 'none';
     document.getElementById("load").style.display = 'block';

@@ -106,10 +106,9 @@ class BrickPiInterface():
                     time.sleep(0.5)
                     self.config['imu'] = SensorStatus.ENABLED
                 except Exception as error:
-                    #try to reconfig
+                    self.log("Cannot initialise IMU Sensor now trying to reconfig")
                     self.reconfig_IMU()
-                    self.log("Cannot initialise IMU Sensor")
-        
+                    
         bp.set_motor_limits(self.mediummotor, 100, 600) #set power / speed limit 
         self.Configured = True #there is a 4 second delay - before robot is Configured
         return
@@ -187,7 +186,8 @@ class BrickPiInterface():
             ifMutexRelease(USEMUTEX)
         return
 
-    #returns the compass value from the IMU sensor - note if the IMU is placed near a motor it can be affected -SEEMS TO RETURN A VALUE BETWEEN -180 and 180. 
+    # Returns the compass value from the IMU sensor - note if the IMU is placed near a motor it can be affected -SEEMS TO RETURN A VALUE BETWEEN -180 and 180. 
+    # It also helps to calibrate the compass before use.
     def get_compass_IMU(self):
         heading = SensorStatus.NOREADING
         if self.config['imu'] >= SensorStatus.DISABLED:

@@ -1,17 +1,43 @@
-from flask import Flask, render_template, session, request, redirect, url_for, jsonify, Response, logging
+from flask import Flask, render_template, session, request, redirect, flash, url_for, jsonify, Response, logging
 from interfaces import databaseinterface, camerainterface
-import robot
+import robot #robot is class that extends the brickpi class
 from global_vars import *
 import logging, time
 
 #Creates the Flask Server Object
 app = Flask(__name__); app.debug = True
+SECRET_KEY = 'my random key can be anything' #this is used for encrypting sessions
+app.config.from_object(__name__) #Set app configuration using above SETTINGS
 logging.basicConfig(filename='logs/flask.log', level=logging.INFO)
+DATABASE = databaseinterface.Database('databases/RobotDatabase.db', app.logger)
 
 #Log messages
 def log(message):
     app.logger.info(message)
     return
+
+#create a login page
+@app.route('/', methods=['GET','POST'])
+def login():
+    if 'userid' in session:
+        return redirect('/dashboard')
+    message = ""
+    if request.method == "POST":
+        email = request.form.get("email")
+        userdetails = DATABASE.ViewQuery("SELECT * FROM users WHERE email = ?", (email,))
+        log(userdetails)
+        if userdetails:
+            user = userdetails[0] #get first row in results
+            if user['password'] == request.form.get("password"):
+                session['userid'] = user['userid']
+                session['permission'] = user['permission']
+                session['name'] = user['name']
+                return redirect('/dashboard')
+            else:
+                message = "Login Unsuccessful"
+        else:
+            message = "Login Unsuccessful"
+    return render_template('login.html', data = message)    
 
 # Load the ROBOT
 @app.route('/robotload', methods=['GET','POST'])
@@ -27,18 +53,26 @@ def robotload():
         log("LOADING THE ROBOT")
         ROBOT = robot.Robot(20, app.logger)
         ROBOT.configure_sensors() #defaults have been provided but you can 
-        sensordict = ROBOT.get_all_sensors()
-    '''global DATABASE
-    if not DATABASE:
-        DATABASE = databaseinterface.Database('databases/test.sqlite', app.logger)'''
-    return jsonify({ 'message':sensordict })
+    sensordict = ROBOT.get_all_sensors()
+    return jsonify(sensordict)
 
 #-YOUR FLASK CODE------------------------------------------------------------------------
 # Dashboard
-@app.route('/', methods=['GET','POST'])
+@app.route('/dashboard', methods=['GET','POST'])
 def robotdashboard():
+    if not 'userid' in session:
+        return redirect('/')
     enabled = int(ROBOT != None)
     return render_template('dashboard.html', robot_enabled = enabled )
+
+
+
+
+
+
+
+
+
 
 
 
@@ -78,7 +112,7 @@ def videofeed():
     global CAMERA
     if CAMERA:
         """Video streaming route. Put this in the src attribute of an img tag."""
-        return Response(gen(CAMERA), mimetype='multipart/x-mixed-replace; boundary=frame') #not actually sure what this code does    
+        return Response(gen(CAMERA), mimetype='multipart/x-mixed-replace; boundary=frame') 
     else:
         return '', 204
 #----------------------------------------------------------------------------
@@ -93,17 +127,23 @@ def shutdowneverything():
         CAMERA = None
     return
 
+#Ajax handler for shutdown button
 @app.route('/robotshutdown', methods=['GET','POST'])
 def robotshutdown():
     shutdowneverything()
     return jsonify({'message':'robot shutdown'})
 
 #Shut down the web server if necessary
-@app.route('/shutdown', methods=['GET','POST'])
+@app.route('/shutdown')
 def shutdown():
     shutdowneverything()
     func = request.environ.get('werkzeug.server.shutdown'); func()
     return jsonify({'message':'shutdown web server'})
+
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect('/')
 
 #---------------------------------------------------------------------------
 #main method called web server application
