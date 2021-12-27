@@ -53,10 +53,12 @@ def robotload():
         log("LOADING THE ROBOT")
         ROBOT = robot.Robot(20, app.logger)
         ROBOT.configure_sensors() #defaults have been provided but you can 
+        ROBOT.reconfig_IMU()
     sensordict = ROBOT.get_all_sensors()
     return jsonify(sensordict)
 
-#-YOUR FLASK CODE------------------------------------------------------------------------
+# YOUR FLASK CODE------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------
 # Dashboard
 @app.route('/dashboard', methods=['GET','POST'])
 def robotdashboard():
@@ -94,8 +96,8 @@ def robotdashboard():
 
 
 
-
-#-CAMERA CODE-----------------------------------------------------------------------
+# -----------------------------------------------------------------------------------
+# CAMERA CODE-----------------------------------------------------------------------
 # Continually gets the frame from the pi camera
 def gen(cam):
     """Video streaming generator function."""
@@ -115,6 +117,7 @@ def videofeed():
         return Response(gen(CAMERA), mimetype='multipart/x-mixed-replace; boundary=frame') 
     else:
         return '', 204
+        
 #----------------------------------------------------------------------------
 #Shutdown the robot, camera and database
 def shutdowneverything():
@@ -126,6 +129,15 @@ def shutdowneverything():
     if CAMERA:
         CAMERA = None
     return
+
+#Used for reconfiguring IMU
+@app.route('/reconfig_IMU', methods=['GET','POST'])
+def reconfig_IMU():
+    if ROBOT:
+        ROBOT.calibrate_imu()
+        sensorconfig = ROBOT.get_all_sensors()
+        return jsonify(sensorconfig)
+    return jsonify({'message':'ROBOT not loaded'})
 
 #Ajax handler for shutdown button
 @app.route('/robotshutdown', methods=['GET','POST'])
@@ -142,6 +154,7 @@ def shutdown():
 
 @app.route('/logout')
 def logout():
+    shutdowneverything()
     session.clear()
     return redirect('/')
 

@@ -1,5 +1,4 @@
 #To contract or expand sections use Control K and then Control 0
-
 try:
     import brickpi3 # import the BrickPi3 drivers
     from di_sensors.easy_mutex import ifMutexAcquire, ifMutexRelease 
@@ -52,26 +51,6 @@ class BrickPiInterface():
         self.largemotors = motorports['rightmotor'] + motorports['leftmotor']
         self.mediummotor = motorports['mediummotor']
 
-        #set up thermal - thermal sensor uses a thread because else it disables motors
-        self.config['thermal'] = SensorStatus.DISABLED; self.thermal = None
-        if 'thermal' in sensorports: 
-            self.thermal = sensorports['thermal']
-            if self.thermal != None:
-                try:
-                    bp.set_sensor_type(self.thermal, bp.SENSOR_TYPE.I2C, [0, 20])
-                    time.sleep(1)
-                    self.config['thermal'] = SensorStatus.ENABLED
-                except Exception as error:
-                    self.log("Cannot initialise Thermal Sensor")
-                    bp.set_sensor_type(self.thermal, bp.SENSOR_TYPE.NONE)
-            if self.config['thermal'] == SensorStatus.ENABLED:
-                self.get_thermal_sensor() #do one read
-                if self.config['thermal'] < SensorStatus.DISABLED:
-                    self.log("STARTING THERMAL SENSOR THREAD")
-                    self.__start_thermal_infrared_thread() #thread is started
-                else:
-                    bp.set_sensor_type(self.thermal, bp.SENSOR_TYPE.NONE)
- 
         #setup colour sensor
         self.config['colour'] = SensorStatus.DISABLED; self.colour = None
         if 'colour' in sensorports:
@@ -108,7 +87,27 @@ class BrickPiInterface():
                 except Exception as error:
                     self.log("Cannot initialise IMU Sensor now trying to reconfig")
                     self.reconfig_IMU()
-                    
+
+        #set up thermal - thermal sensor uses a thread because else it disables motors
+        self.config['thermal'] = SensorStatus.DISABLED; self.thermal = None
+        if 'thermal' in sensorports: 
+            self.thermal = sensorports['thermal']
+            if self.thermal != None:
+                try:
+                    bp.set_sensor_type(self.thermal, bp.SENSOR_TYPE.I2C, [0, 20])
+                    time.sleep(1)
+                    self.config['thermal'] = SensorStatus.ENABLED
+                except Exception as error:
+                    self.log("Cannot initialise Thermal Sensor")
+                    bp.set_sensor_type(self.thermal, bp.SENSOR_TYPE.NONE)
+            if self.config['thermal'] == SensorStatus.ENABLED:
+                self.get_thermal_sensor() #do one read
+                if self.config['thermal'] < SensorStatus.DISABLED:
+                    self.log("STARTING THERMAL SENSOR THREAD")
+                    self.__start_thermal_infrared_thread() #thread is started
+                else:
+                    bp.set_sensor_type(self.thermal, bp.SENSOR_TYPE.NONE)
+
         bp.set_motor_limits(self.mediummotor, 100, 600) #set power / speed limit 
         self.Configured = True #there is a 4 second delay - before robot is Configured
         return
@@ -180,7 +179,7 @@ class BrickPiInterface():
             time.sleep(0.1) #restabalise the sensor
             self.config['imu'] = SensorStatus.ENABLED
         except Exception as error:
-            self.log("IMU RECONFIG HAS FAILED" + str(error))
+            self.log("IMU RECONFIG HAS FAILED " + str(error))
             self.config['imu'] = SensorStatus.DISABLED
         finally:
             ifMutexRelease(USEMUTEX)
@@ -594,13 +593,8 @@ class BrickPiInterface():
 if __name__ == '__main__':
     logging.basicConfig(filename='logs/robot.log', level=logging.INFO)
     ROBOT = BrickPiInterface(timelimit=20)  #20 second timelimit before
-    bp = ROBOT.BP; bp.reset_all(); time.sleep(2)
-    motorports = {'rightmotor':bp.PORT_D, 'leftmotor':bp.PORT_A, 'mediummotor':bp.PORT_B }
-    sensorports = { 'thermal':bp.PORT_3,'colour':bp.PORT_2,'ultra':bp.PORT_1,'imu':1 }
-    ROBOT.configure_sensors(motorports, sensorports) #This takes 4 seconds
-    ROBOT.reconfig_IMU()
-    ROBOT.calibrate_imu()
-    input("Press any key to test: ")
+    bp = ROBOT.BP; bp.reset_all(); time.sleep(2) #this will halt previou program is still running
+    ROBOT.configure_sensors() #This takes 4 seconds
     ROBOT.rotate_power_heading_IMU(25,0)
     print(ROBOT.get_all_sensors())
     ROBOT.safe_exit()
