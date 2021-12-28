@@ -47,7 +47,6 @@ def robotload():
     if not CAMERA:
         log("LOADING CAMERA")
         CAMERA = camerainterface.Camera()
-        time.sleep(1)
     global ROBOT
     if not ROBOT: 
         log("LOADING THE ROBOT")
@@ -55,6 +54,7 @@ def robotload():
         ROBOT.configure_sensors() #defaults have been provided but you can 
         ROBOT.reconfig_IMU()
     sensordict = ROBOT.get_all_sensors()
+    sensordict['cameracolour'] = CAMERA.colourdetect()
     return jsonify(sensordict)
 
 # YOUR FLASK CODE------------------------------------------------------------------------
@@ -99,10 +99,10 @@ def robotdashboard():
 # -----------------------------------------------------------------------------------
 # CAMERA CODE-----------------------------------------------------------------------
 # Continually gets the frame from the pi camera
-def gen(cam):
+def videostream():
     """Video streaming generator function."""
     while True:
-        frame = cam.get_frame()
+        frame = CAMERA.get_frame()
         if frame:
             yield (b'--frame\r\n'
                     b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n') 
@@ -114,7 +114,7 @@ def videofeed():
     global CAMERA
     if CAMERA:
         """Video streaming route. Put this in the src attribute of an img tag."""
-        return Response(gen(CAMERA), mimetype='multipart/x-mixed-replace; boundary=frame') 
+        return Response(videostream(), mimetype='multipart/x-mixed-replace; boundary=frame') 
     else:
         return '', 204
         
@@ -127,6 +127,7 @@ def shutdowneverything():
         ROBOT.safe_exit(); ROBOT = None
     global CAMERA
     if CAMERA:
+        CAMERA.exit_thread()
         CAMERA = None
     return
 
@@ -134,7 +135,7 @@ def shutdowneverything():
 @app.route('/reconfig_IMU', methods=['GET','POST'])
 def reconfig_IMU():
     if ROBOT:
-        ROBOT.calibrate_imu()
+        ROBOT.reconfig_IMU()
         sensorconfig = ROBOT.get_all_sensors()
         return jsonify(sensorconfig)
     return jsonify({'message':'ROBOT not loaded'})

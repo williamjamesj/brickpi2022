@@ -4,29 +4,32 @@ import time
 import io
 import threading
 import picamera
+import cv2
+import numpy
+import logging
 
 class Camera(object):
 
-    thread = None  # background thread that reads frames from camera
-    frame = None  # current frame is stored here by background thread
-    last_access = 0  # time of last client access to the camera
+    def __init__(self):
+        self.frame = None  # current frame is stored here by background thread
+        self.thread_running = True
+        self.thread = threading.Thread(target=self.__thread)
+        self.thread.start()
+        self.logger=logging.getLogger()
+        return
 
-    def initialize(self):
-        if Camera.thread is None:
-            # start background frame thread
-            Camera.thread = threading.Thread(target=self._thread)
-            Camera.thread.start()
-
-            # wait until frames start to be available
-            while self.frame is None:
-                time.sleep(0)
+    def log(self, message):
+        self.logger.info(message)
+        return
 
     def get_frame(self):
-        Camera.last_access = time.time()
-        self.initialize()
         return self.frame
 
-    def _thread(cls):
+    def exit_thread(self):
+        self.thread_running == False
+        return
+
+    def __thread(self):
         with picamera.PiCamera() as camera:
             # camera setup
             camera.resolution = (320, 240)
@@ -36,20 +39,43 @@ class Camera(object):
             # let camera warm up
             camera.start_preview()
             time.sleep(2)
+            self.log("CAMERA INTERFACE: Started Camera Thread")
 
             stream = io.BytesIO()
             for foo in camera.capture_continuous(stream, 'jpeg',
                                                  use_video_port=True):
+                if self.thread_running == False:
+                    self.log("CAMERA INTERFACE: Exiting Camera Thread")
+                    break
+
                 # store frame
                 stream.seek(0)
-                cls.frame = stream.read()
+                self.frame = stream.read()
 
                 # reset stream for next frame
                 stream.seek(0)
                 stream.truncate()
 
-                # if there hasn't been any clients asking for frames in
-                # the last 10 seconds stop the thread
-                if time.time() - cls.last_access > 10:
-                    break
-        cls.thread = None
+        self.thread_running = False
+        self.thread = None
+        return
+    
+    #detect if there is a colour in the image
+    def colourdetect(self):
+        print(type(self.frame))
+        self.log("CAMERA INTERFACE: Detect colour")
+        img = cv2.imdecode(numpy.fromstring(self.frame, dtype=numpy.uint8), 1)
+        
+        # set red range
+        lowcolor = (0,0,255)
+        highcolor = (128,128,255)
+
+        # threshold
+        thresh = cv2.inRange(img, lowcolor, highcolor)
+
+        # Method 1: count number of white pixels and test if zero
+        totalpixels = numpy.sum(thresh)
+        count = numpy.sum(numpy.nonzero(thresh))
+        if float(count/totalpixels) > 0.25: #more than quarter pixels are red
+            return "red"
+        return "no colour"

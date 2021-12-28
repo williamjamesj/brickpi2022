@@ -70,7 +70,7 @@ class BrickPiInterface():
             if self.ultra:
                 try:
                     bp.set_sensor_type(self.ultra, bp.SENSOR_TYPE.EV3_ULTRASONIC_CM)
-                    time.sleep(1)
+                    time.sleep(1.2)
                     self.config['ultra'] = SensorStatus.ENABLED
                 except Exception as error:
                     self.log("Cannot initialise Ultra Sonic Sensor")
@@ -132,7 +132,7 @@ class BrickPiInterface():
     def get_battery(self):
         return self.BP.get_voltage_battery()
 
-    #self.log out a complete output from the IMU sensor
+    #You need to calibrate the IMU for the compass to work!!!!
     def calibrate_imu(self, timelimit=20):
         if self.config['imu'] >= SensorStatus.DISABLED or not self.Configured:
             return
@@ -143,8 +143,6 @@ class BrickPiInterface():
         elapsed = 0; start = time.time()
         timelimit = start + timelimit #maximum of 20 seconds to calibrate compass sensor
 
-        self.BP.set_motor_power(self.rightmotor, 30)
-        self.BP.set_motor_power(self.leftmotor, -30)
         while self.imu_status != 3 and time.time() < timelimit:
             newtime = time.time()
             newelapsed = int(newtime - start)
@@ -595,6 +593,7 @@ if __name__ == '__main__':
     ROBOT = BrickPiInterface(timelimit=20)  #20 second timelimit before
     bp = ROBOT.BP; bp.reset_all(); time.sleep(2) #this will halt previou program is still running
     ROBOT.configure_sensors() #This takes 4 seconds
-    ROBOT.rotate_power_heading_IMU(25,0)
+    #input("Press enter to start: ")
+    #ROBOT.rotate_power_heading_IMU(25,0)
     print(ROBOT.get_all_sensors())
     ROBOT.safe_exit()
