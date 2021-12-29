@@ -61,21 +61,20 @@ class Camera(object):
         return
     
     #detect if there is a colour in the image
-    def colourdetect(self):
-        print(type(self.frame))
-        self.log("CAMERA INTERFACE: Detect colour")
+    def get_camera_colour(self):
         img = cv2.imdecode(numpy.fromstring(self.frame, dtype=numpy.uint8), 1)
-        
+        self.log(img)
         # set red range
-        lowcolor = (0,0,255)
+        lowcolor = (50,50,150)
         highcolor = (128,128,255)
 
         # threshold
         thresh = cv2.inRange(img, lowcolor, highcolor)
 
-        # Method 1: count number of white pixels and test if zero
-        totalpixels = numpy.sum(thresh)
+        cv2.imwrite("threshold.jpg", thresh)
+
         count = numpy.sum(numpy.nonzero(thresh))
-        if float(count/totalpixels) > 0.25: #more than quarter pixels are red
+        self.log("RED PIXELS: " + str(count))
+        if count > 300: #more than quarter of total pixels are red
             return "red"
         return "no colour"

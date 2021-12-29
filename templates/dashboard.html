@@ -12,6 +12,9 @@
     <div class="row" id="dashboard">
         <button id="shutdown" type="button" class="btn btn-danger" onclick="shutdown_robot();">Shutdown Robot</button>
         <button id="reconfig" type="button" class="btn btn-warning" onclick="new_ajax_helper('/reconfig_IMU');">Reconfigure IMU</button>
+        <button id="search" type="button" class="btn btn-primary" onclick="new_ajax_helper('/search');">Search</button>
+        <button id="stop" type="button" class="btn btn-success" onclick="new_ajax_helper('/stop');">Stop</button>
+        <button id="sensors" type="button" class="btn btn-info" onclick="new_ajax_helper('/sensors');">Sensors</button>
         <div id="videobox">
             <div id="videofeed"></div>
         </div>

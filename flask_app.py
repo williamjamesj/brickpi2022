@@ -1,7 +1,7 @@
 from flask import Flask, render_template, session, request, redirect, flash, url_for, jsonify, Response, logging
 from interfaces import databaseinterface, camerainterface
 import robot #robot is class that extends the brickpi class
-from global_vars import *
+import global_vars as G #load global variables
 import logging, time
 
 #Creates the Flask Server Object
@@ -9,7 +9,7 @@ app = Flask(__name__); app.debug = True
 SECRET_KEY = 'my random key can be anything' #this is used for encrypting sessions
 app.config.from_object(__name__) #Set app configuration using above SETTINGS
 logging.basicConfig(filename='logs/flask.log', level=logging.INFO)
-DATABASE = databaseinterface.Database('databases/RobotDatabase.db', app.logger)
+G.DATABASE = databaseinterface.Database('databases/RobotDatabase.db', app.logger)
 
 #Log messages
 def log(message):
@@ -24,7 +24,7 @@ def login():
     message = ""
     if request.method == "POST":
         email = request.form.get("email")
-        userdetails = DATABASE.ViewQuery("SELECT * FROM users WHERE email = ?", (email,))
+        userdetails = G.DATABASE.ViewQuery("SELECT * FROM users WHERE email = ?", (email,))
         log(userdetails)
         if userdetails:
             user = userdetails[0] #get first row in results
@@ -39,22 +39,20 @@ def login():
             message = "Login Unsuccessful"
     return render_template('login.html', data = message)    
 
-# Load the ROBOT
+# Load the G.ROBOT
 @app.route('/robotload', methods=['GET','POST'])
 def robotload():
     sensordict = None
-    global CAMERA
-    if not CAMERA:
+    if not G.CAMERA:
         log("LOADING CAMERA")
-        CAMERA = camerainterface.Camera()
-    global ROBOT
-    if not ROBOT: 
+        G.CAMERA = camerainterface.Camera()
+    if not G.ROBOT: 
         log("LOADING THE ROBOT")
-        ROBOT = robot.Robot(20, app.logger)
-        ROBOT.configure_sensors() #defaults have been provided but you can 
-        ROBOT.reconfig_IMU()
-    sensordict = ROBOT.get_all_sensors()
-    sensordict['cameracolour'] = CAMERA.colourdetect()
+        G.ROBOT = robot.Robot(20, app.logger)
+        G.ROBOT.configure_sensors() #defaults have been provided but you can 
+        G.ROBOT.reconfig_IMU()
+        colorpixels = G.CAMERA.get_camera_colour()
+    sensordict = G.ROBOT.get_all_sensors()
     return jsonify(sensordict)
 
 # YOUR FLASK CODE------------------------------------------------------------------------
@@ -64,13 +62,31 @@ def robotload():
 def robotdashboard():
     if not 'userid' in session:
         return redirect('/')
-    enabled = int(ROBOT != None)
+    enabled = int(G.ROBOT != None)
     return render_template('dashboard.html', robot_enabled = enabled )
 
+# search button
+@app.route('/search', methods=['GET','POST'])
+def search():
+    data = None
+    if G.ROBOT:
+        G.ROBOT.rotate_power_time(15,2)
+        data = G.ROBOT.rotate_power_untilobjectdetected(13)
+    return jsonify(data)
 
+@app.route('/sensors', methods=['GET','POST'])
+def sensors():
+    data = None
+    if G.ROBOT:
+        data = G.ROBOT.get_all_sensors()
+    return jsonify(data)
 
-
-
+@app.route('/stop', methods=['GET','POST'])
+def stop():
+    data = None
+    if G.ROBOT:
+        G.ROBOT.stop_all()
+    return jsonify(data)
 
 
 
@@ -97,12 +113,12 @@ def robotdashboard():
 
 
 # -----------------------------------------------------------------------------------
-# CAMERA CODE-----------------------------------------------------------------------
+# G.CAMERA CODE-----------------------------------------------------------------------
 # Continually gets the frame from the pi camera
 def videostream():
     """Video streaming generator function."""
     while True:
-        frame = CAMERA.get_frame()
+        frame = G.CAMERA.get_frame()
         if frame:
             yield (b'--frame\r\n'
                     b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n') 
@@ -110,9 +126,8 @@ def videostream():
 #embeds the videofeed by returning a continual stream as above
 @app.route('/videofeed')
 def videofeed():
-    log("READING CAMERA")
-    global CAMERA
-    if CAMERA:
+    log("READING G.CAMERA")
+    if G.CAMERA:
         """Video streaming route. Put this in the src attribute of an img tag."""
         return Response(videostream(), mimetype='multipart/x-mixed-replace; boundary=frame') 
     else:
@@ -122,23 +137,21 @@ def videofeed():
 #Shutdown the robot, camera and database
 def shutdowneverything():
     log("SHUT DOWN EVERYTHING")
-    global ROBOT
-    if ROBOT:
-        ROBOT.safe_exit(); ROBOT = None
-    global CAMERA
-    if CAMERA:
-        CAMERA.exit_thread()
-        CAMERA = None
+    if G.ROBOT:
+        G.ROBOT.safe_exit(); G.ROBOT = None
+    if G.CAMERA:
+        G.CAMERA.exit_thread()
+        G.CAMERA = None
     return
 
 #Used for reconfiguring IMU
 @app.route('/reconfig_IMU', methods=['GET','POST'])
 def reconfig_IMU():
-    if ROBOT:
-        ROBOT.reconfig_IMU()
-        sensorconfig = ROBOT.get_all_sensors()
+    if G.ROBOT:
+        G.ROBOT.reconfig_IMU()
+        sensorconfig = G.ROBOT.get_all_sensors()
         return jsonify(sensorconfig)
-    return jsonify({'message':'ROBOT not loaded'})
+    return jsonify({'message':'G.ROBOT not loaded'})
 
 #Ajax handler for shutdown button
 @app.route('/robotshutdown', methods=['GET','POST'])
@@ -147,11 +160,12 @@ def robotshutdown():
     return jsonify({'message':'robot shutdown'})
 
 #Shut down the web server if necessary
-@app.route('/shutdown')
+@app.route('/shutdown', methods=['GET','POST'])
 def shutdown():
     shutdowneverything()
-    func = request.environ.get('werkzeug.server.shutdown'); func()
-    return jsonify({'message':'shutdown web server'})
+    func = request.environ.get('werkzeug.server.shutdown')
+    func()
+    return jsonify({'message':'Shutting Down'})
 
 @app.route('/logout')
 def logout():

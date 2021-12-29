@@ -43,8 +43,15 @@ if (robot_enabled == 1) {
     hide_dashboard();
 }
 
+//print a message to the screen
 function printmessage(results)
 {
     document.getElementById("message").innerText = results.message;
 }
 
+//shutdown the application
+function shutdown()
+{
+    alert("shutdown");
+    new_ajax_helper('/shutdown');
+}

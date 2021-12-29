@@ -593,7 +593,7 @@ if __name__ == '__main__':
     ROBOT = BrickPiInterface(timelimit=20)  #20 second timelimit before
     bp = ROBOT.BP; bp.reset_all(); time.sleep(2) #this will halt previou program is still running
     ROBOT.configure_sensors() #This takes 4 seconds
-    #input("Press enter to start: ")
+    input("Press enter to start: ")
     #ROBOT.rotate_power_heading_IMU(25,0)
     print(ROBOT.get_all_sensors())
     ROBOT.safe_exit()
