@@ -8,8 +8,8 @@ class Robot(BrickPiInterface):
     
     def __init__(self, timelimit=10, logger=logging.getLogger()):
         super().__init__(timelimit, logger)
-        self.CurrentCommand = "stop"
-        self.CurrentRoutine = "stop"
+        self.CurrentCommand = "stop" #use this to stop or start functions
+        self.CurrentRoutine = "stop" #use this stop or start routines
         return
         
     #Create a function to move time and power which will stop if colour is detected or an object has been found

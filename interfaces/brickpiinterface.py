@@ -163,10 +163,11 @@ class BrickPiInterface():
         if self.imu_status == 3:
             self.log("IMU Compass Sensor has been calibrated")
             self.Calibrated = True
-            return True
+            return "IMU Compass Sensor has been calibrated"
         else:
-            self.log("Calibration unsuccessful")
-            return 
+            self.Calibrated = False
+            self.log("Calibration unsuccessful. Please rotate in 3 dimensions")
+            return "Calibration unsuccessful. Please rotate in 3 dimensions"
         return
 
     #hopefully this is an emergency reconfigure of the IMU Sensor

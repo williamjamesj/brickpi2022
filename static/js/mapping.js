@@ -6,7 +6,8 @@ var alpha = 0;
 
 function load_map()
 {
-    var brd = JXG.JSXGraph.initBoard('box',{boundingbox: [-300, 300, 300, -300]});
+   var width = screen.width * 0.45;
+    var brd = JXG.JSXGraph.initBoard('box',{ boundingbox: [-width, 300, width, -300], keepaspectratio:true });
     turtle = brd.create('turtle',[0, 0], {strokeOpacity:0.5});
     turtle.setPenSize(3);
     turtle.right(90);

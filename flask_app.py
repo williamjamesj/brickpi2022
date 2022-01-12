@@ -80,12 +80,15 @@ def sensors():
         data = GLOBALS.ROBOT.get_all_sensors()
     return jsonify(data)
 
-@app.route('/stop', methods=['GET','POST'])
-def stop():
-    data = None
+#calibrates the compass but takes about 10 seconds, rotate in a small 360 degrees rotation
+@app.route('/compass', methods=['GET','POST'])
+def compass():
+    data = {}
     if GLOBALS.ROBOT:
-        GLOBALS.ROBOT.stop_all()
+        data['message'] = GLOBALS.ROBOT.calibrate_imu(10)
     return jsonify(data)
+
+
 
 
 
