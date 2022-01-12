@@ -7,7 +7,7 @@ import sqlite3
 import logging
 import sys
 
-class Database:
+class DatabaseInterface:
 
     def __init__(self, location="", log = logging.getLogger(__name__)):
         self.location = location

@@ -606,6 +606,6 @@ if __name__ == '__main__':
     ROBOT.configure_sensors() #This takes 4 seconds
     input("Press enter to start: ")
     ROBOT.spin_medium_motor(300)
-    #ROBOT.rotate_power_heading_IMU(25,0)
+    ROBOT.rotate_power_degrees_IMU(17,90)
     print(ROBOT.get_all_sensors())
     ROBOT.safe_exit()

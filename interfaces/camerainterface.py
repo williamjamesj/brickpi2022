@@ -8,7 +8,7 @@ import cv2
 import numpy
 import logging
 
-class Camera(object):
+class CameraInterface(object):
 
     def __init__(self, logger=logging.getLogger()):
         self.frame = None  # current frame is stored here by background thread
