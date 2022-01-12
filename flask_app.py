@@ -1,7 +1,7 @@
 from flask import Flask, render_template, session, request, redirect, flash, url_for, jsonify, Response, logging
 from interfaces import databaseinterface, camerainterface
 import robot #robot is class that extends the brickpi class
-import global_vars as G #load global variables
+import global_vars as GLOBALS #load global variables
 import logging, time
 
 #Creates the Flask Server Object
@@ -9,7 +9,7 @@ app = Flask(__name__); app.debug = True
 SECRET_KEY = 'my random key can be anything' #this is used for encrypting sessions
 app.config.from_object(__name__) #Set app configuration using above SETTINGS
 logging.basicConfig(filename='logs/flask.log', level=logging.INFO)
-G.DATABASE = databaseinterface.Database('databases/RobotDatabase.db', app.logger)
+GLOBALS.DATABASE = databaseinterface.Database('databases/RobotDatabase.db', app.logger)
 
 #Log messages
 def log(message):
@@ -24,7 +24,7 @@ def login():
     message = ""
     if request.method == "POST":
         email = request.form.get("email")
-        userdetails = G.DATABASE.ViewQuery("SELECT * FROM users WHERE email = ?", (email,))
+        userdetails = GLOBALS.DATABASE.ViewQuery("SELECT * FROM users WHERE email = ?", (email,))
         log(userdetails)
         if userdetails:
             user = userdetails[0] #get first row in results
@@ -43,16 +43,15 @@ def login():
 @app.route('/robotload', methods=['GET','POST'])
 def robotload():
     sensordict = None
-    if not G.CAMERA:
+    if not GLOBALS.CAMERA:
         log("LOADING CAMERA")
-        G.CAMERA = camerainterface.Camera()
-    if not G.ROBOT: 
+        GLOBALS.CAMERA = camerainterface.Camera()
+    if not GLOBALS.ROBOT: 
         log("LOADING THE ROBOT")
-        G.ROBOT = robot.Robot(20, app.logger)
-        G.ROBOT.configure_sensors() #defaults have been provided but you can 
-        G.ROBOT.reconfig_IMU()
-        colorpixels = G.CAMERA.get_camera_colour()
-    sensordict = G.ROBOT.get_all_sensors()
+        GLOBALS.ROBOT = robot.Robot(20, app.logger)
+        GLOBALS.ROBOT.configure_sensors() #defaults have been provided but you can 
+        GLOBALS.ROBOT.reconfig_IMU()
+    sensordict = GLOBALS.ROBOT.get_all_sensors()
     return jsonify(sensordict)
 
 # YOUR FLASK CODE------------------------------------------------------------------------
@@ -62,30 +61,30 @@ def robotload():
 def robotdashboard():
     if not 'userid' in session:
         return redirect('/')
-    enabled = int(G.ROBOT != None)
+    enabled = int(GLOBALS.ROBOT != None)
     return render_template('dashboard.html', robot_enabled = enabled )
 
 # search button
 @app.route('/search', methods=['GET','POST'])
 def search():
     data = None
-    if G.ROBOT:
-        G.ROBOT.rotate_power_time(15,2)
-        data = G.ROBOT.rotate_power_untilobjectdetected(13)
+    if GLOBALS.ROBOT:
+        GLOBALS.ROBOT.rotate_power_time(16,2)
+        data = GLOBALS.ROBOT.rotate_power_untilobjectdetected(16)
     return jsonify(data)
 
 @app.route('/sensors', methods=['GET','POST'])
 def sensors():
     data = None
-    if G.ROBOT:
-        data = G.ROBOT.get_all_sensors()
+    if GLOBALS.ROBOT:
+        data = GLOBALS.ROBOT.get_all_sensors()
     return jsonify(data)
 
 @app.route('/stop', methods=['GET','POST'])
 def stop():
     data = None
-    if G.ROBOT:
-        G.ROBOT.stop_all()
+    if GLOBALS.ROBOT:
+        GLOBALS.ROBOT.stop_all()
     return jsonify(data)
 
 
@@ -118,16 +117,21 @@ def stop():
 def videostream():
     """Video streaming generator function."""
     while True:
-        frame = G.CAMERA.get_frame()
-        if frame:
-            yield (b'--frame\r\n'
-                    b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n') 
+        if GLOBALS.CAMERA:
+            frame = GLOBALS.CAMERA.get_frame()
+            if frame:
+                yield (b'--frame\r\n'
+                        b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n') 
+            else:
+                return '', 204
+        else:
+            return '', 204 
 
 #embeds the videofeed by returning a continual stream as above
 @app.route('/videofeed')
 def videofeed():
-    log("READING G.CAMERA")
-    if G.CAMERA:
+    log("READING CAMERA")
+    if GLOBALS.CAMERA:
         """Video streaming route. Put this in the src attribute of an img tag."""
         return Response(videostream(), mimetype='multipart/x-mixed-replace; boundary=frame') 
     else:
@@ -137,19 +141,20 @@ def videofeed():
 #Shutdown the robot, camera and database
 def shutdowneverything():
     log("SHUT DOWN EVERYTHING")
-    if G.ROBOT:
-        G.ROBOT.safe_exit(); G.ROBOT = None
-    if G.CAMERA:
-        G.CAMERA.exit_thread()
-        G.CAMERA = None
+    if GLOBALS.ROBOT:
+        GLOBALS.ROBOT.safe_exit(); GLOBALS.ROBOT = None
+    if GLOBALS.CAMERA:
+        log("TRY TO EXIT CAMERA THREAD")
+        GLOBALS.CAMERA.exit_thread()
+        #GLOBALS.CAMERA = None
     return
 
 #Used for reconfiguring IMU
 @app.route('/reconfig_IMU', methods=['GET','POST'])
 def reconfig_IMU():
-    if G.ROBOT:
-        G.ROBOT.reconfig_IMU()
-        sensorconfig = G.ROBOT.get_all_sensors()
+    if GLOBALS.ROBOT:
+        GLOBALS.ROBOT.reconfig_IMU()
+        sensorconfig = GLOBALS.ROBOT.get_all_sensors()
         return jsonify(sensorconfig)
     return jsonify({'message':'G.ROBOT not loaded'})
 

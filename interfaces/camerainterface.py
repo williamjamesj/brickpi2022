@@ -10,12 +10,12 @@ import logging
 
 class Camera(object):
 
-    def __init__(self):
+    def __init__(self, logger=logging.getLogger()):
         self.frame = None  # current frame is stored here by background thread
         self.thread_running = True
         self.thread = threading.Thread(target=self.__thread)
         self.thread.start()
-        self.logger=logging.getLogger()
+        self.logger=logger
         return
 
     def log(self, message):
@@ -45,7 +45,7 @@ class Camera(object):
             for foo in camera.capture_continuous(stream, 'jpeg',
                                                  use_video_port=True):
                 if self.thread_running == False:
-                    self.log("CAMERA INTERFACE: Exiting Camera Thread")
+                    self.log("Should end thread but not working")
                     break
 
                 # store frame
@@ -56,14 +56,18 @@ class Camera(object):
                 stream.seek(0)
                 stream.truncate()
 
+            camera.stop_preview()
+            camera.close()
+
         self.thread_running = False
         self.thread = None
         return
     
     #detect if there is a colour in the image
     def get_camera_colour(self):
+        if not self.frame: #hasnt read a frame from camera
+            return "camera is not running yet"
         img = cv2.imdecode(numpy.fromstring(self.frame, dtype=numpy.uint8), 1)
-        self.log(img)
         # set red range
         lowcolor = (50,50,150)
         highcolor = (128,128,255)

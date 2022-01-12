@@ -540,11 +540,21 @@ class BrickPiInterface():
         self.logger.info(message)
         return
 
+    #rotate left motor but does not stop, use stop_all() to stop motor
+    def set_left_motor_power(self, power):
+        self.BP.set_motor_power(self.leftmotor, power)
+        return
+
+    #rotate right motor but does not stop, use stop_all() to stop motor
+    def set_right_motor_power(self, power):
+        self.BP.set_motor_power(self.rightmotor, power)
+        return    
+
     #stop all motors and set current command to stop
     def stop_all(self):
+        self.CurrentCommand = "stop"
         bp = self.BP
         bp.set_motor_power(self.largemotors+self.mediummotor, 0)
-        self.CurrentCommand = "stop"
         return
         
     #returns the current command
@@ -594,6 +604,7 @@ if __name__ == '__main__':
     bp = ROBOT.BP; bp.reset_all(); time.sleep(2) #this will halt previou program is still running
     ROBOT.configure_sensors() #This takes 4 seconds
     input("Press enter to start: ")
+    ROBOT.spin_medium_motor(300)
     #ROBOT.rotate_power_heading_IMU(25,0)
     print(ROBOT.get_all_sensors())
     ROBOT.safe_exit()
