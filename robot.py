@@ -12,42 +12,18 @@ class Robot(BrickPiInterface):
         self.CurrentRoutine = "stop" #use this stop or start routines
         return
         
-    #Create a function to move time and power which will stop if colour is detected or an object has been found
+        
+    #Create a function to move time and power which will stop if colour is detected or wall has been found
+    
+    
     
 
+    #Create a function to search for victim
+    
 
-
-
-    #Create a function to rotate time and power until and object has been detected
-    def rotate_power_untilobjectdetected(self, power):
-        self.interrupt_previous_command()
-        self.CurrentCommand = "rotate_power_untilobjectdetected"
-        self.log("ROBOT: " + self.CurrentCommand)
-        starttime = time.time(); timelimit = starttime + self.timelimit
-        data = { 'starttime': starttime, 'command': self.CurrentCommand }
-        found = False
-        self.set_right_motor_power(-power)
-        self.set_left_motor_power(power)
-        while time.time() < timelimit and self.CurrentCommand == "rotate_power_untilobjectdetected":
-            #detected an object
-            distance = self.get_ultra_sensor()
-            self.log("Ultra: " + str(distance))
-            if distance < 50 and distance != 0:
-                self.stop_all()
-                data['endtime'] = time.time()
-                found = True
-                break
-        self.stop_all()
-        
-        if found:
-            data['distance'] = distance
-            data['thermal'] = self.get_thermal_sensor()
-            if GLOBALS.CAMERA:
-                data['cameracolour'] = GLOBALS.CAMERA.get_camera_colour()
-                if data['cameracolour'] == 'red':
-                    self.spin_medium_motor(-1200)
-        return data
-
+    
+    
+    
     #Create a routine that will effective search the maze and keep track of where the robot has been.
 
 
