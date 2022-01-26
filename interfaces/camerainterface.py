@@ -80,6 +80,6 @@ class CameraInterface(object):
 
         count = numpy.sum(numpy.nonzero(thresh))
         self.log("RED PIXELS: " + str(count))
-        if count > 300: #more than quarter of total pixels are red
+        if count > 300: #more than 300 pixels are between the low and high color
             return "red"
         return "no colour"
