@@ -46,6 +46,7 @@ def robotload():
     if not GLOBALS.CAMERA:
         log("LOADING CAMERA")
         GLOBALS.CAMERA = camerainterface.CameraInterface()
+        GLOBALS.CAMERA.start()
     if not GLOBALS.ROBOT: 
         log("LOADING THE ROBOT")
         GLOBALS.ROBOT = robot.Robot(20, app.logger)
@@ -160,14 +161,11 @@ def videofeed():
 #Shutdown the robot, camera and database
 def shutdowneverything():
     log("SHUT DOWN EVERYTHING")
-    if GLOBALS.ROBOT:
-        GLOBALS.ROBOT.safe_exit(); GLOBALS.ROBOT = None
     if GLOBALS.CAMERA:
-        log("TRY TO EXIT CAMERA THREAD")
-        GLOBALS.CAMERA.exit_thread()
-        GLOBALS.CAMERA = None
-    if GLOBALS.SOUND:
-        GLOBALS.SOUND = None
+        GLOBALS.CAMERA.stop()
+    if GLOBALS.ROBOT:
+        GLOBALS.ROBOT.safe_exit()
+    GLOBALS.CAMERA = None; GLOBALS.ROBOT = None; GLOBALS.SOUND = None
     return
 
 #Ajax handler for shutdown button

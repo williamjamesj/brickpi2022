@@ -4,20 +4,33 @@ import time
 import io
 import threading
 import picamera
+import picamera.array
 import cv2
 import numpy
 import logging
 
 class CameraInterface(object):
 
-    def __init__(self, logger=logging.getLogger()):
+    def __init__(self, logger=logging.getLogger(), resolution = (320,240), framerate=32):
         self.frame = None  # current frame is stored here by background thread
-        self.thread_running = True
-        self.thread = threading.Thread(target=self.__thread)
-        self.thread.start()
         self.logger=logger
+        self.camera = picamera.PiCamera()
+        self.camera.resolution = resolution
+        self.camera.framerate = framerate
+        self.camera.hflip = True; self.camera.vflip = True #not sure what this does
+        self.rawCapture = io.BytesIO()
+        self.stream = None
+        self.thread = None
+        self.stopped = False
         return
 
+    def start(self):
+        self.thread = threading.Thread(target=self.update, args=())
+        self.thread.daemon = True
+        self.thread.start()
+        self.log("CAMERA INTERFACE: Started Camera Thread")
+        return
+        
     def log(self, message):
         self.logger.info(message)
         return
@@ -25,42 +38,30 @@ class CameraInterface(object):
     def get_frame(self):
         return self.frame
 
-    def exit_thread(self):
-        self.thread_running == False
+    def stop(self):
+        self.stopped = True
         return
 
-    def __thread(self):
-        with picamera.PiCamera() as camera:
-            # camera setup
-            camera.resolution = (320, 240)
-            camera.hflip = True
-            camera.vflip = True
+    # Thread reads frames from the stream
+    def update(self):
+        self.camera.start_preview()
+        time.sleep(2)
+        self.stream = self.camera.capture_continuous(self.rawCapture, 'jpeg', use_video_port=True)
+        for f in self.stream:
+            self.rawCapture.seek(0)
+            self.frame = self.rawCapture.read()
+            self.rawCapture.truncate(0)
+            self.rawCapture.seek(0)
 
-            # let camera warm up
-            camera.start_preview()
-            time.sleep(2)
-            self.log("CAMERA INTERFACE: Started Camera Thread")
-
-            stream = io.BytesIO()
-            for foo in camera.capture_continuous(stream, 'jpeg',
-                                                 use_video_port=True):
-                if self.thread_running == False:
-                    self.log("Should end thread but not working")
-                    break
-
-                # store frame
-                stream.seek(0)
-                self.frame = stream.read()
-
-                # reset stream for next frame
-                stream.seek(0)
-                stream.truncate()
-
-            camera.stop_preview()
-            camera.close()
-
-        self.thread_running = False
-        self.thread = None
+            # stop the thread
+            if self.stopped:
+                self.camera.stop_preview()
+                time.sleep(2)
+                self.rawCapture.close()
+                self.stream.close()
+                self.camera.close()
+                self.log("CAMERA INTERFACE: Exiting Camera Thread")
+                return
         return
     
     #detect if there is a colour in the image
