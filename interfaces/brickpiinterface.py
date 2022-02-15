@@ -35,14 +35,14 @@ class BrickPiInterface():
         return
 
     #------------------- Initialise Ports ---------------------------
-    # motorports = {'rightmotor':bp.PORT_D,'leftmotor':bp.PORT_A,'mediummotor':bp.PORT_B }
+    # motorports = {'rightmotor':bp.PORT_A,'leftmotor':bp.PORT_D,'mediummotor':bp.PORT_B }
     # sensorports = { 'thermal':bp.PORT_3,'colour':bp.PORT_2,'ultra':bp.PORT_1,'imu':1 }
     # if some ports do not exist, set as disabled
     # this will take 3-4 seconds to initialise
     def configure_sensors(self, motorports=None, sensorports=None):
         bp = self.BP
         if motorports == None:
-            motorports = {'rightmotor':bp.PORT_D, 'leftmotor':bp.PORT_A, 'mediummotor':bp.PORT_B }
+            motorports = {'rightmotor':bp.PORT_A, 'leftmotor':bp.PORT_D, 'mediummotor':bp.PORT_B }
         if sensorports == None:
             sensorports = { 'thermal':bp.PORT_3,'colour':bp.PORT_2,'ultra':bp.PORT_1,'imu':1 }
         self.thread_running = False #end thread if its still running
@@ -601,7 +601,7 @@ class BrickPiInterface():
 # Only execute if this is the main file, good for testing code
 if __name__ == '__main__':
     logging.basicConfig(filename='logs/robot.log', level=logging.INFO)
-    ROBOT = BrickPiInterface(timelimit=20)  #20 second timelimit before
+    ROBOT = BrickPiInterface(timelimit=10)  #20 second timelimit before
     bp = ROBOT.BP; bp.reset_all(); time.sleep(2) #this will halt previou program is still running
     ROBOT.configure_sensors() #This takes 4 seconds
     input("Press enter to start: ")

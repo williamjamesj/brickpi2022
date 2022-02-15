@@ -45,15 +45,20 @@ def robotload():
     sensordict = None
     if not GLOBALS.CAMERA:
         log("LOADING CAMERA")
-        GLOBALS.CAMERA = camerainterface.CameraInterface()
-        GLOBALS.CAMERA.start()
+        try:
+            GLOBALS.CAMERA = camerainterface.CameraInterface()
+        except Exception as error:
+            log("FLASK APP: CAMERA NOT WORKING")
+            GLOBALS.CAMERA = None
+        if GLOBALS.CAMERA:
+            GLOBALS.CAMERA.start()
     if not GLOBALS.ROBOT: 
-        log("LOADING THE ROBOT")
+        log("FLASK APP: LOADING THE ROBOT")
         GLOBALS.ROBOT = robot.Robot(20, app.logger)
         GLOBALS.ROBOT.configure_sensors() #defaults have been provided but you can 
         GLOBALS.ROBOT.reconfig_IMU()
     if not GLOBALS.SOUND:
-        log("LOADING THE SOUND")
+        log("FLASK APP: LOADING THE SOUND")
         GLOBALS.SOUND = soundinterface.SoundInterface()
         GLOBALS.SOUND.say("I am ready")
     sensordict = GLOBALS.ROBOT.get_all_sensors()
@@ -150,8 +155,8 @@ def videostream():
 #embeds the videofeed by returning a continual stream as above
 @app.route('/videofeed')
 def videofeed():
-    log("READING CAMERA")
     if GLOBALS.CAMERA:
+        log("FLASK APP: READING CAMERA")
         """Video streaming route. Put this in the src attribute of an img tag."""
         return Response(videostream(), mimetype='multipart/x-mixed-replace; boundary=frame') 
     else:
@@ -160,7 +165,7 @@ def videofeed():
 #----------------------------------------------------------------------------
 #Shutdown the robot, camera and database
 def shutdowneverything():
-    log("SHUT DOWN EVERYTHING")
+    log("FLASK APP: SHUTDOWN EVERYTHING")
     if GLOBALS.CAMERA:
         GLOBALS.CAMERA.stop()
     if GLOBALS.ROBOT:
