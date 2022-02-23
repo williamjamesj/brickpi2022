@@ -99,8 +99,34 @@ def sensors():
 
 # YOUR FLASK CODE------------------------------------------------------------------------
 
+@app.route("/shoot", methods=["GET","POST"])
+def shoot():
+    data = {}
+    if GLOBALS.SOUND:
+        GLOBALS.SOUND.say("OwOwOwO")
+    if GLOBALS.ROBOT:
+        GLOBALS.ROBOT.spin_medium_motor(2000)
+    return jsonify(data)
 
+@app.route("/moveforward", methods=["GET","POST"])
+def moveforward():
+    data = {}
+    if GLOBALS.ROBOT:
+        GLOBALS.ROBOT.move_power_time(30,3,-3)
+    return jsonify(data)
 
+@app.route("/sensorview", methods=["GET","POST"])
+def sensorview():
+    data = None
+    return render_template("sensorview.html",data=data)
+
+@app.route("/mission", methods=["GET","POST"])
+def mission():
+    # If formdata
+        # Get form data
+        # save data to database
+    data = None
+    return render_template("mission.html",data=data)
 
 
 
