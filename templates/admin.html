@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Users</h1>
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>User ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Hashed Password</th>
+            <th>Permission</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for user in users %}
+        <tr>
+            <th>{{user["userid"]}}</th>
+            <th>{{user["name"]}}</th>
+            <th>{{user["email"]}}</th>
+            <th>{{user["password"]}}</th>
+            <th>{{user["permission"]}}</th>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<a href = "/createuser" class="btn btn-primary">Create User</a>
+{% endblock %}
