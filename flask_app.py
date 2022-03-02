@@ -68,7 +68,6 @@ def robotload():
     if not GLOBALS.SOUND:
         log("FLASK APP: LOADING THE SOUND")
         GLOBALS.SOUND = soundinterface.SoundInterface()
-        GLOBALS.SOUND.say("I am ready")
     sensordict = GLOBALS.ROBOT.get_all_sensors()
     return jsonify(sensordict)
 
@@ -108,17 +107,25 @@ def sensors():
 # YOUR FLASK CODE------------------------------------------------------------------------
 
 @app.route("/finecontrol", methods=["GET","POST"])
-def finecontrol(power,direction,action):
+def finecontrol():
     if request.method == "POST":
-        print(power,direction,action)
+        data = request.get_json()
+        if data["action"] == "move":
+            print("moving",data["power"], data["time"])
+            GLOBALS.ROBOT.move_power_time(data["power"], data["time"])
+        elif data["action"] == "turn":
+            print("turning",data["power"], data["degrees"])
+            GLOBALS.ROBOT.rotate_power_degrees_IMU(data["power"], data["time"])
+        elif data["action"].split(" ")[0] == "say":
+            print(" ".join(data["action"].split(" ")[1:]))
+            GLOBALS.SOUND.say(" ".join(data["action"].split(" ")[1:]))
         return jsonify({})
+
     return render_template("finecontrol.html")
 
 @app.route("/shoot", methods=["GET","POST"])
 def shoot():
     data = {}
-    if GLOBALS.SOUND:
-        GLOBALS.SOUND.say("OwOwOwO")
     if GLOBALS.ROBOT:
         GLOBALS.ROBOT.spin_medium_motor(-2000)
     return jsonify(data)
@@ -164,11 +171,6 @@ def mission():
         # save data to database
     data = None
     return render_template("mission.html",data=data)
-
-
-
-
-
 
 @app.route("/admin", methods=["GET","POST"]) # Allows administrators to view users.
 def admin():
@@ -252,6 +254,8 @@ def twofactor():
             session['name'] = user['name']
             session["email"] = user["email"]
             return redirect('/dashboard')
+        else:
+            flash("Code invalid.", "warning")
     return render_template("2fa.html")
 
 
