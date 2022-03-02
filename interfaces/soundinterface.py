@@ -1,7 +1,9 @@
 #you will need to install speake3
-import speake3
 import pygame
-
+try:
+    import speake3
+except:
+    print("speake3 library not found.")
 class SoundInterface():
     
     def __init__(self):
