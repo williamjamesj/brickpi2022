@@ -1,5 +1,5 @@
-pygame
-flask
+# pygame
+# flask
 passlib
 pyotp
-Flask-QRcode
+# Flask-QRcode

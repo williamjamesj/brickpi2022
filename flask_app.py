@@ -5,7 +5,6 @@ import global_vars as GLOBALS #load global variables
 import logging, time
 from passlib.hash import sha256_crypt
 import pyotp
-from flask_qrcode import QRcode
 
 #Creates the Flask Server Object
 app = Flask(__name__); app.debug = True
@@ -13,7 +12,7 @@ SECRET_KEY = 'my random key can be anything' #this is used for encrypting sessio
 app.config.from_object(__name__) #Set app configuration using above SETTINGS
 logging.basicConfig(filename='logs/flask.log', level=logging.INFO)
 GLOBALS.DATABASE = databaseinterface.DatabaseInterface('databases/RobotDatabase.db', app.logger)
-qrcode = QRcode(app)
+# qrcode = QRcode(app)
 
 #Log messages
 def log(message):
@@ -108,20 +107,49 @@ def sensors():
 
 # YOUR FLASK CODE------------------------------------------------------------------------
 
+@app.route("/finecontrol", methods=["GET","POST"])
+def finecontrol(power,direction,action):
+    if request.method == "POST":
+        print(power,direction,action)
+        return jsonify({})
+    return render_template("finecontrol.html")
+
 @app.route("/shoot", methods=["GET","POST"])
 def shoot():
     data = {}
     if GLOBALS.SOUND:
         GLOBALS.SOUND.say("OwOwOwO")
     if GLOBALS.ROBOT:
-        GLOBALS.ROBOT.spin_medium_motor(2000)
+        GLOBALS.ROBOT.spin_medium_motor(-2000)
     return jsonify(data)
 
 @app.route("/moveforward", methods=["GET","POST"])
 def moveforward():
     data = {}
     if GLOBALS.ROBOT:
-        GLOBALS.ROBOT.move_power_time(30,3,-3)
+        GLOBALS.ROBOT.move_power_time(50,10)
+    return jsonify(data)
+
+@app.route("/moveright", methods=["GET","POST"])
+def moveright():
+    data = {}
+    if GLOBALS.ROBOT:
+        data = GLOBALS.ROBOT.rotate_power_degrees_IMU(50,-10)
+    return jsonify(data)
+
+
+@app.route("/moveleft", methods=["GET","POST"])
+def moveleft():
+    data = {}
+    if GLOBALS.ROBOT:
+        data = GLOBALS.ROBOT.rotate_power_degrees_IMU(50,10)
+    return jsonify(data)
+
+@app.route("/stop", methods=["GET","POST"])
+def stop():
+    data = {}
+    if GLOBALS.ROBOT:
+        data = GLOBALS.ROBOT.stop_all()
     return jsonify(data)
 
 @app.route("/sensorview", methods=["GET","POST"])

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+<form id="thing">
+    <label for="power">Power</label>
+    <input type="number" id="power" name="power">
+    <label for="direction">Direction</label>
+    <input type="number" id="direction" name="direction">
+    <label for="action">Action</label>
+    <input type="text" id="action" name="action">
+</form>
+<button onclick="send_data();">Go</button>
+{% endblock %}
+{% block scripts %}
+<script>
+    function send_data() {
+        power = document.getElementById("power").value
+        direction = document.getElementById("direction").value
+        action = document.getElementById("action").value
+        new_ajax_helper("/finecontrol");
+    }
+</script>
+{% endblock %}

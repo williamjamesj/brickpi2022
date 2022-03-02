@@ -329,3 +329,1004 @@ WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 243-935-259
 INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
 INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:28:02] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:28:02] "[37mGET /static/css/theme.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:28:02] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:28:02] "[37mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:28:02] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:28:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:flask_app:[{'name': 'admin', 'email': 'admin@admin', 'password': '$5$rounds=535000$4p8BZvDhUDpqifz3$Q8U2lglJeKWMcHMe3h3tUhF8n4jVQgM1yYfG68FYQo3', 'OTPcode': 'CYEOWR23YK5PURCRBRWTRP4UIC3QUH4I', 'userid': 1, 'permission': 'admin'}]
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:28:08] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:28:09] "[37mGET /2fa HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:28:47] "[32mPOST /2fa HTTP/1.1[0m" 302 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:28:48] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:28:48] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:28:48] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:29:02] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:29:02] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:30:13] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:30:21] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:30:21] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:flask_app:0.0
+INFO:flask_app:0.0015945285558700562
+INFO:flask_app:-0.12239779531955719
+INFO:flask_app:-0.4806271940469742
+INFO:flask_app:-2.12653286755085
+INFO:flask_app:-4.036475732922554
+INFO:flask_app:-6.6227899342775345
+INFO:flask_app:-9.258430793881416
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:30:25] "[37mPOST /moveright HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.0016875267028808594
+INFO:flask_app:2.1278858184814453e-05
+INFO:flask_app:-0.0008007436990737915
+INFO:flask_app:8.852779865264893e-05
+INFO:flask_app:0.07728138566017151
+INFO:flask_app:0.2949185073375702
+INFO:flask_app:0.7312684506177902
+INFO:flask_app:1.8113135546445847
+INFO:flask_app:3.5779719799757004
+INFO:flask_app:5.780424430966377
+INFO:flask_app:8.263459295034409
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:30:29] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:0.0026218146085739136
+INFO:flask_app:0.005170583724975586
+INFO:flask_app:0.008541643619537354
+INFO:flask_app:0.0046569108963012695
+INFO:flask_app:-0.01722097396850586
+INFO:flask_app:-0.20191368460655212
+INFO:flask_app:-0.9824284613132477
+INFO:flask_app:-3.2926190197467804
+INFO:flask_app:-5.678191810846329
+INFO:flask_app:-9.20269563794136
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:30:31] "[37mPOST /moveright HTTP/1.1[0m" 200 -
+INFO:flask_app:0.0009501874446868896
+INFO:flask_app:0.002215251326560974
+INFO:flask_app:0.002215251326560974
+INFO:flask_app:0.04362453520298004
+INFO:flask_app:0.37752267718315125
+INFO:flask_app:1.4517292827367783
+INFO:flask_app:3.4350336641073227
+INFO:flask_app:6.104140982031822
+INFO:flask_app:9.329242929816246
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:30:33] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:31:34] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:31:34] "[37mPOST /stop HTTP/1.1[0m" 200 -
+INFO:flask_app:0.0
+INFO:flask_app:0.0011932700872421265
+INFO:flask_app:0.006089270114898682
+INFO:flask_app:-0.06154412031173706
+INFO:flask_app:-0.6052865386009216
+INFO:flask_app:-1.5687485933303833
+INFO:flask_app:-3.874849498271942
+INFO:flask_app:-6.154986798763275
+INFO:flask_app:-8.798486441373825
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:31:44] "[37mPOST /moveright HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.014333054423332214
+INFO:flask_app:-0.038286253809928894
+INFO:flask_app:-0.054974958300590515
+INFO:flask_app:-0.0508575439453125
+INFO:flask_app:-0.049193382263183594
+INFO:flask_app:-0.062130093574523926
+INFO:flask_app:-0.3073084354400635
+INFO:flask_app:-0.9156403243541718
+INFO:flask_app:-1.841272383928299
+INFO:flask_app:-3.385944738984108
+INFO:flask_app:-5.382749438285828
+INFO:flask_app:-7.648989304900169
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:31:44] "[37mPOST /moveright HTTP/1.1[0m" 200 -
+INFO:flask_app:0.02683393657207489
+INFO:flask_app:0.046505510807037354
+INFO:flask_app:-0.04373005032539368
+INFO:flask_app:-0.4458203762769699
+INFO:flask_app:-3.966073662042618
+INFO:flask_app:-9.291226416826248
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:31:45] "[37mPOST /moveright HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:31:49] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.007875367999076843
+INFO:flask_app:-0.0027924329042434692
+INFO:flask_app:-0.0027924329042434692
+INFO:flask_app:0.04741127789020538
+INFO:flask_app:0.34912796318531036
+INFO:flask_app:1.4420245438814163
+INFO:flask_app:1.9284834265708923
+INFO:flask_app:3.1268095821142197
+INFO:flask_app:4.2628453373909
+INFO:flask_app:IMU GYRO: [Errno 5] Input/output error
+INFO:flask_app:IMU GYRO: [Errno 5] Input/output error
+INFO:flask_app:14.160898268222809
+INFO:flask_app:25.82776068150997
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:31:50] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:31:50] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:IMU GYRO: [Errno 5] Input/output error
+INFO:flask_app:32.650689125061035
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:31:52] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:IMU GYRO: [Errno 5] Input/output error
+INFO:flask_app:12.935564517974854
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:31:53] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.001976028084754944
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:31:53] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:31:54] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:IMU GYRO: [Errno 5] Input/output error
+INFO:flask_app:14.801706075668335
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:31:55] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.0012734830379486084
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:31:55] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:0.0
+INFO:flask_app:IMU GYRO: 'int' object is not iterable
+INFO:flask_app:6.15743350982666
+INFO:flask_app:IMU GYRO: [Errno 5] Input/output error
+INFO:flask_app:13.040601968765259
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:31:57] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:IMU GYRO: [Errno 5] Input/output error
+INFO:flask_app:5.218289136886597
+INFO:flask_app:IMU GYRO: [Errno 5] Input/output error
+INFO:flask_app:8.405377864837646
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:31:57] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:32:00] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:32:09] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:32:10] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:32:11] "[37mPOST /moveright HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:32:12] "[37mPOST /moveright HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:32:14] "[37mPOST /stop HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:32:14] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:32:17] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:32:39] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:32:45] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:32:45] "[37mPOST /stop HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:32:45] "[37mPOST /stop HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:34:03] "[37mPOST /shoot HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:34:09] "[37mPOST /shoot HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: SHUTDOWN EVERYTHING
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:34:12] "[37mPOST /robotshutdown HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:34:12] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:34:21] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:34:21] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:34:21] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:34:28] "[37mPOST /shoot HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:42:24] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:flask_app:0.0038857460021972656
+INFO:flask_app:-0.0010050386190414429
+INFO:flask_app:0.014317885041236877
+INFO:flask_app:0.4469289630651474
+INFO:flask_app:2.096494421362877
+INFO:flask_app:5.212920561432838
+INFO:flask_app:9.009717658162117
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:42:25] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:0.0009365081787109375
+INFO:flask_app:0.0018462389707565308
+INFO:flask_app:0.0018462389707565308
+INFO:flask_app:0.007626056671142578
+INFO:flask_app:0.05284568667411804
+INFO:flask_app:0.5222479104995728
+INFO:flask_app:1.4895892143249512
+INFO:flask_app:2.9214866161346436
+INFO:flask_app:4.830455541610718
+INFO:flask_app:7.0242480635643005
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:42:27] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:42:32] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:flask_app:0.0008372217416763306
+INFO:flask_app:0.003339990973472595
+INFO:flask_app:0.005727425217628479
+INFO:flask_app:-0.0027365535497665405
+INFO:flask_app:0.1448010504245758
+INFO:flask_app:1.7567953169345856
+INFO:flask_app:4.244913846254349
+INFO:flask_app:7.169317841529846
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:42:33] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:42:44] "[37mPOST /stop HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:42:44] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:flask_app:0.0015351027250289917
+INFO:flask_app:0.0015351027250289917
+INFO:flask_app:-0.005214318633079529
+INFO:flask_app:0.016251400113105774
+INFO:flask_app:1.1342658549547195
+INFO:flask_app:3.1968659460544586
+INFO:flask_app:5.438623785972595
+INFO:flask_app:8.178290858864784
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:42:46] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.029687225818634033
+INFO:flask_app:-0.03911089897155762
+INFO:flask_app:-0.024080932140350342
+INFO:flask_app:-0.030994713306427002
+INFO:flask_app:0.0591396689414978
+INFO:flask_app:0.35441774129867554
+INFO:flask_app:1.1903576850891113
+INFO:flask_app:2.2802785336971283
+INFO:flask_app:3.975050002336502
+INFO:flask_app:5.80235093832016
+INFO:flask_app:8.282138288021088
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:42:47] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:0.015954673290252686
+INFO:flask_app:0.014926806092262268
+INFO:flask_app:-0.02284473180770874
+INFO:flask_app:0.07160858809947968
+INFO:flask_app:0.4602632075548172
+INFO:flask_app:1.367585450410843
+INFO:flask_app:2.3569609075784683
+INFO:flask_app:3.987613096833229
+INFO:flask_app:5.907463923096657
+INFO:flask_app:8.496756747364998
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:42:47] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.0778903216123581
+INFO:flask_app:-0.09490256011486053
+INFO:flask_app:-0.061249181628227234
+INFO:flask_app:-0.06216652691364288
+INFO:flask_app:-0.007696881890296936
+INFO:flask_app:0.24791334569454193
+INFO:flask_app:0.5948822647333145
+INFO:flask_app:1.6043541580438614
+INFO:flask_app:2.742521971464157
+INFO:flask_app:4.499237447977066
+INFO:flask_app:6.602089315652847
+INFO:flask_app:8.814319968223572
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:42:48] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.005768910050392151
+INFO:flask_app:-0.03807087242603302
+INFO:flask_app:-0.034013450145721436
+INFO:flask_app:0.16083119809627533
+INFO:flask_app:1.2952580899000168
+INFO:flask_app:3.1751997768878937
+INFO:flask_app:4.860500365495682
+INFO:flask_app:6.787915259599686
+INFO:flask_app:9.048785120248795
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:42:48] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.08769607543945312
+INFO:flask_app:-0.10496145486831665
+INFO:flask_app:-0.08507519960403442
+INFO:flask_app:-0.02201467752456665
+INFO:flask_app:0.004127472639083862
+INFO:flask_app:0.26356741786003113
+INFO:flask_app:0.9061978757381439
+INFO:flask_app:1.842579334974289
+INFO:flask_app:3.1626571118831635
+INFO:flask_app:4.710046321153641
+INFO:flask_app:6.72090519964695
+INFO:flask_app:8.8327097594738
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:42:49] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:42:55] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.0018554329872131348
+INFO:flask_app:0.013772621750831604
+INFO:flask_app:0.009033679962158203
+INFO:flask_app:0.00015556812286376953
+INFO:flask_app:0.017359256744384766
+INFO:flask_app:0.24420809745788574
+INFO:flask_app:0.7479750514030457
+INFO:flask_app:1.7809158563613892
+INFO:flask_app:3.305595636367798
+INFO:flask_app:5.2046939432621
+INFO:flask_app:7.15501743555069
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:42:55] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:0.028701886534690857
+INFO:flask_app:0.03782081604003906
+INFO:flask_app:0.047771915793418884
+INFO:flask_app:0.5441313236951828
+INFO:flask_app:1.660452887415886
+INFO:flask_app:4.362056598067284
+INFO:flask_app:7.418654382228851
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:42:56] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:0.021698027849197388
+INFO:flask_app:0.02854672074317932
+INFO:flask_app:0.018633604049682617
+INFO:flask_app:0.011544346809387207
+INFO:flask_app:0.011544346809387207
+INFO:flask_app:0.1602063626050949
+INFO:flask_app:0.5567204058170319
+INFO:flask_app:1.411597490310669
+INFO:flask_app:2.5083417296409607
+INFO:flask_app:4.171695068478584
+INFO:flask_app:6.020314395427704
+INFO:flask_app:8.185487657785416
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:42:56] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:43:08] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.003372699022293091
+INFO:flask_app:-0.003372699022293091
+INFO:flask_app:-0.018151402473449707
+INFO:flask_app:-0.05547201633453369
+INFO:flask_app:-0.221655935049057
+INFO:flask_app:-0.46821458637714386
+INFO:flask_app:-1.0214852839708328
+INFO:flask_app:-2.1310185939073563
+INFO:flask_app:-4.054672524333
+INFO:flask_app:-5.9349367171525955
+INFO:flask_app:-8.359593108296394
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:43:10] "[37mPOST /moveright HTTP/1.1[0m" 200 -
+INFO:flask_app:0.0018860697746276855
+INFO:flask_app:0.0018860697746276855
+INFO:flask_app:0.0009711235761642456
+INFO:flask_app:-0.0007326751947402954
+INFO:flask_app:0.019948139786720276
+INFO:flask_app:0.27950066328048706
+INFO:flask_app:0.9937230944633484
+INFO:flask_app:2.0352904200553894
+INFO:flask_app:3.5397564321756363
+INFO:flask_app:5.402149274945259
+INFO:flask_app:7.493335589766502
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:43:11] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.0008550882339477539
+INFO:flask_app:-0.0016756653785705566
+INFO:flask_app:-0.0007654428482055664
+INFO:flask_app:0.007126018404960632
+INFO:flask_app:0.1343749463558197
+INFO:flask_app:0.36847546696662903
+INFO:flask_app:0.8264184147119522
+INFO:flask_app:1.6491643488407135
+INFO:flask_app:3.156299188733101
+INFO:flask_app:4.779997423291206
+INFO:flask_app:6.725465014576912
+INFO:flask_app:8.894156575202942
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:43:13] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:2.4774398803710938
+INFO:flask_app:4.707617282867432
+INFO:flask_app:6.920130133628845
+INFO:flask_app:9.045520603656769
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:43:13] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:43:18] "[37mPOST /stop HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:43:18] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:flask_app:IMU GYRO: 'int' object is not iterable
+INFO:flask_app:IMU GYRO: [Errno 5] Input/output error
+INFO:flask_app:7.0696635246276855
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:43:22] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:25.697972059249878
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:43:22] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:0.0009273290634155273
+INFO:flask_app:0.0009273290634155273
+INFO:flask_app:-1.1652708053588867e-05
+INFO:flask_app:0.013300210237503052
+INFO:flask_app:0.1280342936515808
+INFO:flask_app:0.5134929865598679
+INFO:flask_app:1.2019758075475693
+INFO:flask_app:2.3771795481443405
+INFO:flask_app:3.8739996552467346
+INFO:flask_app:5.894505470991135
+INFO:flask_app:7.877095937728882
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:43:23] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.08823108673095703
+INFO:flask_app:-0.11269459128379822
+INFO:flask_app:-0.14036649465560913
+INFO:flask_app:-0.18594200909137726
+INFO:flask_app:-0.06874744594097137
+INFO:flask_app:-0.18188394606113434
+INFO:flask_app:-0.5369939506053925
+INFO:flask_app:-1.124899461865425
+INFO:flask_app:-2.33900149166584
+INFO:flask_app:-4.327551424503326
+INFO:flask_app:-6.337118208408356
+INFO:flask_app:-8.5603466629982
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:43:24] "[37mPOST /moveright HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.0021663308143615723
+INFO:flask_app:-0.00030517578125
+INFO:flask_app:-0.0011284947395324707
+INFO:flask_app:-0.005435526371002197
+INFO:flask_app:-0.051336705684661865
+INFO:flask_app:-0.20276540517807007
+INFO:flask_app:-0.48799097537994385
+INFO:flask_app:-1.3287432491779327
+INFO:flask_app:-2.5212128460407257
+INFO:flask_app:-4.473975971341133
+INFO:flask_app:-6.451052725315094
+INFO:flask_app:-8.590614557266235
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:43:27] "[37mPOST /moveright HTTP/1.1[0m" 200 -
+INFO:flask_app:0.0
+INFO:flask_app:-0.0015545189380645752
+INFO:flask_app:0.0006382614374160767
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:43:28] "[37mPOST /moveright HTTP/1.1[0m" 200 -
+INFO:flask_app:0.0008708834648132324
+INFO:flask_app:-0.0009219944477081299
+INFO:flask_app:0.003992259502410889
+INFO:flask_app:0.008882001042366028
+INFO:flask_app:-0.012546375393867493
+INFO:flask_app:-0.16211462020874023
+INFO:flask_app:-0.484552264213562
+INFO:flask_app:-1.0777570009231567
+INFO:flask_app:-2.4516040682792664
+INFO:flask_app:-3.7466824650764465
+INFO:flask_app:-5.604199483990669
+INFO:flask_app:-7.77084881067276
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:43:28] "[37mPOST /moveright HTTP/1.1[0m" 200 -
+INFO:flask_app:0.3109671175479889
+INFO:flask_app:0.8628129959106445
+INFO:flask_app:1.0944478213787079
+INFO:flask_app:0.9634141325950623
+INFO:flask_app:0.524854987859726
+INFO:flask_app:-0.12724140286445618
+INFO:flask_app:-2.6519400477409363
+INFO:flask_app:-7.206322073936462
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:43:29] "[37mPOST /moveright HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.021929383277893066
+INFO:flask_app:-0.06131637096405029
+INFO:flask_app:-0.045085251331329346
+INFO:flask_app:0.02121061086654663
+INFO:flask_app:0.012164860963821411
+INFO:flask_app:-0.06650316715240479
+INFO:flask_app:-0.25059807300567627
+INFO:flask_app:-0.8678940683603287
+INFO:flask_app:-1.8595566600561142
+INFO:flask_app:-3.3222131580114365
+INFO:flask_app:-5.385125368833542
+INFO:flask_app:-7.458811491727829
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:43:29] "[37mPOST /moveright HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.0035262107849121094
+INFO:flask_app:-0.0035262107849121094
+INFO:flask_app:-0.0035262107849121094
+INFO:flask_app:-0.0035262107849121094
+INFO:flask_app:-0.0052976906299591064
+INFO:flask_app:-0.10784336924552917
+INFO:flask_app:-0.29107916355133057
+INFO:flask_app:-0.9705641567707062
+INFO:flask_app:-1.9009976536035538
+INFO:flask_app:-3.0596506744623184
+INFO:flask_app:-4.959369912743568
+INFO:flask_app:-7.0634191781282425
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:43:30] "[37mPOST /moveright HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:43:34] "[37mPOST /stop HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:43:34] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:flask_app:0.03534889221191406
+INFO:flask_app:0.016331076622009277
+INFO:flask_app:-0.005501732230186462
+INFO:flask_app:0.029091432690620422
+INFO:flask_app:0.05430285632610321
+INFO:flask_app:0.1527404636144638
+INFO:flask_app:0.2846261113882065
+INFO:flask_app:0.8217258304357529
+INFO:flask_app:1.3932977467775345
+INFO:flask_app:2.1577459424734116
+INFO:flask_app:3.031150385737419
+INFO:flask_app:4.9021439999341965
+INFO:flask_app:6.729235589504242
+INFO:flask_app:8.751531437039375
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:44:01] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:0.0
+INFO:flask_app:-0.002162456512451172
+INFO:flask_app:0.00045055150985717773
+INFO:flask_app:0.009489327669143677
+INFO:flask_app:0.06501011550426483
+INFO:flask_app:0.13554488122463226
+INFO:flask_app:0.3166875094175339
+INFO:flask_app:0.7942339926958084
+INFO:flask_app:1.781640186905861
+INFO:flask_app:2.9666261076927185
+INFO:flask_app:4.742477238178253
+INFO:flask_app:7.0309500098228455
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:44:08] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:0.0009233653545379639
+INFO:flask_app:0.006118714809417725
+INFO:flask_app:0.03325824439525604
+INFO:flask_app:0.09158529341220856
+INFO:flask_app:0.22050423920154572
+INFO:flask_app:0.4279558062553406
+INFO:flask_app:0.9758100509643555
+INFO:flask_app:1.7624090164899826
+INFO:flask_app:3.0384023636579514
+INFO:flask_app:4.591324493288994
+INFO:flask_app:6.845275178551674
+INFO:flask_app:8.93508793413639
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:44:09] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:44:15] "[37mPOST /shoot HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:44:18] "[37mPOST /stop HTTP/1.1[0m" 200 -
+INFO:flask_app:0.0018425285816192627
+INFO:flask_app:0.0018425285816192627
+INFO:flask_app:0.0037768781185150146
+INFO:flask_app:0.005428791046142578
+INFO:flask_app:-0.04467499256134033
+INFO:flask_app:-0.23602168262004852
+INFO:flask_app:-0.41749726235866547
+INFO:flask_app:-0.6511725932359695
+INFO:flask_app:-1.0160102397203445
+INFO:flask_app:-1.209680512547493
+INFO:flask_app:-1.4907380640506744
+INFO:flask_app:-1.9185583740472794
+INFO:flask_app:-2.347862645983696
+INFO:flask_app:-2.7836111038923264
+INFO:flask_app:-2.9982251077890396
+INFO:flask_app:-3.250141128897667
+INFO:flask_app:-3.5766550451517105
+INFO:flask_app:-3.90961517393589
+INFO:flask_app:-4.2134823352098465
+INFO:flask_app:-4.533412888646126
+INFO:flask_app:-4.921367600560188
+INFO:flask_app:-5.186014905571938
+INFO:flask_app:-5.455275401473045
+INFO:flask_app:-5.934539794921875
+INFO:flask_app:-6.485869526863098
+INFO:flask_app:-7.323084115982056
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:44:38] "[37mPOST /moveright HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:44:49] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.000822901725769043
+INFO:flask_app:-0.0017131716012954712
+INFO:flask_app:-0.0017131716012954712
+INFO:flask_app:-0.0017131716012954712
+INFO:flask_app:0.006053313612937927
+INFO:flask_app:0.0319087952375412
+INFO:flask_app:0.34067879617214203
+INFO:flask_app:0.960464134812355
+INFO:flask_app:2.030852258205414
+INFO:flask_app:3.3065271824598312
+INFO:flask_app:5.097164109349251
+INFO:flask_app:7.038958266377449
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:44:52] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:0.22314167022705078
+INFO:flask_app:0.11889755725860596
+INFO:flask_app:0.14665721356868744
+INFO:flask_app:0.2846830189228058
+INFO:flask_app:0.6483515352010727
+INFO:flask_app:1.3560772985219955
+INFO:flask_app:3.3065577000379562
+INFO:flask_app:5.409117713570595
+INFO:flask_app:8.275077477097511
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:44:53] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:3.3596420288085938
+INFO:flask_app:6.190238982439041
+INFO:flask_app:9.863949805498123
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:44:53] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:2.3171375691890717
+INFO:flask_app:3.679611384868622
+INFO:flask_app:4.185522645711899
+INFO:flask_app:4.458942711353302
+INFO:flask_app:4.636762335896492
+INFO:flask_app:5.047228828072548
+INFO:flask_app:6.197910264134407
+INFO:flask_app:7.347609952092171
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:44:53] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:0.651465654373169
+INFO:flask_app:0.8579111099243164
+INFO:flask_app:0.9895504713058472
+INFO:flask_app:1.0155154317617416
+INFO:flask_app:0.7688169330358505
+INFO:flask_app:0.4488465040922165
+INFO:flask_app:0.9466799944639206
+INFO:flask_app:1.682363584637642
+INFO:flask_app:3.0570841878652573
+INFO:flask_app:4.705888345837593
+INFO:flask_app:6.785490989685059
+INFO:flask_app:9.201410248875618
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:44:53] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:1.044689267873764
+INFO:flask_app:1.4850134402513504
+INFO:flask_app:1.7219972759485245
+INFO:flask_app:1.4808250963687897
+INFO:flask_app:1.4964217394590378
+INFO:flask_app:1.9180859178304672
+INFO:flask_app:2.3527663201093674
+INFO:flask_app:3.4112301021814346
+INFO:flask_app:4.615508064627647
+INFO:flask_app:6.144328981637955
+INFO:flask_app:7.680228918790817
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:44:53] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:5.944892168045044
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:44:54] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.1291266828775406
+INFO:flask_app:-0.4552627354860306
+INFO:flask_app:-0.6410315781831741
+INFO:flask_app:-0.546980544924736
+INFO:flask_app:-0.33397142589092255
+INFO:flask_app:0.4081515520811081
+INFO:flask_app:2.4594262689352036
+INFO:flask_app:8.913859084248543
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:44:54] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.053878962993621826
+INFO:flask_app:-0.32446780800819397
+INFO:flask_app:-0.7187295854091644
+INFO:flask_app:-0.641315221786499
+INFO:flask_app:-0.49699896574020386
+INFO:flask_app:-0.26285940408706665
+INFO:flask_app:0.3748149275779724
+INFO:flask_app:1.3025512248277664
+INFO:flask_app:2.4557526856660843
+INFO:flask_app:4.293114215135574
+INFO:flask_app:6.674890071153641
+INFO:flask_app:8.777627497911453
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:44:54] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:2.3082463145256042
+INFO:flask_app:4.188429087400436
+INFO:flask_app:6.201970100402832
+INFO:flask_app:7.957340091466904
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:44:54] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:0.03235556185245514
+INFO:flask_app:-0.016901865601539612
+INFO:flask_app:-0.0056321024894714355
+INFO:flask_app:0.08075067400932312
+INFO:flask_app:0.1512509286403656
+INFO:flask_app:0.2516801655292511
+INFO:flask_app:0.7038730680942535
+INFO:flask_app:2.007207304239273
+INFO:flask_app:3.4287677109241486
+INFO:flask_app:5.4068873077631
+INFO:flask_app:7.940035864710808
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:44:55] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.1318366825580597
+INFO:flask_app:-0.2630022168159485
+INFO:flask_app:-0.5411299169063568
+INFO:flask_app:-0.7147903293371201
+INFO:flask_app:0.045212432742118835
+INFO:flask_app:2.0942889600992203
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:44:55] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:0.010045617818832397
+INFO:flask_app:0.012871503829956055
+INFO:flask_app:0.020232006907463074
+INFO:flask_app:0.030797079205513
+INFO:flask_app:0.14678306877613068
+INFO:flask_app:0.8349605202674866
+INFO:flask_app:1.7929234504699707
+INFO:flask_app:3.7971177101135254
+INFO:flask_app:5.739297568798065
+INFO:flask_app:9.1167953312397
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:44:56] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.08894801139831543
+INFO:flask_app:0.008496344089508057
+INFO:flask_app:0.10001274943351746
+INFO:flask_app:0.1990833580493927
+INFO:flask_app:0.396432101726532
+INFO:flask_app:1.2182661592960358
+INFO:flask_app:5.568245738744736
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:44:56] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:0.0008559077978134155
+INFO:flask_app:0.008922204375267029
+INFO:flask_app:-0.009539708495140076
+INFO:flask_app:-0.011634781956672668
+INFO:flask_app:0.06189124286174774
+INFO:flask_app:0.24101145565509796
+INFO:flask_app:0.8126476407051086
+INFO:flask_app:1.7701483368873596
+INFO:flask_app:3.0729910135269165
+INFO:flask_app:4.777791261672974
+INFO:flask_app:6.846322774887085
+INFO:flask_app:9.042244613170624
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:44:57] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.0009439736604690552
+INFO:flask_app:0.004189103841781616
+INFO:flask_app:-0.0007649362087249756
+INFO:flask_app:0.1397322714328766
+INFO:flask_app:0.43736959993839264
+INFO:flask_app:1.1731838881969452
+INFO:flask_app:3.8661890625953674
+INFO:flask_app:10.719870567321777
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:44:57] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:0.0042871832847595215
+INFO:flask_app:0.0012116730213165283
+INFO:flask_app:-0.0014578849077224731
+INFO:flask_app:-0.009866908192634583
+INFO:flask_app:0.19268514215946198
+INFO:flask_app:1.2013749182224274
+INFO:flask_app:2.559162899851799
+INFO:flask_app:4.815067648887634
+INFO:flask_app:7.056841045618057
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:44:58] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:0.00961574912071228
+INFO:flask_app:0.06871306896209717
+INFO:flask_app:0.10379475355148315
+INFO:flask_app:0.19083857536315918
+INFO:flask_app:0.5452023595571518
+INFO:flask_app:1.973942592740059
+INFO:flask_app:5.218153968453407
+INFO:flask_app:14.138192489743233
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:44:58] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.002427041530609131
+INFO:flask_app:-0.0015677064657211304
+INFO:flask_app:-0.005860358476638794
+INFO:flask_app:-0.010507658123970032
+INFO:flask_app:0.01990552246570587
+INFO:flask_app:0.13305719196796417
+INFO:flask_app:0.5242752581834793
+INFO:flask_app:1.2265009135007858
+INFO:flask_app:2.257966712117195
+INFO:flask_app:3.829096570611
+INFO:flask_app:5.749611049890518
+INFO:flask_app:7.883375510573387
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:44:59] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:0.002844482660293579
+INFO:flask_app:-0.001820296049118042
+INFO:flask_app:-0.07769927382469177
+INFO:flask_app:-0.0251644104719162
+INFO:flask_app:0.5952782183885574
+INFO:flask_app:2.7793350517749786
+INFO:flask_app:6.6248665899038315
+INFO:flask_app:11.25141042470932
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:45:00] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:1.9804478287696838
+INFO:flask_app:3.169106036424637
+INFO:flask_app:4.239447727799416
+INFO:flask_app:4.716520354151726
+INFO:flask_app:5.328656643629074
+INFO:flask_app:5.686009272933006
+INFO:flask_app:6.27378922700882
+INFO:flask_app:7.341013550758362
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:45:00] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:45:03] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.0029127001762390137
+INFO:flask_app:-0.0029127001762390137
+INFO:flask_app:0.00045350193977355957
+INFO:flask_app:-0.011666059494018555
+INFO:flask_app:0.6896350383758545
+INFO:flask_app:3.2416729032993317
+INFO:flask_app:6.97255577147007
+INFO:flask_app:9.395902648568153
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:45:05] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:1.361033320426941
+INFO:flask_app:2.5995612740516663
+INFO:flask_app:3.1848026514053345
+INFO:flask_app:3.5220587849617004
+INFO:flask_app:3.585487514734268
+INFO:flask_app:3.7145913541316986
+INFO:flask_app:3.9463614523410797
+INFO:flask_app:4.641329720616341
+INFO:flask_app:5.50358934700489
+INFO:flask_app:6.791197672486305
+INFO:flask_app:8.477990120649338
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:45:05] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:45:14] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.011383160948753357
+INFO:flask_app:-0.012425497174263
+INFO:flask_app:-0.0011746883392333984
+INFO:flask_app:0.04177096486091614
+INFO:flask_app:0.2765548676252365
+INFO:flask_app:0.8163750022649765
+INFO:flask_app:1.8056643456220627
+INFO:flask_app:3.802458629012108
+INFO:flask_app:5.928014189004898
+INFO:flask_app:8.805554538965225
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:45:15] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:3.658278524875641
+INFO:flask_app:5.585624530911446
+INFO:flask_app:7.636289373040199
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:45:15] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:45:28] "[37mPOST /stop HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:45:28] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 10:47:11] "[37mPOST /shoot HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 11:10:34] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 11:10:34] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 11:10:34] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 11:10:34] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 11:10:35] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 11:10:47] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 11:10:47] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 11:10:56] "[37mGET /finecontrol HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 11:11:05] "[37mPOST /finecontrol HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 11:18:14] "[33mGET /finecontrol HTTP/1.1[0m" 404 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 11:18:35] "[33mGET /finecontrol?1&1&banan HTTP/1.1[0m" 404 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 11:18:48] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 11:18:48] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 11:18:56] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 11:18:56] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 11:19:02] "[33mGET /finecontrol HTTP/1.1[0m" 404 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 11:19:11] "[33mGET /finecontrol?%3Cpower%3E&%3Cdirection%3E&%3Caction%3E HTTP/1.1[0m" 404 -
+INFO:werkzeug:10.10.73.0 - - [02/Mar/2022 11:19:38] "[33mGET /finecontrol?1&2&test HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
