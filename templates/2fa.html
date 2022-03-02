@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="mx-auto" style="width: 30%;">
+        <div class="d-flex justify-content-center">
+        <h2>Two-factor authentication</h2>
+        </div>
+        <p>Please enter your two-factor authentication code from your device.</p>
+        <form action="" method=POST>
+            <label for="2fa">Code: </label><br>
+            <input type="text" class="form-control" id="2fa" name="2fa">
+            <button class="btn btn-primary" type="submit">Log In</button>
+        </form>
+    </div>
+{% endblock %}

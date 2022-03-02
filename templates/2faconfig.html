@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+<img src="{{qrcode(url)}}">
+<p>Scan the code above with a authenticator app, such as Google Authenticator to enable two-factor authentication. Once the code has been added to your device, enter the token below and activate two-factor authentication!</p>
+<form method="POST" action="/2faconfig" class="form-group">
+    <input type="hidden" value="{{code}}" name="code">
+    <label for="2fa" class="form-label">Input Code:</label>
+    <input type="text" id="2fa" name="2fa" class="form-control">
+    <button type="submit" class="btn btn-primary">Enable 2FA</button>
+</form>
+{% endblock %}

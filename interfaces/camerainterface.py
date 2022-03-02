@@ -3,11 +3,16 @@
 import time
 import io
 import threading
-import picamera
-import picamera.array
-import cv2
+
 import numpy
 import logging
+
+try:
+    import picamera
+    import picamera.array
+    import cv2
+except Exception as E:
+    print("No camera libraries. Likely not Raspberry Pi.")
 
 class CameraInterface(object):
 

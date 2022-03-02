@@ -3,6 +3,9 @@ from interfaces import databaseinterface, camerainterface, soundinterface
 import robot #robot is class that extends the brickpi class
 import global_vars as GLOBALS #load global variables
 import logging, time
+from passlib.hash import sha256_crypt
+import pyotp
+from flask_qrcode import QRcode
 
 #Creates the Flask Server Object
 app = Flask(__name__); app.debug = True
@@ -10,6 +13,7 @@ SECRET_KEY = 'my random key can be anything' #this is used for encrypting sessio
 app.config.from_object(__name__) #Set app configuration using above SETTINGS
 logging.basicConfig(filename='logs/flask.log', level=logging.INFO)
 GLOBALS.DATABASE = databaseinterface.DatabaseInterface('databases/RobotDatabase.db', app.logger)
+qrcode = QRcode(app)
 
 #Log messages
 def log(message):
@@ -28,15 +32,20 @@ def login():
         log(userdetails)
         if userdetails:
             user = userdetails[0] #get first row in results
-            if user['password'] == request.form.get("password"):
+            correct_password = sha256_crypt.verify(request.form.get("password"), user['password'])
+            if correct_password:
+                if user["OTPcode"]:
+                    session['tempuserid'] = user['userid']
+                    return redirect("/2fa")
                 session['userid'] = user['userid']
                 session['permission'] = user['permission']
                 session['name'] = user['name']
+                session["email"] = user["email"]
                 return redirect('/dashboard')
             else:
-                message = "Login Unsuccessful"
+                flash("Login unsuccessful.", "warning")
         else:
-            message = "Login Unsuccessful"
+            flash("Login unsuccessful.", "warning")
     return render_template('login.html', data = message)    
 
 # Load the ROBOT
@@ -133,6 +142,89 @@ def mission():
 
 
 
+@app.route("/admin", methods=["GET","POST"]) # Allows administrators to view users.
+def admin():
+    if 'userid' in session:
+        if session['permission'] != 'admin':
+            return redirect('/dashboard')
+    else:
+        return redirect('/')
+    users = GLOBALS.DATABASE.ViewQuery("SELECT * FROM users")
+    return render_template("admin.html", users = users)
+
+@app.route("/createuser", methods=["GET","POST"]) # Allows the admin to create new users.
+def createuser():
+    if 'userid' in session:
+        if session['permission'] != 'admin':
+            return redirect('/dashboard')
+    else:
+        return redirect('/')
+    if request.method == "POST":
+        name = request.form.get("name")
+        email = request.form.get("email")
+        password = request.form.get("password")
+        password = sha256_crypt.hash(password)
+        permission = request.form.get("permission")
+        if permission == "on":
+            permission = "admin"
+        else:
+            permission = "user"
+        GLOBALS.DATABASE.ModifyQuery("INSERT INTO users (name, email, password, permission) VALUES (?,?,?,?)", (name, email, password, permission))
+        return redirect('/admin')
+    return render_template("createuser.html")
+
+@app.route("/accountsettings", methods=["GET","POST"])
+def accountsettings():
+    if "userid" not in session:
+        return redirect("/")
+    userdetails = GLOBALS.DATABASE.ViewQuery("SELECT * FROM users WHERE userid = ?", (session['userid'],))[0]
+    if request.method == "POST":
+        name = request.form.get("name")
+        email = request.form.get("email")
+        password = request.form.get("password")
+        oldpassword = request.form.get("oldpassword")
+        correct_password = sha256_crypt.verify(oldpassword, userdetails['password'])
+        if correct_password:
+            password = sha256_crypt.hash(password)
+            GLOBALS.DATABASE.ModifyQuery("UPDATE users SET name = ?, email = ?, password = ? WHERE userid = ?", (name, email, password, session['userid']))
+            flash("Account settings updated","success")
+            return redirect('/dashboard')
+        else:
+            flash("Incorrect password","warning")
+            return redirect('/accountsettings')
+    return render_template("accountsettings.html", userdetails = userdetails)
+
+@app.route("/2faconfig", methods=["GET","POST"])
+def twofactorconfig():
+    if "userid" not in session:
+        return redirect("/")
+    if request.method == "POST":
+        token = request.form.get("2fa")
+        code = request.form.get("code")
+        if pyotp.TOTP(code).verify(token):
+            GLOBALS.DATABASE.ModifyQuery("UPDATE users SET OTPcode = ? WHERE userid = ?", (code, session['userid']))
+            flash(message="2FA enrollment complete!", category="success")
+            return redirect('/accountsettings')
+        else:
+            flash(message="Invalid code. A new QR Code has been generated.", category="warning")
+            return redirect('/2faconfig')
+    code = pyotp.random_base32()
+    url = pyotp.totp.TOTP(code).provisioning_uri(session['email'], issuer_name="Robot Controller")
+    return render_template("2faconfig.html",url=url,code=code)
+
+@app.route("/2fa", methods=["GET","POST"])
+def twofactor():
+    if request.method == "POST":
+        user = GLOBALS.DATABASE.ViewQuery("SELECT * FROM users WHERE userid = ?", (session['tempuserid'],))[0]
+        token = request.form.get("2fa")
+        code = user['OTPcode']
+        if pyotp.TOTP(code).verify(token):
+            session["userid"] = session['tempuserid']
+            session['permission'] = user['permission']
+            session['name'] = user['name']
+            session["email"] = user["email"]
+            return redirect('/dashboard')
+    return render_template("2fa.html")
 
 
 
