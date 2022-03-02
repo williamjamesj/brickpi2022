@@ -1330,3 +1330,336 @@ INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py',
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:54:27] "[32mGET /accountsettings HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:54:27] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:54:28] "[36mGET /static/css/theme.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:54:28] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:54:28] "GET /static/js/custom.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:54:28] "GET /static/js/new_ajax_helper.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:54:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:flask_app:[{'userid': 1, 'name': 'admin', 'email': 'admin@admin', 'password': '$5$rounds=535000$4p8BZvDhUDpqifz3$Q8U2lglJeKWMcHMe3h3tUhF8n4jVQgM1yYfG68FYQo3', 'permission': 'admin', 'OTPcode': 'CYEOWR23YK5PURCRBRWTRP4UIC3QUH4I'}]
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:54:32] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:54:32] "GET /2fa HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:54:33] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:54:33] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:54:33] "[36mGET /static/css/theme.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:54:33] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:54:36] "POST /2fa HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:54:36] "[36mGET /static/css/theme.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:54:36] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:54:36] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:54:36] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:55:27] "POST /2fa HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:55:28] "[36mGET /static/css/theme.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:55:28] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:55:28] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:55:28] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:55:59] "[32mPOST /2fa HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:55:59] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:56:00] "[36mGET /static/css/theme.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:56:00] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:56:00] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:56:00] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:56:00] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:56:00] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:56:05] "GET /accountsettings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:56:05] "[36mGET /static/css/theme.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:56:06] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:56:06] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:56:06] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:56:07] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:56:07] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:56:07] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:56:10] "GET /2faconfig HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:56:10] "[36mGET /static/css/theme.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:56:10] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:56:10] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:56:10] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:56:22] "[36mGET /static/css/theme.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:56:22] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:56:31] "GET /2faconfig HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:56:31] "[36mGET /static/css/theme.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:56:31] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:56:31] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:56:31] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:57:36] "[32mPOST /2faconfig HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:57:36] "GET /accountsettings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:57:36] "[36mGET /static/css/theme.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:57:37] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:57:37] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 20:57:37] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:06:08] "[35m[1mGET /finecontrol HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:06:08] "GET /finecontrol?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:06:08] "GET /finecontrol?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:06:08] "GET /finecontrol?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:06:08] "GET /finecontrol?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:06:08] "GET /finecontrol?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:08:05] "GET /finecontrol HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:08:05] "[36mGET /static/css/theme.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:08:06] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:08:06] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:08:06] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:08:06] "GET /static/js/more_ajax.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:08:16] "[36mGET /static/css/theme.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:08:16] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:09:28] "GET /finecontrol HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:09:28] "[36mGET /static/css/theme.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:09:28] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:09:28] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:09:28] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:09:28] "GET /static/js/more_ajax.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:10:51] "GET /finecontrol HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:10:51] "[36mGET /static/css/theme.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:10:51] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:10:51] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:10:51] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:10:51] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:10:56] "POST /finecontrol HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:14:06] "GET /finecontrol HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:14:06] "[36mGET /static/css/theme.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:14:06] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:14:06] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:14:06] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:14:06] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:14:22] "POST /finecontrol HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:15:01] "GET /finecontrol HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:15:02] "[36mGET /static/css/theme.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:15:02] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:15:02] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:15:02] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:15:02] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:15:09] "POST /finecontrol HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:15:19] "[35m[1mPOST /finecontrol HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:15:39] "[35m[1mPOST /finecontrol HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:23:00] "GET /finecontrol HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:23:00] "[36mGET /static/css/theme.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:23:00] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:23:00] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:23:00] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:23:00] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:23:48] "GET /finecontrol HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:23:48] "[36mGET /static/css/theme.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:23:48] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:23:48] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:23:48] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:23:48] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:23:53] "[35m[1mPOST /finecontrol HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:24:33] "GET /finecontrol HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:24:33] "[36mGET /static/css/theme.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:24:33] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:24:33] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:24:33] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:24:33] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:24:39] "[35m[1mPOST /finecontrol HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:25:18] "GET /finecontrol HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:25:18] "[36mGET /static/css/theme.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:25:18] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:25:18] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:25:18] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:25:18] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:25:23] "POST /finecontrol HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.173:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [02/Mar/2022 21:25:57] "[35m[1mPOST /finecontrol HTTP/1.1[0m" 500 -

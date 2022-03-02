@@ -1,11 +1,20 @@
 {% extends "layout.html" %}
+{% block styles %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script> <!-- Retrieves the necessary libraries for displaying a QR Code.-->
+{% endblock %}
 {% block content %}
-<img src="{{qrcode(url)}}">
-<p>Scan the code above with a authenticator app, such as Google Authenticator to enable two-factor authentication. Once the code has been added to your device, enter the token below and activate two-factor authentication!</p>
+<div id="2faQR"></div>
+<p>Scan the QR Code above with a authenticator app, such as Google Authenticator to enable two-factor authentication. Once the token has been added to your device, enter the code below and activate two-factor authentication!</p>
+<p>The token can also be added manually using this code: <i class="text-primary">{{code}}</i></p>
 <form method="POST" action="/2faconfig" class="form-group">
     <input type="hidden" value="{{code}}" name="code">
     <label for="2fa" class="form-label">Input Code:</label>
     <input type="text" id="2fa" name="2fa" class="form-control">
     <button type="submit" class="btn btn-primary">Enable 2FA</button>
 </form>
+{% endblock %}
+{% block scripts %}
+<script>
+    new QRCode(document.getElementById("2faQR"), "{{url}}");
+</script>
 {% endblock %}
