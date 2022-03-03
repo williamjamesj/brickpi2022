@@ -63,6 +63,8 @@ def robotload():
     if not GLOBALS.ROBOT: 
         log("FLASK APP: LOADING THE ROBOT")
         GLOBALS.ROBOT = robot.Robot(20, app.logger)
+        if GLOBALS.ROBOT.BP == "Give up all hope.":
+            return jsonify(sensordict)
         GLOBALS.ROBOT.configure_sensors() #defaults have been provided but you can 
         GLOBALS.ROBOT.reconfig_IMU()
     if not GLOBALS.SOUND:
@@ -110,13 +112,13 @@ def sensors():
 def finecontrol():
     if request.method == "POST":
         data = request.get_json()
-        if data["action"] == "move":
+        if data["action"] == "move" and GLOBALS.ROBOT:
             print("moving",data["power"], data["time"])
             GLOBALS.ROBOT.move_power_time(data["power"], data["time"])
-        elif data["action"] == "turn":
+        elif data["action"] == "turn" and GLOBALS.ROBOT:
             print("turning",data["power"], data["degrees"])
             GLOBALS.ROBOT.rotate_power_degrees_IMU(data["power"], data["time"])
-        elif data["action"].split(" ")[0] == "say":
+        elif data["action"].split(" ")[0] == "say" and GLOBALS.SOUND:
             print(" ".join(data["action"].split(" ")[1:]))
             GLOBALS.SOUND.say(" ".join(data["action"].split(" ")[1:]))
         return jsonify({})
@@ -257,33 +259,6 @@ def twofactor():
         else:
             flash("Code invalid.", "warning")
     return render_template("2fa.html")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # -----------------------------------------------------------------------------------
