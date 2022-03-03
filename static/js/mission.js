@@ -10,5 +10,5 @@
 
 */
 function start_mission() {
-
+    send_data("/start_mission", {});
 }

@@ -174,6 +174,10 @@ def mission():
     data = None
     return render_template("mission.html",data=data)
 
+@app.route("/start_mission", methods=["GET","POST"])
+def start_mission():
+    
+    return jsonify({"data":"Mission Started."})
 @app.route("/admin", methods=["GET","POST"]) # Allows administrators to view users.
 def admin():
     if 'userid' in session:
