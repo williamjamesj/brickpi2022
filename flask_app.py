@@ -1,3 +1,4 @@
+import datetime
 from flask import Flask, render_template, session, request, redirect, flash, url_for, jsonify, Response, logging
 from interfaces import databaseinterface, camerainterface, soundinterface
 import robot #robot is class that extends the brickpi class
@@ -176,8 +177,18 @@ def mission():
 
 @app.route("/start_mission", methods=["GET","POST"])
 def start_mission():
-    
+    if "userid" in session:
+        GLOBALS.DATABASE.ModifyQuery("INSERT INTO missions (userid,startTime) VALUES (?,?)",(session['userid'],int(time.time())))
+        missionID = GLOBALS.DATABASE.ViewQuery("SELECT MAX(missionID) as M FROM missions")[0]["M"]
+        session["missionID"] = missionID
     return jsonify({"data":"Mission Started."})
+
+@app.route("/stop_mission", methods=["GET","POST"])
+def stop_mission():
+    if "userid" in session:
+        GLOBALS.DATABASE.ModifyQuery("UPDATE missions SET endTime=? WHERE missionID=?",(int(time.time()),session["missionID"]))
+        session.pop("missionID",None)
+    return jsonify({"data":"Mission Ended."})
 @app.route("/admin", methods=["GET","POST"]) # Allows administrators to view users.
 def admin():
     if 'userid' in session:
