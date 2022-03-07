@@ -13,12 +13,24 @@ SECRET_KEY = 'my random key can be anything' #this is used for encrypting sessio
 app.config.from_object(__name__) #Set app configuration using above SETTINGS
 logging.basicConfig(filename='logs/flask.log', level=logging.INFO)
 GLOBALS.DATABASE = databaseinterface.DatabaseInterface('databases/RobotDatabase.db', app.logger)
+EXEMPT_PATHS = ["/","/2fa","/favicon.ico"] # All of the paths that are not protected by the login.
 # qrcode = QRcode(app)
 
 #Log messages
 def log(message):
     app.logger.info(message)
     return
+
+# Before accessing ANY page (other than sign in pages), check if the user is logged in, as there is no public facing functionality for this website.
+@app.before_request
+def check_login():
+    print(request.path)
+    exempt_page = request.path in EXEMPT_PATHS
+    logged_in = 'userid' in session
+    if not (logged_in or exempt_page):
+        print("none of that")
+        return redirect("/") # Redirect to the login if the user has not logged in.
+    
 
 #create a login page
 @app.route('/', methods=['GET','POST'])
@@ -115,11 +127,11 @@ def finecontrol():
         data = request.get_json()
         if data["action"] == "move" and GLOBALS.ROBOT:
             print("moving",data["power"], data["time"])
-            GLOBALS.ROBOT.move_power_time(data["power"], data["time"])
-        elif data["action"] == "turn" and GLOBALS.ROBOT:
+            GLOBALS.ROBOT.move_power_time(int(data["power"]), int(data["time"]))
+        elif data["action"] == "turn":
             print("turning",data["power"], data["degrees"])
-            GLOBALS.ROBOT.rotate_power_degrees_IMU(data["power"], data["time"])
-        elif data["action"].split(" ")[0] == "say" and GLOBALS.SOUND:
+            GLOBALS.ROBOT.rotate_power_degrees_IMU(int(data["power"]), int(data["degrees"]))
+        elif data["action"].split(" ")[0] == "say":
             print(" ".join(data["action"].split(" ")[1:]))
             GLOBALS.SOUND.say(" ".join(data["action"].split(" ")[1:]))
         return jsonify({})
@@ -261,6 +273,8 @@ def twofactorconfig():
 
 @app.route("/2fa", methods=["GET","POST"])
 def twofactor():
+    if 'tempuserid' not in session:
+        return redirect("/login")
     if request.method == "POST":
         user = GLOBALS.DATABASE.ViewQuery("SELECT * FROM users WHERE userid = ?", (session['tempuserid'],))[0]
         token = request.form.get("2fa")
@@ -329,7 +343,9 @@ def shutdown():
 
 @app.route('/logout')
 def logout():
-    shutdowneverything()
+    if GLOBALS.ROBOT:
+        if GLOBALS.ROBOT.BP != "Give up all hope.":
+            shutdowneverything()
     session.clear()
     return redirect('/')
 
