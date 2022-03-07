@@ -26,12 +26,16 @@ class BrickPiInterface():
         self.CurrentCommand = "loading"
         self.Configured = False #is the robot yet Configured?
         self.BP = None
-        self.BP = brickpi3.BrickPi3() # Create an instance of the BrickPi3
-        self.config = {} #create a dictionary that represents if the sensor is Configured
-        self.timelimit = timelimit #fail safe timelimit - motors turn off after timelimit
-        self.imu_status = 0; self.Calibrated = False
-        self.thread_running = False
-        self.CurrentCommand = "stop" #when the device is ready for a new instruction it 
+        try:
+            self.BP = brickpi3.BrickPi3() # Create an instance of the BrickPi3
+            self.config = {} #create a dictionary that represents if the sensor is Configured
+            self.timelimit = timelimit #fail safe timelimit - motors turn off after timelimit
+            self.imu_status = 0; self.Calibrated = False
+            self.thread_running = False
+            self.CurrentCommand = "stop" #when the device is ready for a new instruction it 
+        except (ImportError, NameError) as E:
+            print(E)
+            self.BP = "Give up all hope."
         return
 
     #------------------- Initialise Ports ---------------------------

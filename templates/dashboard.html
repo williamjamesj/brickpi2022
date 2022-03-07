@@ -14,6 +14,7 @@
             <button id="reconfig" type="button" class="btn btn-warning" onclick="new_ajax_helper('/reconfig_IMU');">Reconfigure IMU</button>
             <button id="compass" type="button" class="btn btn-secondary" onclick="new_ajax_helper('/compass');">Set Compass</button>
             <button id="sensors" type="button" class="btn btn-info" onclick="new_ajax_helper('/sensors');">Sensors</button>
+            <button id="mission" type="button" class="btn btn-success" onclick="start_mission()">Start Mission</button>
         </div>
         <div class="row">
             <button id="shoot" type="button" class="btn btn-primary" onclick="new_ajax_helper('/shoot');">Shoot</button>
@@ -35,4 +36,5 @@
     <script> robot_enabled = {{robot_enabled}}; </script>
     <script src="/static/js/dashboard.js"></script> 
     <script src="/static/js/mapping.js"></script> 
+    <script src="/static/js/mission.js"></script>
 {% endblock %}

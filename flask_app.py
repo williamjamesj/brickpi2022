@@ -1,3 +1,4 @@
+import datetime
 from flask import Flask, render_template, session, request, redirect, flash, url_for, jsonify, Response, logging
 from interfaces import databaseinterface, camerainterface, soundinterface
 import robot #robot is class that extends the brickpi class
@@ -75,6 +76,8 @@ def robotload():
     if not GLOBALS.ROBOT: 
         log("FLASK APP: LOADING THE ROBOT")
         GLOBALS.ROBOT = robot.Robot(20, app.logger)
+        if GLOBALS.ROBOT.BP == "Give up all hope.":
+            return jsonify(sensordict)
         GLOBALS.ROBOT.configure_sensors() #defaults have been provided but you can 
         GLOBALS.ROBOT.reconfig_IMU()
     if not GLOBALS.SOUND:
@@ -122,7 +125,7 @@ def sensors():
 def finecontrol():
     if request.method == "POST":
         data = request.get_json()
-        if data["action"] == "move":
+        if data["action"] == "move" and GLOBALS.ROBOT:
             print("moving",data["power"], data["time"])
             GLOBALS.ROBOT.move_power_time(int(data["power"]), int(data["time"]))
         elif data["action"] == "turn":
@@ -184,6 +187,20 @@ def mission():
     data = None
     return render_template("mission.html",data=data)
 
+@app.route("/start_mission", methods=["GET","POST"])
+def start_mission():
+    if "userid" in session:
+        GLOBALS.DATABASE.ModifyQuery("INSERT INTO missions (userid,startTime) VALUES (?,?)",(session['userid'],int(time.time())))
+        missionID = GLOBALS.DATABASE.ViewQuery("SELECT MAX(missionID) as M FROM missions")[0]["M"]
+        session["missionID"] = missionID
+    return jsonify({"data":"Mission Started."})
+
+@app.route("/stop_mission", methods=["GET","POST"])
+def stop_mission():
+    if "userid" in session:
+        GLOBALS.DATABASE.ModifyQuery("UPDATE missions SET endTime=? WHERE missionID=?",(int(time.time()),session["missionID"]))
+        session.pop("missionID",None)
+    return jsonify({"data":"Mission Ended."})
 @app.route("/admin", methods=["GET","POST"]) # Allows administrators to view users.
 def admin():
     if 'userid' in session:
@@ -273,33 +290,6 @@ def twofactor():
     return render_template("2fa.html")
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # -----------------------------------------------------------------------------------
 # CAMERA CODE-----------------------------------------------------------------------
 # Continually gets the frame from the pi camera
@@ -353,7 +343,9 @@ def shutdown():
 
 @app.route('/logout')
 def logout():
-    shutdowneverything()
+    if GLOBALS.ROBOT:
+        if GLOBALS.ROBOT.BP != "Give up all hope.":
+            shutdowneverything()
     session.clear()
     return redirect('/')
 
