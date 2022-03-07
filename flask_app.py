@@ -112,10 +112,10 @@ def finecontrol():
         data = request.get_json()
         if data["action"] == "move":
             print("moving",data["power"], data["time"])
-            GLOBALS.ROBOT.move_power_time(data["power"], data["time"])
+            GLOBALS.ROBOT.move_power_time(int(data["power"]), int(data["time"]))
         elif data["action"] == "turn":
             print("turning",data["power"], data["degrees"])
-            GLOBALS.ROBOT.rotate_power_degrees_IMU(data["power"], data["time"])
+            GLOBALS.ROBOT.rotate_power_degrees_IMU(int(data["power"]), int(data["degrees"]))
         elif data["action"].split(" ")[0] == "say":
             print(" ".join(data["action"].split(" ")[1:]))
             GLOBALS.SOUND.say(" ".join(data["action"].split(" ")[1:]))
