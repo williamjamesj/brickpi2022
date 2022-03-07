@@ -2286,3 +2286,109 @@ INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 11:11:39] "POST /robotload HTTP/1.1" 20
 INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 11:11:39] "[35m[1mGET /videofeed HTTP/1.1[0m" 204 -
 INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 11:11:41] "POST /start_mission HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 11:11:44] "POST /stop_mission HTTP/1.1" 200 -
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:42:12] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:42:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:42:14] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:42:15] "[37mGET /static/css/theme.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:42:15] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:42:15] "[37mGET /static/js/more_ajax.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:42:15] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:42:15] "[37mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:42:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:42:22] "[32mGET /accountsettings HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:42:22] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:flask_app:False
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:43:32] "[37mPOST / HTTP/1.1[0m" 200 -
+INFO:flask_app:False
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:43:37] "[37mPOST / HTTP/1.1[0m" 200 -
+INFO:flask_app:[{'userid': 6, 'password': '$5$rounds=535000$ztbVvOE814VDZIez$o3R6l.ePsGl8BRs0Jni3m5DaC2HLHfO86iN2mUaPf37', 'permission': 'user', 'email': 'williamjamesj123@gmail.com', 'OTPcode': 'QTKVTVSLXEKRT25I7DIVPRSHGYNXXF4F', 'name': 'Will with a different email, because its pretty stupid to think that that would have worked.'}]
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:43:54] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:43:54] "[37mGET /2fa HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:44:14] "[32mPOST /2fa HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:44:15] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:44:15] "[37mGET /static/js/mission.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:44:20] "[37mGET /accountsettings HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:44:33] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:44:33] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:47:14] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:47:38] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:47:38] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:47:43] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:47:44] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:48:34] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:48:35] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:48:37] "[33mGET /missions HTTP/1.1[0m" 404 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:48:39] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:48:40] "[37mGET /sensors HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:48:45] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:49:11] "[37mGET /accountsettings HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:49:14] "[37mGET /2faconfig HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:49:19] "[37mGET /2faconfig HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:49:41] "[37mGET /2faconfig HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:49:56] "[37mGET /2faconfig HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:49:57] "[37mGET /2faconfig HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:49:57] "[37mGET /2faconfig HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:49:57] "[37mGET /2faconfig HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:49:58] "[37mGET /2faconfig HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:52:38] "[32mPOST /2faconfig HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:52:38] "[37mGET /accountsettings HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:52:44] "[37mGET /2faconfig HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:55:01] "[37mGET /2faconfig HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:55:01] "[37mGET /2faconfig HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:55:19] "[37mGET /2faconfig HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:55:38] "[37mGET /2faconfig HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:58:41] "[37mGET /2faconfig HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:58:43] "[37mGET /2faconfig HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:59:16] "[37mGET /2faconfig HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:59:40] "[32mPOST /2faconfig HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 17:59:41] "[37mGET /accountsettings HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 18:00:27] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 18:00:27] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 18:00:28] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 18:00:29] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:flask_app:[{'OTPcode': 'V4WKQKX24AE4D52MX5R5IHOPG7S3H6CE', 'email': 'williamjamesj123@gmail.com', 'name': 'Will with a different email, because its pretty stupid to think that that would have worked.', 'userid': 6, 'password': '$5$rounds=535000$ztbVvOE814VDZIez$o3R6l.ePsGl8BRs0Jni3m5DaC2HLHfO86iN2mUaPf37', 'permission': 'user'}]
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 18:00:36] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 18:00:36] "[37mGET /2fa HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 18:00:43] "[32mPOST /2fa HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 18:00:43] "[37mGET /dashboard HTTP/1.1[0m" 200 -

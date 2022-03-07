@@ -15,6 +15,6 @@
 {% endblock %}
 {% block scripts %}
 <script>
-    new QRCode(document.getElementById("2faQR"), "{{url}}");
+    new QRCode(document.getElementById("2faQR"), "otpauth://totp/Robot%20Controller:{{email | urlencode}}?issuer=Robot%20Controller&secret={{code}}");
 </script>
 {% endblock %}

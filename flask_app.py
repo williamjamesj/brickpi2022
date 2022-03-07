@@ -25,7 +25,7 @@ def log(message):
 @app.before_request
 def check_login():
     print(request.path)
-    exempt_page = request.path in EXEMPT_PATHS
+    exempt_page = request.path in EXEMPT_PATHS or request.path.startswith("/static") # Check if it is one of the pages that is allowed (login and 2fa especially, to avoid a loop) or if it is a static file.
     logged_in = 'userid' in session
     if not (logged_in or exempt_page):
         print("none of that")
@@ -269,7 +269,8 @@ def twofactorconfig():
             return redirect('/2faconfig')
     code = pyotp.random_base32()
     url = pyotp.totp.TOTP(code).provisioning_uri(session['email'], issuer_name="Robot Controller")
-    return render_template("2faconfig.html",url=url,code=code)
+    print(url)
+    return render_template("2faconfig.html",url=url,code=code,email=session['email'])
 
 @app.route("/2fa", methods=["GET","POST"])
 def twofactor():

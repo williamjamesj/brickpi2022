@@ -34,8 +34,15 @@
               <li class="nav-item">
                 <a class="nav-link" href="/dashboard" data-ol-has-click-handler="">Dashboard</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/missions" data-ol-has-click-handler="">Missions</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" href="/sensors" data-ol-has-click-handler="">Sensors</a>
+              </li>
             </ul>
             <form class="d-flex">
+                  <a style="color: rgba(255, 255, 255, 0.55) !important" class="nav-link" href="/accountsettings" data-ol-has-click-handler="">Account Settings</a>
                   <a style="color: rgba(255, 255, 255, 0.55) !important" class="nav-link" href="/logout" data-ol-has-click-handler="">Log out</a>
               <button class="btn btn-secondary my-2 my-sm-0" type="button" onclick="shutdown();">Exit</button>
             </form>
@@ -43,7 +50,7 @@
         </div>
       </nav>
       <div class="container">
-        {% with messages = get_flashed_messages(with_categories=True) %}
+        {% with messages = get_flashed_messages(with_categories=True) %} <!-- Displays any "flashed" messages, which are just messages that need to be displayed to the user on reload, such as a failed login.-->
             {% if messages %}
                 {% for category, message in messages %}
                 <div class="alert alert-{{category}} alert-dismissible fade show">
