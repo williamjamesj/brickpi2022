@@ -21,6 +21,14 @@ def log(message):
     app.logger.info(message)
     return
 
+def logaction(form,power=0,degrees=0,duration=0,mission=0):
+    print("inserting data")
+    GLOBALS.DATABASE.ModifyQuery("INSERT INTO actions (actiontype,actionpower,actiondegrees,actionduration,missionid,timestamp) VALUES (?,?,?,?,?,?)",(form,power,degrees,duration,mission,time.time()))
+    return
+@app.route("/actionbackdoor")
+def actionbackdoor():
+    return jsonify(GLOBALS.DATABASE.ViewQuery("SELECT * FROM actions"))
+
 # Before accessing ANY page (other than sign in pages), check if the user is logged in, as there is no public facing functionality for this website.
 @app.before_request
 def check_login():
@@ -53,6 +61,7 @@ def login():
                 session['permission'] = user['permission']
                 session['name'] = user['name']
                 session["email"] = user["email"]
+                session["missionID"] = None
                 return redirect('/dashboard')
             else:
                 flash("Login unsuccessful.", "warning")
@@ -127,7 +136,7 @@ def finecontrol():
         data = request.get_json()
         if data["action"] == "move" and GLOBALS.ROBOT:
             print("moving",data["power"], data["time"])
-            GLOBALS.ROBOT.move_power_time(int(data["power"]), int(data["time"]))
+            GLOBALS.ROBOT.move_power_time(int(data["power"]), int(data["time"]),deviation=2)
         elif data["action"] == "turn":
             print("turning",data["power"], data["degrees"])
             GLOBALS.ROBOT.rotate_power_degrees_IMU(int(data["power"]), int(data["degrees"]))
@@ -149,7 +158,8 @@ def shoot():
 def moveforward():
     data = {}
     if GLOBALS.ROBOT:
-        GLOBALS.ROBOT.move_power_time(50,10)
+        GLOBALS.ROBOT.move_power_time(10,3)
+        logaction("forward",power=50, duration=10,mission=session["missionID"])
     return jsonify(data)
 
 @app.route("/moveright", methods=["GET","POST"])
@@ -179,6 +189,13 @@ def sensorview():
     data = None
     return render_template("sensorview.html",data=data)
 
+@app.route("/check_mission",methods=["POST"])
+def check_mission():
+    if session["missionID"] is not None:
+        return jsonify({"status":"mission"})
+    return jsonify({"status":"no mission"})
+
+
 @app.route("/mission", methods=["GET","POST"])
 def mission():
     # If formdata
@@ -199,7 +216,7 @@ def start_mission():
 def stop_mission():
     if "userid" in session:
         GLOBALS.DATABASE.ModifyQuery("UPDATE missions SET endTime=? WHERE missionID=?",(int(time.time()),session["missionID"]))
-        session.pop("missionID",None)
+        session["missionID"] = None
     return jsonify({"data":"Mission Ended."})
 @app.route("/admin", methods=["GET","POST"]) # Allows administrators to view users.
 def admin():

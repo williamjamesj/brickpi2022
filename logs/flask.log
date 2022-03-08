@@ -2392,3 +2392,511 @@ INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 18:00:36] "[32mPOST / HTTP/1.1[0m
 INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 18:00:36] "[37mGET /2fa HTTP/1.1[0m" 200 -
 INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 18:00:43] "[32mPOST /2fa HTTP/1.1[0m" 302 -
 INFO:werkzeug:192.168.0.175 - - [07/Mar/2022 18:00:43] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 16:47:01] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 16:47:01] "[36mGET /static/css/theme.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 16:47:01] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 16:47:01] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 16:47:01] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 16:47:01] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 16:47:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:flask_app:[{'OTPcode': '4YNJB3Q23GUDFUKUT5IQQAJVKRIP6A6I', 'email': 'admin@admin', 'permission': 'admin', 'userid': 1, 'name': 'admin', 'password': '$5$rounds=535000$4p8BZvDhUDpqifz3$Q8U2lglJeKWMcHMe3h3tUhF8n4jVQgM1yYfG68FYQo3'}]
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 16:47:10] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 16:47:10] "[37mGET /2fa HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 16:47:25] "[32mPOST /2fa HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 16:47:25] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 16:47:25] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 16:47:25] "[36mGET /static/js/mission.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 16:47:25] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 16:48:11] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 16:48:11] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 16:57:13] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 16:57:21] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 16:57:21] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 16:58:56] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 16:59:05] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 16:59:05] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 16:59:12] "[35m[1mPOST /moveforward HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 16:59:24] "[37mPOST /start_mission HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 16:59:29] "[35m[1mPOST /moveforward HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:00:05] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:00:11] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:00:11] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+ERROR:flask_app:DATABASE ERROR: table actions has no column named actionduration
+ERROR:flask_app:INSERT INTO actions (actiontype,actionpower,actiondegrees,actionduration,mission,time) VALUES (?,?,?,?,?,?)
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:00:51] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+ERROR:flask_app:DATABASE ERROR: table actions has no column named mission
+ERROR:flask_app:INSERT INTO actions (actiontype,actionpower,actiondegrees,actionduration,mission,time) VALUES (?,?,?,?,?,?)
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:03:08] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:03:54] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:03:59] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:04:13] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:04:21] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:04:21] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:04:26] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:04:27] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+ERROR:flask_app:DATABASE ERROR: table actions has no column named time
+ERROR:flask_app:INSERT INTO actions (actiontype,actionpower,actiondegrees,actionduration,missionid,time) VALUES (?,?,?,?,?,?)
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:04:34] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:04:55] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:04:58] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:05:03] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:05:04] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:05:07] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:06:16] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:06:20] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:06:26] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:06:26] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:06:32] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:07:35] "[37mGET /actionbackdoor HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:07:44] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:07:44] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:07:53] "[35m[1mPOST /moveforward HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:08:02] "[37mGET /actionbackdoor HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:08:13] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:08:14] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:08:19] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:08:24] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:08:30] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:08:30] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:08:34] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:08:41] "[37mGET /actionbackdoor HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:14:04] "[37mGET /finecontrol HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:14:24] "[37mPOST /finecontrol HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:14:41] "[37mPOST /finecontrol HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:14:49] "[37mGET /finecontrol HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:14:51] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:14:57] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:14:57] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:15:09] "[37mPOST /finecontrol HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:15:19] "[37mPOST /finecontrol HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:17:08] "[37mPOST /finecontrol HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:17:11] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:17:17] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:17:18] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:17:21] "[37mPOST /finecontrol HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:17:31] "[37mPOST /finecontrol HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:17:42] "[37mPOST /finecontrol HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:17:52] "[37mGET /finecontrol HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:17:52] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:17:58] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:17:58] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:18:09] "[37mPOST /finecontrol HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:18:21] "[37mPOST /finecontrol HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:18:24] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:Cannot initialise IMU Sensor now trying to reconfig
+INFO:flask_app:IMU RECONFIG HAS FAILED 'int' object has no attribute 'BNO055'
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:IMU RECONFIG HAS FAILED 'int' object has no attribute 'BNO055'
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:18:29] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:18:29] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:18:32] "[37mPOST /finecontrol HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:18:46] "[37mPOST /finecontrol HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:18:46] "[37mPOST /stop HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:19:13] "[37mPOST /finecontrol HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:19:28] "[37mPOST /finecontrol HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:20:01] "[37mGET /actionbackdoor HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:20:08] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:20:10] "[37mGET /actionbackdoor HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:26:10] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:26:18] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:26:18] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:26:28] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:26:29] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:27:35] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:27:35] "[37mGET /static/css/theme.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:27:35] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:27:36] "[37mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:27:36] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:27:36] "[37mGET /static/js/more_ajax.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:27:36] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:27:36] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:27:36] "[37mGET /static/js/mission.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:27:37] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:27:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:27:43] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:27:44] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:28:34] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:28:34] "[37mGET /static/css/theme.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:28:34] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:28:34] "[37mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:28:34] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:28:35] "[37mGET /static/js/more_ajax.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:28:35] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:28:35] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:28:35] "[37mGET /static/js/mission.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:28:35] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:28:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:28:55] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:28:55] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:13] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:14] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:14] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:15] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:15] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:15] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:17] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:18] "[37mGET /static/css/theme.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:18] "[37mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:18] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:18] "[37mGET /static/js/more_ajax.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:18] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:18] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:19] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:19] "[37mGET /static/js/mission.js HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:21] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:21] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:30] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:30] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:30] "[37mGET /static/css/theme.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:30] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:30] "[37mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:30] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:30] "[37mGET /static/js/more_ajax.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:31] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:32] "[37mGET /static/js/mission.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:35] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:35] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:29:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:30:03] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:30:04] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:30:04] "[37mGET /static/css/theme.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:30:04] "[37mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:30:04] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:30:04] "[37mGET /static/js/more_ajax.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:30:04] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:30:04] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:30:04] "[37mGET /static/js/mission.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:30:06] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:30:06] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:30:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:30:45] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:30:45] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:30:46] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:30:46] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:30:49] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:30:50] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:30:50] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:30:51] "[33mGET /missions HTTP/1.1[0m" 404 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:30:53] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:30:54] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:30:55] "[37mGET /sensors HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:30:57] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:30:57] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:30:58] "[37mGET /accountsettings HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:31:00] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:31:00] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:31:00] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:36:04] "[37mGET /sensors HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:36:07] "[33mGET /dasb HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:36:11] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:36:11] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:36:20] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:36:20] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:36:44] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:36:45] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:36:45] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:36:48] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:36:50] "[37mGET /static/css/theme.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:36:50] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:36:50] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:36:50] "[37mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:36:50] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:36:50] "[37mGET /static/js/more_ajax.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:36:50] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:36:50] "[37mGET /static/js/mission.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:36:54] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:36:54] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:36:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:37:19] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:37:19] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:37:19] "[37mGET /static/css/theme.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:37:19] "[37mGET /static/js/more_ajax.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:37:19] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:37:19] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:37:19] "[37mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:37:20] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:37:20] "[37mGET /static/js/mission.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:37:21] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:37:22] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:37:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:42:27] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:42:27] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:42:27] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:42:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:44:05] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:44:06] "[37mGET /static/css/theme.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:44:06] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:44:06] "[37mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:44:06] "[37mGET /static/js/more_ajax.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:44:06] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:44:06] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:44:06] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:44:06] "[37mGET /static/js/mission.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:44:20] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:44:20] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:44:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:49:44] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:49:44] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:49:44] "[37mGET /static/css/theme.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:49:44] "[37mGET /static/js/more_ajax.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:49:44] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:49:44] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:49:45] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:49:58] "[37mGET /static/js/mission.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:49:58] "[37mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:49:58] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:49:58] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:49:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:50:14] "[37mPOST /stop_mission HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:56:16] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:56:16] "[37mGET /static/css/theme.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:56:16] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:56:16] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:56:16] "[37mGET /static/js/more_ajax.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:56:16] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:56:17] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:56:21] "[37mGET /static/js/mission.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:56:21] "[37mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:56:35] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:56:35] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:56:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:56:37] "[37mPOST /start_mission HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:56:44] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:56:45] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:56:45] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:192.168.0.175 - - [08/Mar/2022 17:56:47] "[37mPOST /stop_mission HTTP/1.1[0m" 200 -

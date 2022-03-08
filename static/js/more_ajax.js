@@ -7,7 +7,7 @@ function send_data(url, data, responseDestination=receivedResponse) {
         contentType: "application/json",
         dataType: "json",
         success: function(result) {
-            receivedResponse(result);
+            responseDestination(result);
         }
     });
 }
