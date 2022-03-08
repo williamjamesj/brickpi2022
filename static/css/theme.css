@@ -64,6 +64,7 @@
    --bs-body-line-height: 1.5;
    --bs-body-color: #373a3c;
    --bs-body-bg: #fff;
+   --bs-font: "Wingdings", "Comic Sans MS", "Comic Sans", cursive;
  }
  
  *,
@@ -81,6 +82,7 @@
  body {
    margin: 0;
    font-family: var(--bs-body-font-family);
+   /* font-family: var(--bs-font); For if you want your font-family to font-disown you. */
    font-size: var(--bs-body-font-size);
    font-weight: var(--bs-body-font-weight);
    line-height: var(--bs-body-line-height);
