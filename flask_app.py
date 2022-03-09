@@ -196,13 +196,12 @@ def check_mission():
     return jsonify({"status":"no mission"})
 
 
-@app.route("/mission", methods=["GET","POST"])
-def mission():
-    # If formdata
-        # Get form data
-        # save data to database
-    data = None
-    return render_template("mission.html",data=data)
+@app.route("/missions", methods=["GET","POST"])
+def missions():
+    data = GLOBALS.DATABASE.ViewQuery("SELECT missions.missionID, name, email, missions.userid, startTime, endTime, notes, location, COUNT(actionid) AS actions FROM (missions INNER JOIN users ON users.userid = missions.userID) LEFT JOIN actions on missions.missionID = actions.missionid GROUP BY missions.missionID")
+    print(data)
+    print(datetime.timedelta(0, 0, 0))
+    return render_template("missions.html",data=data,datetime=datetime,int=int,str=str)
 
 @app.route("/start_mission", methods=["GET","POST"])
 def start_mission():
@@ -302,6 +301,7 @@ def twofactor():
             session['permission'] = user['permission']
             session['name'] = user['name']
             session["email"] = user["email"]
+            session["missionID"] = None
             return redirect('/dashboard')
         else:
             flash("Code invalid.", "warning")

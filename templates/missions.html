@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+{% for mission in data %}
+<div class="col-sm-6 col-lg-4 mb-4">
+    <div class="card" style="max-width: 18rem;">
+        <div class="card-header">{{mission["location"]}}</div>
+        <div class="card-body">
+            <p>Operator: {{mission["name"]}}</p>
+            {% if mission["actions"] == 1 %}
+                <p>1 action performed</p>
+            {% else %}
+                <p>{{mission["actions"]}} actions performed</p>
+            {% endif %}
+            <p>Duration: {{str(datetime.timedelta(seconds=int(mission["startTime"])-int(mission["endTime"] or 0)))}}</p>
+            
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">Started on: {{datetime.datetime.fromtimestamp(mission["startTime"])}}</small>
+        </div>
+    </div>
+</div>
+{{mission["missionID"]}}
+{% endfor %}
+{% endblock %}
