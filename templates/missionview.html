@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+{% if data %}
+    <h1>Mission at {{data[0]["location"] or "Unknown Location"}}</h1>
+    <h6>Robot Operator: <a href='mailto:{{data[0]["email"]}}'>{{data[0]["name"]}}</a> Duration: {{str(datetime.timedelta(seconds=int(data[0]["endTime"] or 1646886023)-int(data[0]["startTime"] or 1646886023)))}}</h6>
+    <h6>Started on {{datetime.datetime.fromtimestamp(data[0]["startTime"])}}. Ended on {{datetime.datetime.fromtimestamp(data[0]["endTime"])}}.</h6>
+    <h4>Medical Notes</h4>
+    <p>{{data[0]["notes"] or "No notes have been left for this mission."}}</p>
+    <h3>Actions:</h3>
+    {% if data[0]["actionid"] %}
+        {% for action in data %}
+            <div class="card text-center" style="width: 100%;">
+                <div class="card-body">
+                    {% if action["actiontype"] == "move" %}
+                        <p>Moved for {{action["actionduration"]}} seconds with a power of {{action["actionpower"]}}. </p>
+                    {% elif action[""] == "turn" %}
+                        <p>Turned {{action["actiondegrees"]}} degrees with a power of {{action["actionpower"]}}. </p>
+                    {% else %}
+                        <p>{{data["actiontype"]}}</p>
+                    {% endif %}
+                </div>
+            </div>
+            <br>
+        {% endfor %}
+    {% else %}
+        <p>No actions have been assigned to this mission.</p>
+    {% endif %}
+{% else %}
+    <h1>There is no mission.</h1>
+{% endif %}
+{% endblock %}

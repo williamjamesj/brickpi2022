@@ -38,10 +38,10 @@
                 <a class="nav-link" href="/sensors" data-ol-has-click-handler="" id="sensors">Sensors</a>
               </li>
             </ul>
-            <form class="d-flex">
-                  <a style="color: rgba(255, 255, 255, 0.55) !important" class="nav-link" href="/accountsettings" data-ol-has-click-handler="" id="accountsettings">Account Settings</a>
+            <div class="d-flex navbar-nav">
+                  <a class="nav-link" href="/accountsettings" data-ol-has-click-handler="" id="accountsettings">Account Settings</a>
                   <a style="color: rgba(255, 255, 255, 0.55) !important" class="nav-link" href="/logout" data-ol-has-click-handler="" id="logout">Log out</a>
-              <button class="btn btn-secondary my-2 my-sm-0" type="button" onclick="shutdown();">Exit</button>
+                  <button class="btn btn-secondary my-2 my-sm-0" type="button" onclick="shutdown();">Exit</button>
             </form>
           </div>
         </div>
@@ -59,10 +59,11 @@
         {% endwith %}
         {% block content %}{% endblock %} <!-- Container for Content -->
       </div>
+    <script src="/static/js/navbar_helper.js"></script>
+    <script>update_navbar("{{request.path}}");</script>
     <script src="/static/js/new_ajax_helper.js"></script> <!-- JSON HELPER -->
     <script src="/static/js/custom.js"></script> <!-- JSON HELPER -->
     <script src="/static/js/more_ajax.js"></script> 
-    <script src="/static/js/navbar_helper.js">update_navbar({{request.path}});</script>
     {% block scripts %}{% endblock %} <!-- Container for Scripts-->
 </body>
 </html>

@@ -159,7 +159,7 @@ def moveforward():
     data = {}
     if GLOBALS.ROBOT:
         GLOBALS.ROBOT.move_power_time(10,3)
-        logaction("forward",power=50, duration=10,mission=session["missionID"])
+        logaction("move",power=50, duration=10,mission=session["missionID"])
     return jsonify(data)
 
 @app.route("/moveright", methods=["GET","POST"])
@@ -196,12 +196,17 @@ def check_mission():
     return jsonify({"status":"no mission"})
 
 
-@app.route("/missions", methods=["GET","POST"])
+@app.route("/missions", methods=["GET","POST"]) # This is the view for the list of missions.
 def missions():
     data = GLOBALS.DATABASE.ViewQuery("SELECT missions.missionID, name, email, missions.userid, startTime, endTime, notes, location, COUNT(actionid) AS actions FROM (missions INNER JOIN users ON users.userid = missions.userID) LEFT JOIN actions on missions.missionID = actions.missionid GROUP BY missions.missionID")
     print(data)
     print(datetime.timedelta(0, 0, 0))
     return render_template("missions.html",data=data,datetime=datetime,int=int,str=str)
+
+@app.route("/mission/<id>", methods=["GET","POST"]) # This is the view for an individual mission.
+def mission(id):
+    data = GLOBALS.DATABASE.ViewQuery("SELECT * FROM (missions LEFT JOIN users ON users.userid = missions.userid) LEFT JOIN actions ON actions.missionid = missions.missionID WHERE missions.missionID = ?",(id,))
+    return render_template("missionview.html", data=data, datetime=datetime, int=int, str=str)
 
 @app.route("/start_mission", methods=["GET","POST"])
 def start_mission():
