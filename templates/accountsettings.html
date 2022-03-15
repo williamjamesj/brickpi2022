@@ -8,12 +8,12 @@
             <label for="name" class="form-label">Email:</label>
             <input type="email" id="email" name="email" class="form-control" value='{{userdetails["email"]}}'>
             <label for="oldpassword" class="form-label">Old Password:</label>
-            <input type="password" id="password" name="oldpassword" class="form-control">
-            <label for="password" class="form-label">New Password:</label>
+            <input type="password" id="oldpassword" name="oldpassword" class="form-control">
+            <label for="oldpassword" class="form-label">New Password:</label>
             <input type="password" id="password" name="password" class="form-control">
             <button type="submit" class="btn btn-primary">Update Settings</button>
         </div>
     </form>
-    <a href="/2faconfig" class="btn btn-primary" role="button">Configure two-factor authentication</a>
+    <a href="/2faconfig" class="btn btn-primary" style="max-width: none;" role="button">Configure two-factor authentication</a>
 </div>
 {% endblock %}

@@ -12,7 +12,7 @@
             <p>{{mission["actions"]}} actions performed</p>
         {% endif %}
         <p>Duration: {{str(datetime.timedelta(seconds=int(mission["endTime"] or 1646886023)-int(mission["startTime"] or 1646886023)))}}</p>
-        
+        <a href='/mission/{{mission["missionID"]}}' class="btn btn-primary">View Mission</a>  
     </div>
     <div class="card-footer">
         <small class="text-muted">Started on: {{datetime.datetime.fromtimestamp(mission["startTime"])}}</small>

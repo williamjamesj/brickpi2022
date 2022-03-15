@@ -199,8 +199,6 @@ def check_mission():
 @app.route("/missions", methods=["GET","POST"]) # This is the view for the list of missions.
 def missions():
     data = GLOBALS.DATABASE.ViewQuery("SELECT missions.missionID, name, email, missions.userid, startTime, endTime, notes, location, COUNT(actionid) AS actions FROM (missions INNER JOIN users ON users.userid = missions.userID) LEFT JOIN actions on missions.missionID = actions.missionid GROUP BY missions.missionID")
-    print(data)
-    print(datetime.timedelta(0, 0, 0))
     return render_template("missions.html",data=data,datetime=datetime,int=int,str=str)
 
 @app.route("/mission/<id>", methods=["GET","POST"]) # This is the view for an individual mission.
