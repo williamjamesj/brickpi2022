@@ -31,6 +31,7 @@ function toggle_mission() {
     } else {
         send_data("/stop_mission", {});
         mission = false;
+        $('#editmodal').modal('show')
     }
     update_mission();
 }

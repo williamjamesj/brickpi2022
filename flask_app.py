@@ -49,7 +49,7 @@ def login():
     if request.method == "POST":
         email = request.form.get("email")
         userdetails = GLOBALS.DATABASE.ViewQuery("SELECT * FROM users WHERE email = ?", (email,))
-        log(userdetails)
+        log(f"User authenticated ID: {userdetails[0]['userid']}")
         if userdetails:
             user = userdetails[0] #get first row in results
             correct_password = sha256_crypt.verify(request.form.get("password"), user['password'])
@@ -99,8 +99,12 @@ def robotload():
 # Dashboard
 @app.route('/dashboard', methods=['GET','POST'])
 def robotdashboard():
-    if not 'userid' in session:
-        return redirect('/')
+    if request.method == "POST":
+        location = request.form.get("location")
+        notes = request.form.get("notes")
+        missionid = session["lastMissionID"]
+        print(location,notes,missionid)
+        GLOBALS.DATABASE.ModifyQuery("UPDATE missions SET location = ?, notes = ? WHERE missionID = ?",(location,notes,missionid))
     enabled = int(GLOBALS.ROBOT != None)
     return render_template('dashboard.html', robot_enabled = enabled )
 
@@ -228,6 +232,7 @@ def start_mission():
 def stop_mission():
     if "userid" in session:
         GLOBALS.DATABASE.ModifyQuery("UPDATE missions SET endTime=? WHERE missionID=?",(int(time.time()),session["missionID"]))
+        session["lastMissionID"] = session["missionID"]
         session["missionID"] = None
     return jsonify({"data":"Mission Ended."})
 @app.route("/admin", methods=["GET","POST"]) # Allows administrators to view users.

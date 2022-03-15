@@ -31,6 +31,27 @@
             <div id="message"></div>
         </div>
     </div>
+    <div class="modal fade" id="editmodal" tabindex="-1" aria-labelledby="creationpopup" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Save Mission Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form method="POST" class="form-group" id="formulaic">
+                <label for="location">Location:</label><br>
+                <input type="text" class="form-group" id="location" name="location" required><br><br>
+                <label for="notes">Notes:</label><br>
+                <textarea class="form-control" id="notes" name="notes" required></textarea><br><br>
+          </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary">Save Details</button>
+          </form>
+            </div>
+            </div>
+        </div>
+      </div>
 {% endblock %}
 {% block scripts %}
     <script> robot_enabled = {{robot_enabled}}; </script>
