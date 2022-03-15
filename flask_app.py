@@ -204,6 +204,16 @@ def missions():
 @app.route("/mission/<id>", methods=["GET","POST"]) # This is the view for an individual mission.
 def mission(id):
     data = GLOBALS.DATABASE.ViewQuery("SELECT * FROM (missions LEFT JOIN users ON users.userid = missions.userid) LEFT JOIN actions ON actions.missionid = missions.missionID WHERE missions.missionID = ?",(id,))
+    if request.method == "POST":
+        location = request.form.get("location")
+        print(location)
+        notes = request.form.get("notes")
+        print(notes)
+        if GLOBALS.DATABASE.ModifyQuery("UPDATE missions SET location = ?, notes = ? WHERE missionID = ?",(location,notes,id)):
+            flash("Mission updated","success")
+        else:
+            flash("Mission update failed","danger")
+        return redirect("/mission/"+id)
     return render_template("missionview.html", data=data, datetime=datetime, int=int, str=str)
 
 @app.route("/start_mission", methods=["GET","POST"])
@@ -263,9 +273,13 @@ def accountsettings():
         oldpassword = request.form.get("oldpassword")
         correct_password = sha256_crypt.verify(oldpassword, userdetails['password'])
         if correct_password:
-            password = sha256_crypt.hash(password)
-            GLOBALS.DATABASE.ModifyQuery("UPDATE users SET name = ?, email = ?, password = ? WHERE userid = ?", (name, email, password, session['userid']))
-            flash("Account settings updated","success")
+            if password != "":
+                password = sha256_crypt.hash(password)
+                GLOBALS.DATABASE.ModifyQuery("UPDATE users SET name = ?, email = ?, password = ? WHERE userid = ?", (name, email, password, session['userid']))
+                flash("Account settings and password changed.","success")
+            else:
+                GLOBALS.DATABASE.ModifyQuery("UPDATE users SET name = ?, email = ? WHERE userid = ?", (name, email, session['userid']))
+                flash("Account details updated successfully.","success")
             return redirect('/dashboard')
         else:
             flash("Incorrect password","warning")

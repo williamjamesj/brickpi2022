@@ -6,6 +6,28 @@
     <h6>Started on {{datetime.datetime.fromtimestamp(data[0]["startTime"] or 0)}}. Ended on {{datetime.datetime.fromtimestamp(data[0]["endTime"] or 0)}}.</h6>
     <h4>Medical Notes</h4>
     <p>{{data[0]["notes"] or "No notes have been left for this mission."}}</p>
+    <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#editmodal">Edit Details</button>
+        <div class="modal fade" id="editmodal" tabindex="-1" aria-labelledby="creationpopup" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modify Mission</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form method="POST" class="form-group" id="formulaic">
+                  <label for="location">Location:</label><br>
+                  <input type="text" class="form-group" id="location" name="location" value='{{data[0]["location"]}}' required><br><br>
+                  <label for="notes">Notes:</label><br>
+                  <textarea class="form-control" id="notes" name="notes" required>{{data[0]["notes"]}}</textarea><br><br>
+            </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Save Details</button>
+            </form>
+              </div>
+              </div>
+          </div>
+        </div>
     <h3>Actions:</h3>
     {% if data[0]["actionid"] %}
         {% for action in data %}
@@ -23,7 +45,7 @@
             <br>
         {% endfor %}
     {% else %}
-        <p>No actions have been assigned to this mission.</p>
+        <p>No actions have been performed in this mission.</p>
     {% endif %}
 {% else %}
     <h1>There is no mission.</h1>
