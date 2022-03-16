@@ -49,7 +49,6 @@ def login():
     if request.method == "POST":
         email = request.form.get("email")
         userdetails = GLOBALS.DATABASE.ViewQuery("SELECT * FROM users WHERE email = ?", (email,))
-        log(f"User authenticated ID: {userdetails[0]['userid']}")
         if userdetails:
             user = userdetails[0] #get first row in results
             correct_password = sha256_crypt.verify(request.form.get("password"), user['password'])
@@ -170,7 +169,7 @@ def moveforward():
 def moveright():
     data = {}
     if GLOBALS.ROBOT:
-        data = GLOBALS.ROBOT.rotate_power_degrees_IMU(50,-10)
+        data = GLOBALS.ROBOT.rotate_power_degrees_IMU(10,-90,2)
     return jsonify(data)
 
 
@@ -178,7 +177,7 @@ def moveright():
 def moveleft():
     data = {}
     if GLOBALS.ROBOT:
-        data = GLOBALS.ROBOT.rotate_power_degrees_IMU(50,10)
+        data = GLOBALS.ROBOT.rotate_power_degrees_IMU(10,90,2)
     return jsonify(data)
 
 @app.route("/stop", methods=["GET","POST"])

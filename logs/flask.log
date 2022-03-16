@@ -5547,3 +5547,273 @@ INFO:werkzeug:127.0.0.1 - - [16/Mar/2022 09:37:57] "[36mGET /static/js/new_ajax
 INFO:werkzeug:127.0.0.1 - - [16/Mar/2022 09:37:58] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [16/Mar/2022 09:37:58] "[36mGET /static/js/mission.js HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [16/Mar/2022 09:37:58] "POST /check_mission HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 640-964-912
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:39:48] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:39:48] "[37mGET /static/css/zephyr.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:39:48] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:39:48] "[37mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:39:48] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:39:48] "[37mGET /static/js/more_ajax.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:39:48] "[37mGET /static/js/navbar_helper.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:39:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:39:56] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:39:56] "[37mGET /2fa HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:40:15] "[32mPOST /2fa HTTP/1.1[0m" 302 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:40:15] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:40:15] "[37mGET /static/js/mission.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:40:15] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:40:15] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:40:16] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:40:22] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:40:22] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:flask_app:0.0010828673839569092
+INFO:flask_app:0.0029189586639404297
+INFO:flask_app:0.0037437230348587036
+INFO:flask_app:0.02603328227996826
+INFO:flask_app:0.24828222393989563
+INFO:flask_app:0.6941500008106232
+INFO:flask_app:1.4328217208385468
+INFO:flask_app:3.23716002702713
+INFO:flask_app:5.376168370246887
+INFO:flask_app:7.999284967780113
+INFO:flask_app:10.725289314985275
+INFO:flask_app:13.820244759321213
+INFO:flask_app:17.09563621878624
+INFO:flask_app:19.978936731815338
+INFO:flask_app:23.978179574012756
+INFO:flask_app:28.195725202560425
+INFO:flask_app:31.409384697675705
+INFO:flask_app:35.59456141293049
+INFO:flask_app:40.63518287241459
+INFO:flask_app:44.570067659020424
+INFO:flask_app:48.927780121564865
+INFO:flask_app:52.5367628633976
+INFO:flask_app:56.353915363550186
+INFO:flask_app:60.408529072999954
+INFO:flask_app:64.60744047164917
+INFO:flask_app:68.90507209300995
+INFO:flask_app:72.89269150793552
+INFO:flask_app:77.16267044842243
+INFO:flask_app:81.84859612584114
+INFO:flask_app:86.90778025984764
+INFO:flask_app:93.64140221476555
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:40:31] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.0009265691041946411
+INFO:flask_app:0.0009080618619918823
+INFO:flask_app:0.0009080618619918823
+INFO:flask_app:-0.03912825882434845
+INFO:flask_app:-0.308147132396698
+INFO:flask_app:IMU GYRO: 'int' object is not iterable
+INFO:flask_app:13.270027458667755
+INFO:flask_app:11.564143136143684
+INFO:flask_app:8.715877428650856
+INFO:flask_app:5.272453740239143
+INFO:flask_app:1.8855211287736893
+INFO:flask_app:-1.652399554848671
+INFO:flask_app:-4.850560083985329
+INFO:flask_app:-8.138420060276985
+INFO:flask_app:-11.28226624429226
+INFO:flask_app:-14.636168330907822
+INFO:flask_app:-17.54815511405468
+INFO:flask_app:-20.89783178269863
+INFO:flask_app:-24.066932275891304
+INFO:flask_app:-27.492857590317726
+INFO:flask_app:-30.7963457852602
+INFO:flask_app:-34.75338362157345
+INFO:flask_app:-39.42348502576351
+INFO:flask_app:-44.148359432816505
+INFO:flask_app:-48.55260269343853
+INFO:flask_app:-52.11609028279781
+INFO:flask_app:-55.69299603998661
+INFO:flask_app:-59.39783300459385
+INFO:flask_app:-63.12059856951237
+INFO:flask_app:-66.61879993975163
+INFO:flask_app:-70.1107582449913
+INFO:flask_app:-74.31909918785095
+INFO:flask_app:-78.21036148071289
+INFO:flask_app:-81.67446947097778
+INFO:flask_app:-85.19780403375626
+INFO:flask_app:-89.07051062583923
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:40:35] "[37mPOST /moveright HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:40:44] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:40:49] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:flask_app:-0.007487758994102478
+INFO:flask_app:-0.012905970215797424
+INFO:flask_app:-0.0030151456594467163
+INFO:flask_app:0.01202644407749176
+INFO:flask_app:0.35027892887592316
+INFO:flask_app:1.3449131101369858
+INFO:flask_app:4.482272431254387
+INFO:flask_app:9.763157293200493
+INFO:flask_app:15.560595616698265
+INFO:flask_app:20.596808090806007
+INFO:flask_app:27.283910557627678
+INFO:flask_app:31.829553440213203
+INFO:flask_app:36.17145974934101
+INFO:flask_app:39.49130691587925
+INFO:flask_app:42.5292896181345
+INFO:flask_app:45.762755021452904
+INFO:flask_app:49.26454645395279
+INFO:flask_app:52.67024031281471
+INFO:flask_app:55.80970934033394
+INFO:flask_app:59.19090273976326
+INFO:flask_app:62.77645044028759
+INFO:flask_app:65.76901330053806
+INFO:flask_app:69.72248856723309
+INFO:flask_app:72.99955020844936
+INFO:flask_app:76.75813864171505
+INFO:flask_app:79.89021457731724
+INFO:flask_app:82.76629073917866
+INFO:flask_app:85.55711990594864
+INFO:flask_app:89.61813576519489
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:41:08] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 640-964-912
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:42:53] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:42:53] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:42:54] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:43:00] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:43:01] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:43:07] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:IMU GYRO: 'int' object is not iterable
+INFO:flask_app:IMU GYRO: [Errno 5] Input/output error
+INFO:flask_app:IMU GYRO: [Errno 5] Input/output error
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:43:17] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:43:36] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:43:44] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:43:50] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:43:55] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 640-964-912
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:44:24] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 640-964-912
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:44:30] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:44:46] "[37mPOST /moveright HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:44:55] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:44:57] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:45:04] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:45:04] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:45:13] "[37mPOST /moveright HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:45:22] "[37mPOST /moveright HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:45:27] "[37mPOST /moveright HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:45:39] "[37mPOST /moveright HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 640-964-912
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:45:58] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:45:59] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:46:00] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:46:05] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:46:05] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:flask_app:IMU GYRO: [Errno 5] Input/output error
+INFO:flask_app:IMU GYRO: [Errno 5] Input/output error
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:46:10] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 640-964-912
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:46:20] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:46:28] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:46:28] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:46:34] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:46:34] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:46:38] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 640-964-912
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:46:49] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:46:49] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:46:53] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:46:53] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 640-964-912
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:47:02] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:47:02] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:47:08] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:IMU GYRO: 'int' object is not iterable
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:47:15] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:47:21] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:47:27] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:47:28] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:47:28] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:47:29] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:47:29] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:flask_app:IMU GYRO: [Errno 5] Input/output error
+INFO:flask_app:IMU GYRO: [Errno 5] Input/output error
+INFO:flask_app:IMU GYRO: [Errno 5] Input/output error
+INFO:flask_app:IMU GYRO: [Errno 5] Input/output error
+INFO:flask_app:IMU GYRO: [Errno 5] Input/output error
+INFO:flask_app:IMU GYRO: [Errno 5] Input/output error
+INFO:flask_app:IMU GYRO: [Errno 5] Input/output error
+INFO:flask_app:IMU GYRO: [Errno 5] Input/output error
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:47:29] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:47:29] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:47:30] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:47:30] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:47:30] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:47:31] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:47:33] "[37mPOST /moveright HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:47:33] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:47:34] "[37mPOST /moveright HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:47:34] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:47:41] "[37mPOST /moveleft HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:47:45] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.0 - - [16/Mar/2022 10:47:54] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/robot.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 640-964-912
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/robot.py', reloading
+INFO:werkzeug: * Restarting with stat
