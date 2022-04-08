@@ -129,8 +129,19 @@ def sensors():
     data = {}
     if GLOBALS.ROBOT:
         data = GLOBALS.ROBOT.get_all_sensors()
+        temp = int(open("/sys/class/thermal/thermal_zone0/temp").read().rstrip())/1000
+        data["pitemp"] = temp
+        data = GLOBALS.ROBOT.get_all_sensors()
     return jsonify(data)
 
+@app.route('/sensor_view')
+def sensor_view():
+    data = {}
+    if GLOBALS.ROBOT:
+        data = GLOBALS.ROBOT.get_all_sensors()
+        temp = int(open("/sys/class/thermal/thermal_zone0/temp").read().rstrip())/1000
+        data["pitemp"] = temp
+    return render_template('sensor_view.html',int=int, data = data)
 # YOUR FLASK CODE------------------------------------------------------------------------
 
 @app.route("/finecontrol", methods=["GET","POST"])
