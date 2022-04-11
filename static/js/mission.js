@@ -31,7 +31,7 @@ function toggle_mission() {
     } else {
         send_data("/stop_mission", {});
         mission = false;
-        $('#editmodal').modal('show')
+        $('#editmodal').modal('show') // Tells Bootstrap to display the mission details section, for the user to enter location and notes post-mission.
     }
     update_mission();
 }

@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% block scripts %}
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load('current', {'packages':['gauge']});
+        google.charts.setOnLoadCallback(drawChart);
+        data = null;
+        options = null;
+        chart = null;
+        function newValues(result) {
+            data.setValue(0, 1, result.temperature);
+            data.setValue(1, 1, result.thermal);
+            data.setValue(2, 1, result.pitemp);
+            document.getElementById("battery").innerHTML = "Battery: "+result.battery+"V";
+            document.getElementById("compass").innerHTML = "Compass: "+result.compass;
+            document.getElementById("colour").innerHTML = "Colour: "+result.colour;
+            document.getElementById("ultrasonic").innerHTML = "Distance: "+result.ultrasonic+"cm";
+            chart.draw(data, options);
+        }
+        function drawChart() {
+            data = google.visualization.arrayToDataTable([
+                ['Label', 'Value'],
+                ['IMU Temp', {{int(data["temperature"])}}],
+                ['Sensor Temp', {{int(data["thermal"])}}],
+                ['Pi Temp', {{int(data["pitemp"])}}]
+            ]);
+            options = {
+                width: 1000, height: 200,
+                redFrom: 90, redTo: 100,
+                yellowFrom:75, yellowTo: 90,
+                minorTicks: 5
+                };
+            chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+            chart.draw(data, options);
+    
+            setInterval(function() {
+                send_data("/sensors",{},responseDestination=newValues);
+                console.log("Sent request");
+            }, 1000);
+          }
+    </script>
+{% endblock %}
+{% block content %}
+{% if data %}
+<h1>Sensor Readings</h1>
+<div class="row">
+    <div class="col">
+        <p id="battery">Battery: {{data["battery"]}}V</p>
+    </div>
+    <div class="col">
+        <p id="compass">Compass: {{data["compass"]}}</p>
+    </div>
+    <div class="col">
+        <p id="colour">Colour: {{data["colour"]}}</p>
+    </div>
+    <div class="col">
+        <p id="ultrasonic">Distance: {{data["ultrasonic"]}}cm</p>
+    </div>
+</div>
+<div id="chart_div" style="width: 50%; height: 400px; margin: 0 auto;"></div>
+{% else %}
+<h1>Sensor Data Unavailable</h1>
+{% endif %}
+{% endblock %}
