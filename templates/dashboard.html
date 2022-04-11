@@ -9,19 +9,21 @@
         <button type="button" class="btn btn-success" onclick="load_robot();">Load Robot</button>
     </div>   
     <div id="dashboard">
-        <div class="row">
-            <button id="shutdown" type="button" class="btn btn-danger" onclick="shutdown_robot();">Shutdown Robot</button>
-            <button id="reconfig" type="button" class="btn btn-warning" onclick="new_ajax_helper('/reconfig_IMU');">Reconfigure IMU</button>
-            <button id="compass" type="button" class="btn btn-secondary" onclick="new_ajax_helper('/compass');">Set Compass</button>
-            <button id="sensors" type="button" class="btn btn-info" onclick="new_ajax_helper('/sensors');">Sensors</button>
-            <button id="mission" type="button" class="btn btn-success" onclick="toggle_mission()">Start Mission</button>
-        </div>
-        <div class="row">
-            <button id="shoot" type="button" class="btn btn-primary" onclick="new_ajax_helper('/shoot');">Shoot</button>
-            <button id="forward" type="button" class="btn btn-primary" onclick="new_ajax_helper('/moveforward');">Move Forward</button>
-            <button id="left" type="button" class="btn btn-primary" onclick="new_ajax_helper('/moveleft');">Move Right</button>
-            <button id="right" type="button" class="btn btn-primary" onclick="new_ajax_helper('/moveright');">Move Left</button>
-            <button id="forward" type="button" class="btn btn-primary" onclick="new_ajax_helper('/stop');">Stop</button>
+        <div class="d-flex justify-content-lg-center">
+            <div class="row">
+                <button id="shutdown" type="button" class="btn btn-danger" onclick="shutdown_robot();">Shutdown Robot</button>
+                <button id="reconfig" type="button" class="btn btn-warning" onclick="new_ajax_helper('/reconfig_IMU');">Reconfigure IMU</button>
+                <button id="compass" type="button" class="btn btn-secondary" onclick="new_ajax_helper('/compass');">Set Compass</button>
+                <button id="mission" type="button" class="btn btn-success" onclick="toggle_mission()">Start Mission</button>
+            </div>
+            <div class="row">
+                <button id="forward" type="button" class="btn btn-danger" onclick="new_ajax_helper('/stop');">Stop</button>
+                <button id="forward" type="button" class="btn btn-primary" onclick="new_ajax_helper('/moveforward');">Move Forward</button>
+                <button type="button" class="btn btn-warning">AutoMode</button>
+                <button id="right" type="button" class="btn btn-primary" onclick="new_ajax_helper('/moveright');">Move Left</button>
+                <button id="shoot" type="button" class="btn btn-primary" onclick="new_ajax_helper('/shoot');">Shoot</button>
+                <button id="left" type="button" class="btn btn-primary" onclick="new_ajax_helper('/moveleft');">Move Right</button>
+            </div>
         </div>
         <div class="row">
             <div id="videobox" class="col">

@@ -45,7 +45,6 @@ def check_login():
 def login():
     if 'userid' in session:
         return redirect('/dashboard')
-    message = ""
     if request.method == "POST":
         email = request.form.get("email")
         userdetails = GLOBALS.DATABASE.ViewQuery("SELECT * FROM users WHERE email = ?", (email,))
@@ -66,7 +65,7 @@ def login():
                 flash("Login unsuccessful.", "warning")
         else:
             flash("Login unsuccessful.", "warning")
-    return render_template('login.html', data = message)    
+    return render_template('login.html')    
 
 # Load the ROBOT
 @app.route('/robotload', methods=['GET','POST'])
@@ -201,7 +200,7 @@ def check_mission():
 
 @app.route("/missions", methods=["GET","POST"]) # This is the view for the list of missions.
 def missions():
-    data = GLOBALS.DATABASE.ViewQuery("SELECT missions.missionID, name, email, missions.userid, startTime, endTime, notes, location, COUNT(actionid) AS actions FROM (missions INNER JOIN users ON users.userid = missions.userID) LEFT JOIN actions on missions.missionID = actions.missionid GROUP BY missions.missionID")
+    data = GLOBALS.DATABASE.ViewQuery("SELECT missions.missionID, name, email, missions.userid, startTime, endTime, notes, location, COUNT(actionid) AS actions FROM (missions INNER JOIN users ON users.userid = missions.userID) LEFT JOIN actions on missions.missionID = actions.missionid GROUP BY missions.missionID ORDER BY missions.startTime DESC;")
     return render_template("missions.html",data=data,datetime=datetime,int=int,str=str)
 
 @app.route("/mission/<id>", methods=["GET","POST"]) # This is the view for an individual mission.

@@ -1,26 +1,19 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="page-header" id="banner">
-    <div class="row">
-        <h1>Login</h1>
-    </div>
-</div>
-<div class="row">
+<h1 class="d-flex justify-content-center">Sign in</h1>
+
+<div class="d-flex justify-content-lg-center">
     <form action="/" method="POST">
-    Email:<br>
-    <input type="text" name="email" value="" required><br>
-    Password:<br>
-    <input type="password" name="password" value="" required><br><br>
-    <input type="submit" value="Submit" class="button">
+    <div class ="form-floating">
+        <input type="text" class="form-control text-body" name="email" value="" required placeholder="email@email.com"><br>
+        <label for="email" class="text-body">Email:</label>
+    </div>
+    <div class ="form-floating">
+        <input type="password" class="form-control text-body" name="password" value="" required placeholder="password"><br>
+        <label for="password" class="text-body">Password:</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Next</button>
     </form>
-</div>
-<div class="row">
-    <p><b>Email:</b> admin@admin  <b>Password:</b> admin <br>
-    If you click the "Submit" button, the form-data will be sent to the URL of the form action.
-    </p>
-</div>
-<div class="row">
-    {{data}}
 </div>
 {% endblock %}
 {% block scripts %}
