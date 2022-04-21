@@ -27,7 +27,7 @@ def logaction(form,power=0,degrees=0,duration=0,mission=0):
     GLOBALS.MAP.append([form,power,degrees,duration])
     return
 
-@app.route("/mazeaccess")
+@app.route("/mazeaccess", methods=['GET','POST'])
 def return_maze():
     return jsonify(GLOBALS.MAP)
 
@@ -178,16 +178,16 @@ def shoot():
 def moveforward():
     data = {}
     if GLOBALS.ROBOT:
-        GLOBALS.ROBOT.move_power_time(10,3,deviation=2.5)
         logaction("move",power=10, duration=3,mission=session["missionID"])
+        GLOBALS.ROBOT.move_power_time(10,3,deviation=2.5)
     return jsonify(data)
 
 @app.route("/moveright", methods=["GET","POST"])
 def moveright():
     data = {}
     if GLOBALS.ROBOT:
+        logaction("move",power=10, degrees=270,mission=session["missionID"])
         data = GLOBALS.ROBOT.rotate_power_degrees_IMU(10,-90,2)
-        logaction("move",power=10, degrees=-90,mission=session["missionID"])
     return jsonify(data)
 
 
@@ -195,8 +195,8 @@ def moveright():
 def moveleft():
     data = {}
     if GLOBALS.ROBOT:
-        data = GLOBALS.ROBOT.rotate_power_degrees_IMU(10,90,2)
         logaction("move",power=10, degrees=90,mission=session["missionID"])
+        data = GLOBALS.ROBOT.rotate_power_degrees_IMU(10,90,2)
     return jsonify(data)
 
 @app.route("/stop", methods=["GET","POST"])
