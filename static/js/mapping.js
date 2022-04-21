@@ -3,6 +3,7 @@
 --------------------------------------------------------------------------*/
 var turtle = null;
 var alpha = 0;
+var movements = [];
 
 function load_map()
 {
@@ -28,5 +29,16 @@ function drawmap() {
    }
 }
 
+function getMovements() {
+   send_data("/mazeaccess", {}, drawRobot)
+}
+
+function drawRobot(results) {
+   let originalLength = movements.length
+   let newLength = results.length
+   
+}
 load_map();
-drawmap();
+// drawmap();
+
+console.log("doot")

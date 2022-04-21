@@ -24,7 +24,13 @@ def log(message):
 def logaction(form,power=0,degrees=0,duration=0,mission=0):
     print("inserting data")
     GLOBALS.DATABASE.ModifyQuery("INSERT INTO actions (actiontype,actionpower,actiondegrees,actionduration,missionid,timestamp) VALUES (?,?,?,?,?,?)",(form,power,degrees,duration,mission,time.time()))
+    GLOBALS.MAP.append([form,power,degrees,duration])
     return
+
+@app.route("/mazeaccess")
+def return_maze():
+    return jsonify(GLOBALS.MAP)
+
 @app.route("/actionbackdoor")
 def actionbackdoor():
     return jsonify(GLOBALS.DATABASE.ViewQuery("SELECT * FROM actions"))
@@ -70,6 +76,7 @@ def login():
 # Load the ROBOT
 @app.route('/robotload', methods=['GET','POST'])
 def robotload():
+    GLOBALS.MAP = []
     sensordict = None
     if not GLOBALS.CAMERA:
         log("LOADING CAMERA")
@@ -171,8 +178,8 @@ def shoot():
 def moveforward():
     data = {}
     if GLOBALS.ROBOT:
-        GLOBALS.ROBOT.move_power_time(10,3)
-        logaction("move",power=50, duration=10,mission=session["missionID"])
+        GLOBALS.ROBOT.move_power_time(10,3,deviation=2.5)
+        logaction("move",power=10, duration=3,mission=session["missionID"])
     return jsonify(data)
 
 @app.route("/moveright", methods=["GET","POST"])
@@ -180,6 +187,7 @@ def moveright():
     data = {}
     if GLOBALS.ROBOT:
         data = GLOBALS.ROBOT.rotate_power_degrees_IMU(10,-90,2)
+        logaction("move",power=10, degrees=-90,mission=session["missionID"])
     return jsonify(data)
 
 
@@ -188,6 +196,7 @@ def moveleft():
     data = {}
     if GLOBALS.ROBOT:
         data = GLOBALS.ROBOT.rotate_power_degrees_IMU(10,90,2)
+        logaction("move",power=10, degrees=90,mission=session["missionID"])
     return jsonify(data)
 
 @app.route("/stop", methods=["GET","POST"])

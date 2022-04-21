@@ -1,4 +1,8 @@
 {% extends "layout.html" %}
+{% block styles %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsxgraph@1.1.0/distrib/jsxgraph.css" />
+<script src="https://cdn.jsdelivr.net/npm/jsxgraph@1.1.0/distrib/jsxgraphcore.js"></script> <!-- It isn't a style, but it is very welcome in the styles block. -->
+{% endblock %}
 {% block content %}
     <div class="page-header" id="banner">
         <div class="row">
