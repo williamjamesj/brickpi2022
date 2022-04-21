@@ -25,7 +25,6 @@ function show_dashboard(results)
     document.getElementById("load").style.display = 'none';
     document.getElementById("dashboard").style.display = 'block';
     document.getElementById("videofeed").innerHTML = '<img src="/videofeed" width=100% />';
-    console.log(results);
 }
 
 //Hide the dashboard

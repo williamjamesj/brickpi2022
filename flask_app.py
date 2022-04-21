@@ -22,7 +22,6 @@ def log(message):
     return
 
 def logaction(form,power=0,degrees=0,duration=0,mission=0):
-    print("inserting data")
     GLOBALS.DATABASE.ModifyQuery("INSERT INTO actions (actiontype,actionpower,actiondegrees,actionduration,missionid,timestamp) VALUES (?,?,?,?,?,?)",(form,power,degrees,duration,mission,time.time()))
     GLOBALS.MAP.append([form,power,degrees,duration])
     return
@@ -176,27 +175,31 @@ def shoot():
 
 @app.route("/moveforward", methods=["GET","POST"])
 def moveforward():
+    power = 25
+    duration = 3
     data = {}
     if GLOBALS.ROBOT:
-        logaction("move",power=10, duration=3,mission=session["missionID"])
-        GLOBALS.ROBOT.move_power_time(10,3,deviation=2.5)
+        logaction("move",power=power, duration=duration,mission=session["missionID"])
+        GLOBALS.ROBOT.move_power_time(power,duration,deviation=2.5)
     return jsonify(data)
 
 @app.route("/moveright", methods=["GET","POST"])
 def moveright():
+    power = 25
     data = {}
     if GLOBALS.ROBOT:
-        logaction("move",power=10, degrees=270,mission=session["missionID"])
-        data = GLOBALS.ROBOT.rotate_power_degrees_IMU(10,-90,2)
+        logaction("move",power=power, degrees=270,mission=session["missionID"])
+        data = GLOBALS.ROBOT.rotate_power_degrees_IMU(power,-90,2)
     return jsonify(data)
 
 
 @app.route("/moveleft", methods=["GET","POST"])
 def moveleft():
+    power = 25
     data = {}
     if GLOBALS.ROBOT:
-        logaction("move",power=10, degrees=90,mission=session["missionID"])
-        data = GLOBALS.ROBOT.rotate_power_degrees_IMU(10,90,2)
+        logaction("move",power=power, degrees=90,mission=session["missionID"])
+        data = GLOBALS.ROBOT.rotate_power_degrees_IMU(power,90,2)
     return jsonify(data)
 
 @app.route("/stop", methods=["GET","POST"])
