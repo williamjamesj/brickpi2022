@@ -2,4 +2,7 @@
 flask
 passlib
 pyotp
+numpy
+opencv-python
+speake3
 # Flask-QRcode
