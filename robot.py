@@ -100,6 +100,7 @@ class Robot(BrickPiInterface):
             right = self.maze_progress[str([self.x,self.y,1])]
             backward = self.maze_progress[str([self.x,self.y,2])]
             left = self.maze_progress[str([self.x,self.y,3])]
+            print(forward,right,backward,left)
             print(self.maze_progress)
             if left:
                 self.orientation =  2
@@ -139,23 +140,29 @@ class Robot(BrickPiInterface):
     
     def turn(self, degrees, power):
         current_direction = self.get_orientation_IMU()[0]
-        print("turning to ",degrees)
-        clockwise = degrees-current_direction
-        counterclockwise = current_direction-degrees
+        print("Turning to",degrees,"degrees.")
+        clockwise = degrees-current_direction # Find the distance the robot has to travel in a clockwise direction.
+        counterclockwise = current_direction-degrees # find the distance the robot has to travel in a counterclockwise direction.
         if clockwise > counterclockwise: # Turn clockwise to the destination.
+            print("Clockwise.")
             compass = self.get_orientation_IMU()[0]
-            while (compass < degrees+1) or (compass < degrees-1):
+            while compass < degrees:
+                if degrees < 1 and compass > 355:
+                    break
                 self.BP.set_motor_power(self.rightmotor, -power)
                 self.BP.set_motor_power(self.leftmotor, power)
                 compass = self.get_orientation_IMU()[0]
                 # print(compass)
         else: # Turn counterclockwise to the destination.
             compass = self.get_orientation_IMU()[0]
-            while (compass > degrees+1) or (compass > degrees-1):
+            while compass > degrees:
+                if degrees < 1 and compass > 355:
+                    break
                 self.BP.set_motor_power(self.rightmotor, power)
                 self.BP.set_motor_power(self.leftmotor, -power)
                 compass = self.get_orientation_IMU()[0]
                 # print(compass)
+        print(compass)
         pass
 
     
@@ -177,31 +184,13 @@ if __name__ == '__main__':
     # ROBOT.move_square(1,2.5)
     # input("Get Straight, then press enter...")
     ROBOT.configure_compass()
+    # ROBOT.turn(360,20)
     try:
         ROBOT.search_maze()
     except KeyboardInterrupt:
         ROBOT.stop_all()
         ROBOT.safe_exit()
         print("Keyboard Interrupt")
-    # print(ROBOT.forward)
-    # print(ROBOT.right)
-    # print(ROBOT.backward)
-    # print(ROBOT.left)
-    # ROBOT.turn(ROBOT.right, 10)
-    # ROBOT.turn(ROBOT.backward, 10)
-    # ROBOT.turn(ROBOT.left, 10)
-    # ROBOT.turn(ROBOT.forward, 10)
-    # for i in range(100):
-    #     print(ROBOT.get_compass_IMU())
-    #     time.sleep(0.1)
-    # for i in range(10):
-    #     print(ROBOT.get_ultra_sensor())
-    # ROBOT.move_forward_until_wall(50,2.5,20)
-    # for i in range(10):
-    #     powermodifier = 1
-    #     if i%2 != 0:
-    #         powermodifier = -1
-    #     ROBOT.move_square(1,2.5,powermodifier=powermodifier)
 
     # ROBOT.move_square(1,2.5)
     # ROBOT.rotate_power_degrees_IMU(20,-90)
