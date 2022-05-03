@@ -6,3 +6,4 @@ logs/
 *.log
 *.ipynb
 /pythonCompilation
+__pycache__/robot.cpython-35.pyc

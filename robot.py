@@ -1,9 +1,10 @@
 #This is where your main robot code resides. It extendeds from the BrickPi Interface File
 #It includes all the code inside brickpiinterface. The CurrentCommand and CurrentRoutine are important because they can keep track of robot functions and commands. Remember Flask is using Threading (e.g. more than once process which can confuse the robot)
 from interfaces.brickpiinterface import *
-from flask_app import logaction
+# from flask_app import logaction
 import global_vars as GLOBALS
 import logging
+import time
 
 class Robot(BrickPiInterface):
     
@@ -11,6 +12,19 @@ class Robot(BrickPiInterface):
         super().__init__(timelimit, logger)
         self.CurrentCommand = "stop" #use this to stop or start functions
         self.CurrentRoutine = "stop" #use this stop or start routines
+        return
+    
+    def configure_compass(self):
+        self.forward = self.get_orientation_IMU()[0]
+        self.right = self.forward+90
+        self.backward = self.forward+180
+        self.left = self.forward+270
+        self.uncheckeddirections = [self.right,self.backward,self.left,self.forward]
+        self.directions =[]
+        for i in self.uncheckeddirections:
+            if i > 360:
+                i -= 360
+            self.directions.append(i)
         return
         
         
@@ -65,47 +79,48 @@ class Robot(BrickPiInterface):
 
 
     def search_maze(self):
-        self.BP.reset_motor_encoder(self.BP.PORT_A)
-        self.BP.reset_motor_encoder(self.BP.PORT_B)
-        ninetydegrees = 85
         # if not self.maze_progress:
         self.maze_progress ={}
         self.x = 0
         self.y = 0
-        self.orientation = 0
+        self.orientation = 0 # 0 is right, 1 is left, 2 is backwards, 3 is forwards
+        print(self.directions)
         while True:
-            for i in range (4): # Search all of the four directions that a wall/victim can be.
-                if self.orientation >= 4:
-                    self.orientation = 0
+            for i in self.directions: # Search all of the four directions that a wall/victim can be.
                 distance = ROBOT.get_ultra_sensor()
                 if distance > 30:
-                    self.maze_progress[str([self.x,self.y,self.orientation])] = True
+                    self.maze_progress[str([self.x,self.y,self.directions.index(i)])] = True
                     print(self.orientation,"No Wall")
                 else:
                     print(self.orientation,"Wall")
-                    self.maze_progress[str([self.x,self.y,self.orientation])] = False
-                ROBOT.rotate_power_degrees_IMU(10, ninetydegrees) # Turn Right ~ 90 Degrees
-                self.orientation += 1
+                    self.maze_progress[str([self.x,self.y,self.directions.index(i)])] = False
+                print("turning to ",i)
+                ROBOT.turn(i,25) # Turn to the necessary direction using the orientation-based turning function
             forward = self.maze_progress[str([self.x,self.y,0])]
             right = self.maze_progress[str([self.x,self.y,1])]
-            behind = self.maze_progress[str([self.x,self.y,2])]
+            backward = self.maze_progress[str([self.x,self.y,2])]
             left = self.maze_progress[str([self.x,self.y,3])]
             print(self.maze_progress)
             if left:
                 self.orientation =  2
-                ROBOT.rotate_power_degrees_IMU(10, 3*ninetydegrees)
+                self.turn(self.directions[2],10)
                 self.move_square(1,2.5)
+                self.x -= 1
             elif right:
                 self.orientation =  1
-                ROBOT.rotate_power_degrees_IMU(10, ninetydegrees)
+                self.turn(self.directions[0],10)
                 self.move_square(1,2.5)
+                self.x += 1
             elif forward:
                 self.orientation =  0
+                self.turn(self.directions[3],10)
                 self.move_square(1,2.5)
+                self.y += 1
             else:
                 self.orientation =  3
-                ROBOT.rotate_power_degrees_IMU(10, 2*ninetydegrees)
+                self.turn(self.directions[1],10)
                 self.move_square(1,2.5)
+                self.y -= 1
         return
             
     # def move_forward_encoder(self,distance):
@@ -122,6 +137,26 @@ class Robot(BrickPiInterface):
     #         time.sleep(.1)	
     #Create a function to search for victim
     
+    def turn(self, degrees, power):
+        current_direction = self.get_orientation_IMU()[0]
+        print("turning to ",degrees)
+        clockwise = degrees-current_direction
+        counterclockwise = current_direction-degrees
+        if clockwise > counterclockwise: # Turn clockwise to the destination.
+            compass = self.get_orientation_IMU()[0]
+            while (compass < degrees+1) or (compass < degrees-1):
+                self.BP.set_motor_power(self.rightmotor, -power)
+                self.BP.set_motor_power(self.leftmotor, power)
+                compass = self.get_orientation_IMU()[0]
+                # print(compass)
+        else: # Turn counterclockwise to the destination.
+            compass = self.get_orientation_IMU()[0]
+            while (compass > degrees+1) or (compass > degrees-1):
+                self.BP.set_motor_power(self.rightmotor, power)
+                self.BP.set_motor_power(self.leftmotor, -power)
+                compass = self.get_orientation_IMU()[0]
+                # print(compass)
+        pass
 
     
     
@@ -141,12 +176,24 @@ if __name__ == '__main__':
     ROBOT.configure_sensors() #This takes 4 seconds
     # ROBOT.move_square(1,2.5)
     # input("Get Straight, then press enter...")
+    ROBOT.configure_compass()
     try:
         ROBOT.search_maze()
     except KeyboardInterrupt:
         ROBOT.stop_all()
         ROBOT.safe_exit()
         print("Keyboard Interrupt")
+    # print(ROBOT.forward)
+    # print(ROBOT.right)
+    # print(ROBOT.backward)
+    # print(ROBOT.left)
+    # ROBOT.turn(ROBOT.right, 10)
+    # ROBOT.turn(ROBOT.backward, 10)
+    # ROBOT.turn(ROBOT.left, 10)
+    # ROBOT.turn(ROBOT.forward, 10)
+    # for i in range(100):
+    #     print(ROBOT.get_compass_IMU())
+    #     time.sleep(0.1)
     # for i in range(10):
     #     print(ROBOT.get_ultra_sensor())
     # ROBOT.move_forward_until_wall(50,2.5,20)

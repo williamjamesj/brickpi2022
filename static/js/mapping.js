@@ -43,7 +43,7 @@ function processMovements(results) {
       setTimeout(getMovements, 1) // Only wait a millisecond to refresh, as it retrieves faster data, as the user has already waited for the turtle to move.
    }
    else {
-      console.log ("No new movements.")
+      console.log("No new movements.")
       setTimeout(getMovements, 1000)
    }
 }
