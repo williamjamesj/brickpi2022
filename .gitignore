@@ -7,3 +7,4 @@ logs/
 *.ipynb
 /pythonCompilation
 __pycache__/robot.cpython-35.pyc
+threshold.jpg

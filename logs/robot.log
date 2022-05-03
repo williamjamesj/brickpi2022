@@ -1506,3 +1506,78 @@ INFO:root:Exiting
 INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
 INFO:root:BRICKPIINTERFACE: Exiting the Thermal Sensor Thread
 INFO:root:Exiting
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Exiting the Thermal Sensor Thread
+INFO:root:Exiting
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Exiting the Thermal Sensor Thread
+INFO:root:Exiting
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Exiting the Thermal Sensor Thread
+INFO:root:Exiting
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Exiting the Thermal Sensor Thread
+INFO:root:Exiting
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Exiting the Thermal Sensor Thread
+INFO:root:Exiting
+INFO:root:Exiting
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:root:BRICKPIINTERFACE: Exiting the Thermal Sensor Thread
+INFO:root:Exiting
+INFO:root:Exiting
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Exiting the Thermal Sensor Thread
+INFO:root:Exiting
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Exiting the Thermal Sensor Thread
+INFO:root:Exiting
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Exiting the Thermal Sensor Thread
+INFO:root:Exiting
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:root:BRICKPIINTERFACE: Exiting the Thermal Sensor Thread
+INFO:root:Exiting
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:root:IMU Orientation: [Errno 5] Input/output error
+INFO:root:IMU Orientation: [Errno 5] Input/output error
+INFO:root:BRICKPIINTERFACE: Exiting the Thermal Sensor Thread
+INFO:root:Exiting
+INFO:root:Exiting
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Exiting the Thermal Sensor Thread
+INFO:root:Exiting
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:root:RED PIXELS: 0
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:root:RED PIXELS: 0
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:root:RED PIXELS: 0
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:root:RED PIXELS: 0
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:root:YELLOW PIXELS: 21427200
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:root:YELLOW PIXELS: 0
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:root:YELLOW PIXELS: 0
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:root:YELLOW PIXELS: 12107257
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:root:YELLOW PIXELS: 779245
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:root:YELLOW PIXELS: 0

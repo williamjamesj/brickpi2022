@@ -70,13 +70,13 @@ class CameraInterface(object):
         return
     
     #detect if there is a colour in the image
-    def get_camera_colour(self):
+    def get_camera_colour(self, low, high):
         if not self.frame: #hasnt read a frame from camera
             return "camera is not running yet"
         img = cv2.imdecode(numpy.fromstring(self.frame, dtype=numpy.uint8), 1)
         # set red range
-        lowcolor = (50,50,150)
-        highcolor = (128,128,255)
+        lowcolor = low
+        highcolor = high
 
         # threshold
         thresh = cv2.inRange(img, lowcolor, highcolor)
@@ -84,7 +84,7 @@ class CameraInterface(object):
         cv2.imwrite("threshold.jpg", thresh)
 
         count = numpy.sum(numpy.nonzero(thresh))
-        self.log("RED PIXELS: " + str(count))
+        self.log("YELLOW PIXELS: " + str(count))
         if count > 300: #more than 300 pixels are between the low and high color
-            return "red"
-        return "no colour"
+            return True
+        return False
