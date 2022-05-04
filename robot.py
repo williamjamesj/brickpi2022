@@ -16,16 +16,11 @@ class Robot(BrickPiInterface):
         return
     
     def configure_compass(self):
-        self.forward = self.get_orientation_IMU()[0]
-        self.right = self.forward+90
-        self.backward = self.forward+180
-        self.left = self.forward+270
-        self.uncheckeddirections = [self.right,self.backward,self.left,self.forward]
-        self.directions =[]
-        for i in self.uncheckeddirections:
-            if i > 360:
-                i -= 360
-            self.directions.append(i)
+        self.forward = self.get_orientation_IMU()[0]%360
+        self.right = (self.forward+90)%360
+        self.backward = (self.forward+180)%360
+        self.left = (self.forward+270)%360
+        self.directions = [self.right,self.backward,self.left,self.forward]
         return
         
         
@@ -78,22 +73,26 @@ class Robot(BrickPiInterface):
 
 
     def search_maze(self):
+        ninety_degrees = 85
         self.movements = [] # This list stores all of the movements the robot has made, so they can be reversed to return the robot to its origin.
         self.maze_progress = {}
         self.x = 0
         self.y = 0
         self.orientation = 0 # 0 is right, 1 is left, 2 is backwards, 3 is forwards
         while True:
-            for i in self.directions: # Search all of the four directions that a wall/victim can be.
+            self.turn(self.forward,10)
+            self.orientation = 0
+            for i in range(4): # This will rotate the robot to see all of the walls, then will rotate to its correct direction to continue navigating the maze.
+                compass = self.get_orientation_IMU()[0]
                 distance = ROBOT.get_ultra_sensor()
                 if distance > 30:
-                    self.maze_progress[str([self.x,self.y,self.directions.index(i)])] = True
+                    self.maze_progress[str([self.x,self.y,self.orientation])] = True
                     print(self.orientation,"No Wall")
                 else:
                     print(self.orientation,"Wall")
-                    self.maze_progress[str([self.x,self.y,self.directions.index(i)])] = False
-                print("turning to ",i)
-                ROBOT.turn(i,25) # Turn to the necessary direction using the orientation-based turning function
+                    self.maze_progress[str([self.x,self.y,self.orientation])] = False
+                self.rotate_power_degrees_IMU(15,ninety_degrees)
+                self.orientation += 1
 
             # These variables indicate if there is a wall in any four directions (relative to the robot's start)
             # There is a wall present if the value is False
@@ -109,16 +108,29 @@ class Robot(BrickPiInterface):
             directions = newdirections
             newdirections = {}
             for direction in directions: # Checks if any of the other directions have already been visited.
-                if not self.remember_square([self.x,self.y,direction]):
+                y = 0
+                x = 0
+                if direction == 0:
+                    x = -1
+                elif direction == 1:
+                    y = -1
+                elif direction == 2:
+                    x = 1
+                elif direction == 3:
+                    y = 1
+                print()
+                if not self.remember_square([self.x+x,self.y+y,direction]):
+                    print("New Direction", direction)
                     newdirections[direction] = directions[direction]
-            print(directions)
+            print(directions,"directions")
+            print(newdirections,"newdirections")
             if len(directions) == 0: # If there are no directions left, then the robot has reached the end of the maze, or is completely stuck between four walls, and will try to drive straight through them.
                 break
             # The directions list now just contains the directions that are not walls or haven't already been visited.
             for index, direction in enumerate(self.directions): # This loop will iterate through the list of directions, and choose based on that priority.
                 print(index, direction)
-                if index in directions:
-                    self.turn(direction,15) # Needs to be slower, as accuracy for turning to change square is important
+                if index in newdirections:
+                    self.turn(direction,10, accuracy=1) # Needs to be slower, as accuracy for turning to change square is important
                     self.move_square(1,2.5)
                     self.movements.append({"type":"m","value":1})
                     self.movements.append({"type":"t","value":direction})
@@ -130,8 +142,10 @@ class Robot(BrickPiInterface):
                         self.y -= 1
                     elif index == 3:
                         self.x -= 1
+                    print("finished movement")
                     break
             else:
+                print("else break")
                 break # Give up once there are no options, not that that's an accurate way of doing this.
         self.return_to_start()
         return
@@ -157,6 +171,7 @@ class Robot(BrickPiInterface):
         This function checks if the robot has already visited a square, based on provided coordinates.
         '''
         try: # If this next if statement returns an error, the square has not yet been visited, or not have the forward direction scanned (not sure why that would happen?).
+            print(self.maze_progress)
             if self.maze_progress[str(coordinate.append(0))]:
                 return True
             else:
@@ -176,7 +191,7 @@ class Robot(BrickPiInterface):
         else:
             return False
         
-    def turn(self, degrees, power):
+    def turn(self, degrees, power, accuracy=2):
         '''
         Given a direction, this function is able to turn to that direction via the shortest option of either clockwise or counterclockwise
         '''
@@ -191,16 +206,16 @@ class Robot(BrickPiInterface):
         if clockwise > counterclockwise: # Turn clockwise to the destination.
             print("Clockwise.")
             compass = self.get_orientation_IMU()[0]
-            while compass < degrees:
+            while abs(compass-degrees) > accuracy: # Keep turning until the difference between the current direction and the destination is less than 2 degrees.
                 if degrees < 1 and compass > 355:
                     break
                 self.BP.set_motor_power(self.rightmotor, -power)
                 self.BP.set_motor_power(self.leftmotor, power)
                 compass = self.get_orientation_IMU()[0]
-                # print(compass)
         else: # Turn counterclockwise to the destination.
+            print("Anticlockwise.")
             compass = self.get_orientation_IMU()[0]
-            while compass > degrees:
+            while abs(compass-degrees) > accuracy: # Keep turning until the difference between the current direction and the destination is less than 2 degrees.
                 if degrees < 1 and compass > 355:
                     break
                 self.BP.set_motor_power(self.rightmotor, power)
@@ -232,17 +247,30 @@ if __name__ == '__main__':
     # frame = CAMERA.get_frame()
     
     ROBOT.configure_sensors() #This takes 4 seconds
-    # ROBOT.configure_compass()
+    ROBOT.configure_compass()
 
 
-    ROBOT.turn(360,20)
+    # ROBOT.turn(ROBOT.left,20)
+    # ROBOT.stop_all()
+    # time.sleep(1)
+    # ROBOT.turn(ROBOT.backward,20)
+    # ROBOT.stop_all()
+    # time.sleep(1)
+    # ROBOT.turn(ROBOT.left,20)
+    # ROBOT.stop_all()
+    # time.sleep(1)
+    # ROBOT.turn(ROBOT.right,20)
+    # ROBOT.stop_all()
+    # time.sleep(1)
+    # ROBOT.turn(ROBOT.forward,20)
+    # ROBOT.stop_all()
     
-    # try:
-    #     ROBOT.search_maze()
-    # except KeyboardInterrupt:
-    #     ROBOT.stop_all()
-    #     ROBOT.safe_exit()
-    #     print("Keyboard Interrupt")
+    try:
+        ROBOT.search_maze()
+    except KeyboardInterrupt:
+        ROBOT.stop_all()
+        ROBOT.safe_exit()
+        print("Keyboard Interrupt")
 
     # ROBOT.move_square(1,2.5)
     # ROBOT.rotate_power_degrees_IMU(20,-90)
@@ -253,3 +281,5 @@ if __name__ == '__main__':
     #     print(compass)
     # sensordict = ROBOT.get_all_sensors()
     # ROBOT.safe_exit()
+    ROBOT.stop_all()
+    ROBOT.safe_exit()
