@@ -12,6 +12,7 @@ class Robot(BrickPiInterface):
         super().__init__(timelimit, logger)
         self.CurrentCommand = "stop" #use this to stop or start functions
         self.CurrentRoutine = "stop" #use this stop or start routines
+        self.movements = [] # Stores movements, so the robot can return to the start.
         return
 
     """Motor encoder code inspired by https://github.com/DexterInd/BrickPi3/blob/master/Software/Python/Examples/LEGO-Motor_Position.py"""
@@ -39,7 +40,7 @@ class Robot(BrickPiInterface):
             time.sleep(0.01)
         return
     
-    def drive_forward(self, distance=42.5, power=100, speed=200): # 42.5 is approximately the size of a sector.
+    def drive(self, distance=42.5, power=100, speed=200): # 42.5 is approximately the size of a sector.
         distance = distance*20.4627783975 # This is a magical number that takes into account the size of the wheels, and converts in to the number of degrees that need to be travelled.
         self.CurrentCommand = "drive"
         self.reset_motors()
@@ -48,8 +49,74 @@ class Robot(BrickPiInterface):
             time.sleep(0.01)
         return
 
+    def search_sqaure(self):
+        walls = [] # 0 is forwards, 1 is right, 2 is backwards, 3 is left
+        for wall in range(4):
+            ultrasonic = self.get_ultra_sensor()
+            if ultrasonic < 30: # Checks if there is a wall in this direction.
+                walls.append(True) # If there is a wall, add True to the list.
+            else:
+                walls.append(False)
+            self.turn(90)
+        return walls
+    
+    def return_to_start(self):
+        self.CurrentCommand = "return"
+        self.movements.reverse()
+        for movement in self.movements:
+            if movement["type"] == "turn":
+                self.turn((360-movement["value"])%360) # Turns the opposite direction to what it did previously.
+
     def search_maze(self):
-        self.CurrentRoutine = "search"
+        self.x = 0; self.y = 0; self.orientation = 0 # The y-axis is forwards and backwards and the x-axis is left and right. Left is negative, right is positive. Forwards is positive, backwards is negative.
+        self.CurrentCommand = "search"
+        while self.CurrentCommand == "search":
+            walls = self.search_sqaure() # The robot will scan all 4 directions, and will be facing self.orientation when it is finished.
+            if walls[0]: # Go forwards, then right, then left, then backwards, when there are multiple options. 
+                self.drive() # Move forward a square.
+                self.movements.append({"type": "drive", "value": 42.5})
+                # Orientation doesn't change.
+                self.y += 1
+            elif walls[1]:
+                self.turn(90) # Turn 90 degrees.
+                self.orientation += 1 # Change the orientation.
+                self.drive()
+                self.x += 1
+                self.movements.append({"type": "drive", "value": 42.5})
+                self.movements.append({"type": "turn", "value": 90})
+            elif walls[3]: # walls[3] is the left wall.
+                self.turn(-90)
+                self.orientation += 3 # Orientation can go over, 3, as it is reset later.
+                self.drive()
+                self.y -= 1
+                self.movements.append({"type": "drive", "value": 42.5})
+                self.movements.append({"type": "turn", "value": -90})
+            elif walls[2]: # walls[2] is the backwards wall
+                self.turn(180)
+                self.orientation += 2
+                self.movements.append({"type": "drive", "value": 42.5})
+                self.movements.append({"type": "turn", "value": 180})
+            else:
+                print("Error: No walls found.")
+            self.orientation = self.orientation % 4 # Ensure that the orientation is within the range [0,3].
+        self.return_to_start()
+        return
+    
+
+    def detect_victim(self):
+            '''
+            Detects a victim, based on their temperature or colour (because thats an acceptable way to discriminate between victims).
+            '''
+            if GLOBALS.CAMERA.get_camera_colour((180, 180, 0), (255,255,255)): # If the victim is yellow.
+                return True
+            elif self.get_thermal_sensor() > 30: # If the victim is warm - ambient temperature assumed to be approximately 30 degrees.
+                return True
+            else:
+                return False
+
+
+
+
         
 
 
@@ -67,7 +134,7 @@ if __name__ == '__main__':
     # frame = CAMERA.get_frame()
     try:
         ROBOT.configure_sensors() #This takes 4 seconds
-        ROBOT.drive_forward()
+        ROBOT.drive()
         ROBOT.turn(360)
     except:
         ROBOT.stop_all()
