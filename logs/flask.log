@@ -12314,3 +12314,533 @@ INFO:werkzeug:10.10.73.40 - - [27/Apr/2022 10:07:48] "[37mPOST /moveforward HTT
 INFO:werkzeug:10.10.73.40 - - [27/Apr/2022 10:08:00] "[37mGET /dashboard HTTP/1.1[0m" 200 -
 INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/robot.py', reloading
 INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://10.10.73.40:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 10:59:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 10:59:43] "GET /static/css/custom.css HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 10:59:43] "GET /static/js/new_ajax_helper.js HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 10:59:43] "GET /static/css/zephyr.css HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 10:59:43] "GET /static/js/custom.js HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 10:59:43] "GET /static/js/navbar_helper.js HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 10:59:46] "GET /static/js/more_ajax.js HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 10:59:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:17] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:17] "GET /2fa HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:17] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:17] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:17] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:17] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:17] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:17] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:50] "[32mPOST /2fa HTTP/1.1[0m" 302 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:50] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:51] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:51] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:51] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:51] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:51] "GET /static/js/mapping.js HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:51] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:51] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:51] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:51] "GET /static/js/mission.js HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:52] "POST /check_mission HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:52] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:53] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:flask_app:FLASK APP: CAMERA NOT WORKING
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:54] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:54] "POST /robotload HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:54] "[35m[1mGET /videofeed HTTP/1.1[0m" 204 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:55] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:56] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:58] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:58] "[35m[1mPOST /moveforward HTTP/1.1[0m" 500 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:59] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:59] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:00:59] "[35m[1mPOST /moveright HTTP/1.1[0m" 500 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:00] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:01] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:02] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:04] "[35m[1mPOST /moveforward HTTP/1.1[0m" 500 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:04] "[35m[1mPOST /moveforward HTTP/1.1[0m" 500 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:04] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:04] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:06] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:07] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:08] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:09] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:10] "[35m[1mPOST /moveforward HTTP/1.1[0m" 500 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:10] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:11] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:12] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:12] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:13] "[35m[1mPOST /moveforward HTTP/1.1[0m" 500 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:14] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:15] "[35m[1mPOST /compass HTTP/1.1[0m" 500 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:15] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:16] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:17] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:19] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:19] "POST /start_mission HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:20] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:22] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:23] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:25] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:26] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:27] "POST /stop_mission HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:27] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:28] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:29] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:30] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:32] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:33] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:35] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:36] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:37] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:39] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:40] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:41] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:43] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:44] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:46] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:48] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:49] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:50] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:51] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:53] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:55] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:56] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:57] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:01:58] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:00] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:01] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:02] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:03] "POST /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:03] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:03] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:03] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:03] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:03] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:03] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:03] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:03] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:03] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:03] "[36mGET /static/js/mission.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:04] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:04] "POST /check_mission HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:04] "[35m[1mGET /videofeed HTTP/1.1[0m" 204 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:05] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:06] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:07] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:08] "GET /missions HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:08] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:08] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:08] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:08] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:08] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:08] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:12] "GET /mission/22 HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:12] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:12] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:12] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:12] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:12] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:12] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:22] "[32mPOST /mission/22 HTTP/1.1[0m" 302 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:22] "GET /mission/22 HTTP/1.1" 200 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:22] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:22] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:22] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:22] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:22] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.72.248 - - [04/May/2022 11:02:22] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://10.10.73.40:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:29] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:29] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:29] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:29] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:29] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:29] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:36] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:36] "GET /2fa HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:36] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:36] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:36] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:36] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:36] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:36] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:54] "[32mPOST /2fa HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:54] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:55] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:55] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:55] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:55] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:55] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:55] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:55] "GET /static/js/mapping.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:55] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:55] "[36mGET /static/js/mission.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:55] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:55] "POST /check_mission HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:57] "GET /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:57] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:57] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:57] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:57] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:57] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:57] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:57] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:59] "GET /mission/23 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:59] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:59] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:59] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:59] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:59] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:03:59] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:10] "[32mPOST /mission/23 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:10] "GET /mission/23 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:10] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:10] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:10] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:10] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:10] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:10] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:12] "[35m[1mGET /sensor_view HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:13] "GET /sensor_view?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:13] "GET /sensor_view?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:13] "GET /sensor_view?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:13] "GET /sensor_view?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:13] "GET /sensor_view?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:14] "GET /mission/23 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:18] "GET /accountsettings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:18] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:18] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:18] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:18] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:18] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:18] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:20] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:20] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:20] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:21] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:21] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:21] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:21] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:21] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:21] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:21] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:21] "[36mGET /static/js/mission.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:21] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:21] "POST /check_mission HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:23] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:24] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:26] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:28] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:30] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:32] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:34] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:36] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:38] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:40] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:42] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:42] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:42] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:42] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:42] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:42] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:42] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:43] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:43] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:43] "[36mGET /static/js/mission.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:43] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:43] "POST /check_mission HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:44] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:45] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:45] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:45] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:45] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:45] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:45] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:45] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:45] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:45] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:46] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:46] "[36mGET /static/js/mission.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:46] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:46] "POST /check_mission HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:47] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:51] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:51] "GET /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:51] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:51] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:51] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:51] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:51] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:51] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:58] "GET /mission/10 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:58] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:58] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:58] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:58] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:58] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:04:58] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:11] "GET /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:11] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:11] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:12] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:12] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:12] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:12] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:13] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:13] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:13] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:14] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:14] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:14] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:14] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:14] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:14] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:14] "[36mGET /static/js/mission.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:14] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:14] "POST /check_mission HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:16] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:18] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:21] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:23] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:25] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:27] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:29] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:31] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:33] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:34] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:36] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:38] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:40] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:42] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:44] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:46] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:48] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:50] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:52] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:54] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:56] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:05:58] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:00] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:02] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:04] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:06] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:08] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:10] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:12] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:14] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:16] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:18] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:20] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:22] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:24] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:26] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:28] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:30] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:32] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:34] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:36] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:38] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:40] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:42] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:44] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:46] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:48] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:50] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:52] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:54] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:56] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:06:58] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:00] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:02] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:04] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:06] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:08] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:10] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:12] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:14] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:16] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:18] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:20] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:22] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:24] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:26] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:28] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:30] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:32] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:34] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:36] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:38] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:40] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:42] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:44] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:46] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:48] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:50] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:52] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:54] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:56] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:07:58] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:00] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:02] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:04] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:06] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:08] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:10] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:12] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:14] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:16] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:18] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:20] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:22] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:24] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:26] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:28] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:30] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:32] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:34] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:36] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:38] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:40] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:42] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:44] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:46] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:48] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:50] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:52] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:54] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:56] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:08:58] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:00] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:02] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:04] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:06] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:08] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:10] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:12] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:14] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:16] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:18] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:20] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:22] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:24] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:26] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:28] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:30] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:32] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:34] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:36] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:38] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:40] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:42] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:44] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:46] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:48] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:50] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:52] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:54] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:56] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:09:58] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:10:00] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:10:02] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:10:04] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:10:06] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:10:08] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:10:10] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:10:12] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:10:14] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:10:16] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:10:18] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/May/2022 11:10:20] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\robot.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://10.10.73.40:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://10.10.73.40:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://10.10.73.40:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://10.10.73.40:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://10.10.73.40:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://10.10.73.40:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://10.10.73.40:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://10.10.73.40:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://10.10.73.40:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://10.10.73.40:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://10.10.73.40:5000/ (Press CTRL+C to quit)

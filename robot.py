@@ -2,7 +2,6 @@
 #It includes all the code inside brickpiinterface. The CurrentCommand and CurrentRoutine are important because they can keep track of robot functions and commands. Remember Flask is using Threading (e.g. more than once process which can confuse the robot)
 from interfaces.brickpiinterface import *
 from interfaces.camerainterface import CameraInterface
-# from flask_app import logaction
 import global_vars as GLOBALS
 import logging
 import time

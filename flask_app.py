@@ -7,14 +7,13 @@ import logging, time
 from passlib.hash import sha256_crypt
 import pyotp
 
-#Creates the Flask Server Object
+#Creates the Flask Server Object and other necessary objects.
 app = Flask(__name__); app.debug = True
-SECRET_KEY = 'my random key can be anything' #this is used for encrypting sessions
+SECRET_KEY = 'cRkgzGZbfkuY7sktRzk5qksUhKWYdZZIjuPpqZ4AbFg' #this is used for encrypting session tokens
 app.config.from_object(__name__) #Set app configuration using above SETTINGS
 logging.basicConfig(filename='logs/flask.log', level=logging.INFO)
 GLOBALS.DATABASE = databaseinterface.DatabaseInterface('databases/RobotDatabase.db', app.logger)
-EXEMPT_PATHS = ["/","/2fa","/favicon.ico"] # All of the paths that are not protected by the login.
-# qrcode = QRcode(app)
+EXEMPT_PATHS = ["/","/2fa","/favicon.ico"] # All of the paths that are not protected by authentication.
 
 #Log messages
 def log(message):
@@ -37,11 +36,9 @@ def actionbackdoor():
 # Before accessing ANY page (other than sign in pages), check if the user is logged in, as there is no public facing functionality for this website.
 @app.before_request
 def check_login():
-    print(request.path)
     exempt_page = request.path in EXEMPT_PATHS or request.path.startswith("/static") # Check if it is one of the pages that is allowed (login and 2fa especially, to avoid a loop) or if it is a static file.
     logged_in = 'userid' in session
     if not (logged_in or exempt_page):
-        print("none of that")
         return redirect("/") # Redirect to the login if the user has not logged in.
     
 
@@ -107,7 +104,6 @@ def robotdashboard():
         location = request.form.get("location")
         notes = request.form.get("notes")
         missionid = session["lastMissionID"]
-        print(location,notes,missionid)
         GLOBALS.DATABASE.ModifyQuery("UPDATE missions SET location = ?, notes = ? WHERE missionID = ?",(location,notes,missionid))
     enabled = int(GLOBALS.ROBOT != None)
     return render_template('dashboard.html', robot_enabled = enabled )
@@ -231,9 +227,7 @@ def mission(id):
     data = GLOBALS.DATABASE.ViewQuery("SELECT * FROM (missions LEFT JOIN users ON users.userid = missions.userid) LEFT JOIN actions ON actions.missionid = missions.missionID WHERE missions.missionID = ?",(id,))
     if request.method == "POST":
         location = request.form.get("location")
-        print(location)
         notes = request.form.get("notes")
-        print(notes)
         if GLOBALS.DATABASE.ModifyQuery("UPDATE missions SET location = ?, notes = ? WHERE missionID = ?",(location,notes,id)):
             flash("Mission updated","success")
         else:
@@ -328,7 +322,6 @@ def twofactorconfig():
             return redirect('/2faconfig')
     code = pyotp.random_base32()
     url = pyotp.totp.TOTP(code).provisioning_uri(session['email'], issuer_name="Robot Controller")
-    print(url)
     return render_template("2faconfig.html",url=url,code=code,email=session['email'])
 
 @app.route("/2fa", methods=["GET","POST"])
