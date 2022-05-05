@@ -21,9 +21,9 @@
                 <button id="mission" type="button" class="btn btn-success" onclick="toggle_mission()">Start Mission</button>
             </div>
             <div class="row">
-                <button id="forward" type="button" class="btn btn-danger" onclick="new_ajax_helper('/stop');">Stop</button>
+                <button id="stop" type="button" class="btn btn-danger" onclick="new_ajax_helper('/stop');">Stop</button>
                 <button id="forward" type="button" class="btn btn-primary" onclick="new_ajax_helper('/moveforward');">Move Forward</button>
-                <button type="button" class="btn btn-warning">AutoMode</button>
+                <button id="auto" type="button" onclick="automode();" class="btn btn-warning">AutoMode</button>
                 <button id="right" type="button" class="btn btn-primary" onclick="new_ajax_helper('/moveright');">Move Left</button>
                 <button id="shoot" type="button" class="btn btn-primary" onclick="new_ajax_helper('/shoot');">Shoot</button>
                 <button id="left" type="button" class="btn btn-primary" onclick="new_ajax_helper('/moveleft');">Move Right</button>

@@ -343,6 +343,19 @@ def twofactor():
             flash("Code invalid.", "warning")
     return render_template("2fa.html")
 
+@app.route("/auto", methods=["GET","POST"])
+def automatic():
+    if session["missionID"] is not None:
+        GLOBALS.ROBOT.search_maze(session["missionID"])
+    else:
+        GLOBALS.ROBOT.search_maze()
+    print("Done.")
+    return jsonify({})
+
+@app.route("/return_home", methods=["GET","POST"])
+def return_home():
+    GLOBALS.HEAD_HOME = True
+    return jsonify({})
 
 # -----------------------------------------------------------------------------------
 # CAMERA CODE-----------------------------------------------------------------------

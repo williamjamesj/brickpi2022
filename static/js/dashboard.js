@@ -54,3 +54,13 @@ function shutdown()
     alert("shutdown");
     new_ajax_helper('/shutdown');
 }
+
+function automode() {
+    if (document.getElementById("auto").innerHTML == "AutoMode") {
+        new_ajax_helper('/auto');
+        document.getElementById("auto").innerHTML = "Return";
+    } else {
+        new_ajax_helper('/return_home');
+        document.getElementById("auto").innerHTML = "AutoMode";
+    }
+}

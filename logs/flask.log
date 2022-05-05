@@ -12844,3 +12844,499 @@ INFO:werkzeug: * Debugger PIN: 169-784-143
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://10.10.73.40:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:08] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:09] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:09] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:09] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:09] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:09] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:09] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:19] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:19] "[37mGET /2fa HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:32] "[32mPOST /2fa HTTP/1.1[0m" 302 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:32] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:33] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:33] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:33] "[36mGET /static/js/mission.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:33] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:33] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:34] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:35] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:36] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:37] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:38] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:flask_app:COLOUR: get_sensor error: Invalid sensor data
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:39] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:39] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:39] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:40] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:41] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:43] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:44] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:45] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:47] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:48] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:49] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:50] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:51] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:53] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:54] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:55] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:57] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:58] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:58:59] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:59:00] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:59:01] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:59:05] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 11:59:06] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:05:30] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:05:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:05:36] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:05:36] "[37mGET /2fa HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:05:58] "[32mPOST /2fa HTTP/1.1[0m" 302 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:05:59] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:05:59] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:05:59] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:00] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:01] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:02] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:03] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:04] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:flask_app:COLOUR: get_sensor error: Invalid sensor data
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:05] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:05] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:05] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:06] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:08] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:09] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:10] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:11] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:12] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:13] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:14] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:15] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:16] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:18] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:19] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:20] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:21] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:22] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:23] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:24] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:26] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:27] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:28] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:31] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:33] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:34] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:35] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:36] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:36] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:36] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:36] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:37] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:39] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:40] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:40] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:42] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:42] "[37mPOST /moveforward HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:43] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:44] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:45] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:47] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:48] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:49] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:50] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:51] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:53] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:54] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:56] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:06:58] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:01] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:02] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:04] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:04] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:04] "[37mGET /static/js/navbar_helper.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:04] "[37mGET /static/css/zephyr.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:04] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:04] "[37mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:04] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:04] "[37mGET /static/js/more_ajax.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:04] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:04] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:04] "[37mGET /static/js/mission.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:04] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:05] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:05] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:05] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:06] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:07] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:08] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:09] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:10] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:11] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:13] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:14] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:15] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:16] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:17] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:19] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:21] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:23] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:25] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:27] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:29] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:30] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:30] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:30] "[37mGET /static/js/navbar_helper.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:30] "[37mGET /static/css/zephyr.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:30] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:30] "[37mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:30] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:30] "[37mGET /static/js/more_ajax.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:30] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:30] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:30] "[37mGET /static/js/mission.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:31] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:31] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:31] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:31] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:32] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:33] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:35] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:36] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:38] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:42] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:43] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:44] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:45] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:46] "[35m[1mPOST /return_home HTTP/1.1[0m" 500 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:47] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:48] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:49] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:50] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:51] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:52] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:53] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:55] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:56] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:57] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:58] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:07:59] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:00] "[35m[1mPOST /auto HTTP/1.1[0m" 500 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:00] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:01] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:02] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:04] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:05] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:06] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:07] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:08] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:09] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:10] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:11] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:13] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:17] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:18] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:19] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:20] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:22] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:23] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:24] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:25] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:27] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:29] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:31] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:33] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:34] "[35m[1mPOST /return_home HTTP/1.1[0m" 500 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:34] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:36] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:37] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:39] "[35m[1mPOST /auto HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/robot.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:43] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:45] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:46] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:48] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:50] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:53] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:54] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:56] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:08:58] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:09:00] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:09:02] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:09:07] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:09:09] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:09:11] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:09:13] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:09:15] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:09:17] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:09:19] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:09:21] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:09:23] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/robot.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:02] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:02] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:02] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:03] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:04] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:06] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:07] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:08] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:flask_app:COLOUR: get_sensor error: Invalid sensor data
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:09] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:09] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:09] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:10] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:11] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:12] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:12] "[37mPOST /return_home HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:13] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:15] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:16] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:17] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:18] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:19] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:21] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:22] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:23] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:24] "[37mPOST /auto HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:24] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:26] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:29] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:30] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:32] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:35] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/robot.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:40] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:41] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:43] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/robot.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:48] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:49] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/robot.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:10:55] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/robot.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:00] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/robot.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:05] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:06] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/robot.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:12] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:13] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:16] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:25] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:25] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:25] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:25] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:26] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:27] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:28] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:30] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:flask_app:COLOUR: get_sensor error: Invalid sensor data
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:31] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:31] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:31] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:32] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:33] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:34] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:34] "[37mPOST /return_home HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:35] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:38] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:39] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:42] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:43] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:45] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:45] "[37mPOST /auto HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:47] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:48] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:50] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:52] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:54] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:11:57] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:12:14] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 243-935-259
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:21] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:21] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:22] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:22] "[37mPOST /check_mission HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:23] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:FLASK APP: LOADING THE ROBOT
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:24] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:25] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:26] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:27] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:FLASK APP: LOADING THE SOUND
+INFO:flask_app:COLOUR: get_sensor error: Invalid sensor data
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:28] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:28] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:flask_app:FLASK APP: READING CAMERA
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:28] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:30] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:31] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:31] "[37mPOST /return_home HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:32] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:33] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:34] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:36] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:37] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:38] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:39] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:41] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:42] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:46] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:47] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:48] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:50] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:51] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:51] "[37mPOST /auto HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:52] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:53] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:54] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:56] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:13:58] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:00] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:01] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:02] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:03] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:04] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:05] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:07] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:08] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:09] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:10] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:11] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:12] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:13] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:14] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:16] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:17] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:18] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:19] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:20] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:21] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:23] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:24] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:25] "[37mPOST /return_home HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:25] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:26] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:27] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:28] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:29] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:31] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:32] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:33] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:34] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:35] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:36] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:37] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:38] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:40] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:41] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:42] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:44] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:46] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:47] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:48] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:49] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:50] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:51] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:53] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:54] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:55] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:56] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:57] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug:10.10.73.40 - - [05/May/2022 14:14:58] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
