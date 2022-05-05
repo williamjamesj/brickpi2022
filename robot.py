@@ -7,12 +7,16 @@ import logging
 import time
 
 class Robot(BrickPiInterface):
-    
     def __init__(self, timelimit=10, logger=logging.getLogger()):
         super().__init__(timelimit, logger)
         self.CurrentCommand = "stop" #use this to stop or start functions
         self.CurrentRoutine = "stop" #use this stop or start routines
         self.movements = [] # Stores movements, so the robot can return to the start.
+        return
+
+    def logaction(form,power=0,degrees=0,duration=0,mission=0): # This function logs the movement to the database, and the MAP variable to display to the user.
+        GLOBALS.DATABASE.ModifyQuery("INSERT INTO actions (actiontype,actionpower,actiondegrees,actionduration,missionid,timestamp) VALUES (?,?,?,?,?,?)",(form,power,degrees,duration,mission,time.time()))
+        GLOBALS.MAP.append([form,power,degrees,duration])
         return
 
     """Motor encoder code inspired by https://github.com/DexterInd/BrickPi3/blob/master/Software/Python/Examples/LEGO-Motor_Position.py"""
@@ -67,33 +71,55 @@ class Robot(BrickPiInterface):
             if movement["type"] == "turn":
                 self.turn((360-movement["value"])%360) # Turns the opposite direction to what it did previously.
 
-    def search_maze(self):
+    def search_maze(self, missionID=None):
         self.x = 0; self.y = 0; self.orientation = 0 # The y-axis is forwards and backwards and the x-axis is left and right. Left is negative, right is positive. Forwards is positive, backwards is negative.
         self.CurrentCommand = "search"
         while self.CurrentCommand == "search":
             walls = self.search_sqaure() # The robot will scan all 4 directions, and will be facing self.orientation when it is finished.
             if walls[0]: # Go forwards, then right, then left, then backwards, when there are multiple options. 
+                start = time.time() # Finds the time the movement started.
                 self.drive() # Move forward a square.
+                end = time.time() # Finds the time the movement ended, to then find the duration, which is used primarily for mapping.
                 self.movements.append({"type": "drive", "value": 42.5})
                 # Orientation doesn't change.
                 self.y += 1
+                self.logaction("move",power=100,duration=end-start,mission=missionID)
             elif walls[1]:
+                startTurn = time.time()
                 self.turn(90) # Turn 90 degrees.
+                endTurn = time.time()
+                self.logaction("move",power=100,degrees=90,duration=endTurn-startTurn,mission=missionID) # Mapping doesn't require the duration, but it is still stored in the database.
                 self.orientation += 1 # Change the orientation.
+                startDrive = time.time()
                 self.drive()
+                endDrive = time.time()
+                self.logaction("move",power=100,duration=endDrive-startDrive,mission=missionID)
                 self.x += 1
                 self.movements.append({"type": "drive", "value": 42.5})
                 self.movements.append({"type": "turn", "value": 90})
             elif walls[3]: # walls[3] is the left wall.
+                startTurn = time.time()
                 self.turn(-90)
+                endTurn = time.time()
+                self.logaction("move",power=100,degrees=270,duration=endTurn-startTurn,mission=missionID)
                 self.orientation += 3 # Orientation can go over, 3, as it is reset later.
+                startDrive = time.time()
                 self.drive()
+                endDrive = time.time()
+                self.logaction("move",power=100,duration=endDrive-startDrive,mission=missionID)
                 self.y -= 1
                 self.movements.append({"type": "drive", "value": 42.5})
                 self.movements.append({"type": "turn", "value": -90})
             elif walls[2]: # walls[2] is the backwards wall
+                startTurn = time.time()
                 self.turn(180)
+                endTurn = time.time()
+                self.logaction("move",power=100,degrees=180,duration=endTurn-startTurn,mission=missionID)
                 self.orientation += 2
+                startDrive = time.time()
+                self.drive()
+                endDrive = time.time()
+                self.logaction("move",power=100,duration=endDrive-startDrive,mission=missionID)
                 self.movements.append({"type": "drive", "value": 42.5})
                 self.movements.append({"type": "turn", "value": 180})
             else:
