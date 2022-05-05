@@ -15,8 +15,8 @@ class Robot(BrickPiInterface):
         return
 
     def logaction(self, form,power=0,degrees=0,duration=0,mission=0): # This function logs the movement to the database, and the MAP variable to display to the user.
-        # GLOBALS.DATABASE.ModifyQuery("INSERT INTO actions (actiontype,actionpower,actiondegrees,actionduration,missionid,timestamp) VALUES (?,?,?,?,?,?)",(form,power,degrees,duration,mission,time.time()))
-        # GLOBALS.MAP.append([form,power,degrees,duration])
+        GLOBALS.DATABASE.ModifyQuery("INSERT INTO actions (actiontype,actionpower,actiondegrees,actionduration,missionid,timestamp) VALUES (?,?,?,?,?,?)",(form,power,degrees,duration,mission,time.time()))
+        GLOBALS.MAP.append([form,power,degrees,duration])
         return
 
     """Motor encoder code inspired by https://github.com/DexterInd/BrickPi3/blob/master/Software/Python/Examples/LEGO-Motor_Position.py"""
@@ -36,26 +36,35 @@ class Robot(BrickPiInterface):
     def turn(self, degrees, power=100, speed=100):
         """This function turns the robot a certain number of degrees. 
         It turns in a clockwise direction when the desired degrees are positive, and an anticlockwise direction when the desired degrees are negative. """
-        degrees += 2
+        actualDegrees = degrees # Save the requested degrees, so they can be logged later.
+        degrees += degrees*0.2 # This number can be changed based on the surface that the robot is travelling on. Carpet = 0.2
         degrees = degrees*2
         self.CurrentCommand = "turn"
         self.reset_motors() # Motor A is the right motor, and motor D is the left motor.
+        start = time.time()
         self.limits_and_positions(power, speed, degrees+10, -1*degrees-10) # Without the +10 and -10, the robot will become stuck, being unable to finish its turn. Degrees+2 is used to attempt to overshoot the necessary position, however the robot will stop turning when it reaches the desired position.
         while not (self.BP.get_motor_encoder(self.BP.PORT_D) >= degrees and self.BP.get_motor_encoder(self.BP.PORT_A) <= -1*degrees):
             # if self.BP.get_motor_encoder(self.BP.PORT_D) >= degrees:
             #     self.BP.set_motor_position(self.BP.PORT_D, 0)
             # elif self.BP.get_motor_encoder(self.BP.PORT_A) <= -1*degrees:
             #     self.BP.set_motor_position(self.BP.PORT_A, 0)
+            # The commented out code above would have the robot wait for both motors to reach the desired position, stopping one motor at a time. This did not function as intended.
             pass
+        end = time.time()
+        self.logaction("move", power=100, degrees=actualDegrees, duration=end-start, mission=self.missionID) # Log the movement to the database, setting the duration to the time it took for the turn to be complete.
         return
     
     def drive(self, distance=42.5, power=100, speed=200): # 42.5 is approximately the size of a sector.
+        actualDistance = distance
         distance = distance*20.4627783975 # This is a magical number that takes into account the size of the wheels, and converts in to the number of degrees that need to be travelled.
         self.CurrentCommand = "drive"
         self.reset_motors()
+        start = time.time()
         self.limits_and_positions(power, speed, distance+15, distance+15)
         while not (self.BP.get_motor_encoder(self.BP.PORT_D) >= distance or self.BP.get_motor_encoder(self.BP.PORT_A) >= distance): # This only waits for one motor to reach the desired position, even though it would be more accurate to wait for both.
-            time.sleep(0.01)
+            pass
+        end = time.time()
+        self.logaction("move", power=200, duration=end-start, mission=self.missionID)
         return
 
     def search_square(self):
@@ -73,69 +82,57 @@ class Robot(BrickPiInterface):
     def return_to_start(self):
         print("Returning home.")
         print(self.movements)
+        self.logaction("returnCommand",0,0,0,0)
         self.CurrentCommand = "return"
         self.movements.reverse()
+        print("180 Degree Turn")
         self.turn(180)
         for movement in self.movements:
             if movement["type"] == "turn":
                 self.turn((360-movement["value"])%360) # Turns the opposite direction to what it did previously.
+                print("Turning: ", (360-movement["value"])%360, "degrees.")
             elif movement["type"] == "drive":
                 self.drive(movement["value"])
+                print("Driving.")
+        self.turn(180)
+        self.movements = []
+        return
 
     def search_maze(self, missionID=None):
         self.x = 0; self.y = 0; self.orientation = 0 # The y-axis is forwards and backwards and the x-axis is left and right. Left is negative, right is positive. Forwards is positive, backwards is negative.
         self.CurrentCommand = "search"
+        self.missionID = missionID
         while not GLOBALS.HEAD_HOME: # The loop will end when the user instructs the user to return to its origin.
             walls = self.search_square() # The robot will scan all 4 directions, and will be facing self.orientation when it is finished.
             if walls[0]: # Go forwards, then right, then left, then backwards, when there are multiple options. 
                 print("Going forwards")
-                start = time.time() # Finds the time the movement started.
                 self.drive() # Move forward a square.
-                end = time.time() # Finds the time the movement ended, to then find the duration, which is used primarily for mapping.
                 self.movements.append({"type": "drive", "value": 42.5})
                 # Orientation doesn't change.
                 self.y += 1
-                self.logaction("move", power=100, duration=end-start, mission=missionID)
-            elif walls[1]:
-                startTurn = time.time()
+            elif walls[1]: # Turn right.
                 self.turn(90) # Turn 90 degrees.
-                endTurn = time.time()
-                self.logaction("move", power=100, degrees=90, duration=endTurn-startTurn, mission=missionID) # Mapping doesn't require the duration, but it is still stored in the database.
                 self.orientation += 1 # Change the orientation.
-                startDrive = time.time()
                 self.drive()
-                endDrive = time.time()
-                self.logaction("move",power=100,duration=endDrive-startDrive,mission=missionID)
                 self.x += 1
-                self.movements.append({"type": "drive", "value": 42.5})
                 self.movements.append({"type": "turn", "value": 90})
+                self.movements.append({"type": "drive", "value": 42.5})
             elif walls[3]: # walls[3] is the left wall.
-                startTurn = time.time()
-                self.turn(270) # Turn left, not really the easiest way.
-                endTurn = time.time()
-                self.logaction("move",power=100,degrees=270,duration=endTurn-startTurn,mission=missionID)
-                self.orientation += 3 # Orientation can go over, 3, as it is reset later.
-                startDrive = time.time()
+                self.turn(270) # Turn left the simple way.
+                self.orientation += 3 # Orientation can go over 3, as it is reset later.
                 self.drive()
-                endDrive = time.time()
-                self.logaction("move",power=100,duration=endDrive-startDrive,mission=missionID)
-                self.y -= 1
-                self.movements.append({"type": "drive", "value": 42.5})
+                self.x -= 1
                 self.movements.append({"type": "turn", "value": -90})
-            elif walls[2]: # walls[2] is the backwards wall
-                startTurn = time.time()
-                self.turn(180)
-                endTurn = time.time()
-                self.logaction("move",power=100,degrees=180,duration=endTurn-startTurn,mission=missionID)
-                self.orientation += 2
-                startDrive = time.time()
-                self.drive()
-                endDrive = time.time()
-                self.logaction("move",power=100,duration=endDrive-startDrive,mission=missionID)
                 self.movements.append({"type": "drive", "value": 42.5})
+            elif walls[2]: # walls[2] is the backwards wall
+                self.turn(180)
+                self.orientation += 2
+                self.drive()
+                self.y -= 1
                 self.movements.append({"type": "turn", "value": 180})
+                self.movements.append({"type": "drive", "value": 42.5})
             else:
-                print("Error: No walls found.")
+                print("Error: No walls found.") # Usually occurs when someone obstructs the sensor, and will cause the robot to take another scan.
             self.orientation = self.orientation % 4 # Ensure that the orientation is within the range [0,3].
         self.return_to_start()
         GLOBALS.HEAD_HOME = False
@@ -173,8 +170,8 @@ if __name__ == '__main__':
     try:
         ROBOT.configure_sensors() #This takes 4 seconds
         # ROBOT.drive()
-        # ROBOT.turn(-90)
-        ROBOT.search_maze()
+        ROBOT.turn(90)
+        # ROBOT.search_maze()
     except KeyboardInterrupt as E:
         print(E)
         ROBOT.stop_all()
