@@ -249,6 +249,7 @@ def stop_mission():
         GLOBALS.DATABASE.ModifyQuery("UPDATE missions SET endTime=? WHERE missionID=?",(int(time.time()),session["missionID"]))
         session["lastMissionID"] = session["missionID"]
         session["missionID"] = None
+        flash("Mission saved successfully!", "success")
     return jsonify({"data":"Mission Ended."})
 @app.route("/admin", methods=["GET","POST"]) # Allows administrators to view users.
 def admin():
