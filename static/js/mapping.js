@@ -10,6 +10,7 @@ var width = screen.width * 0.45;
 var board = JXG.JSXGraph.initBoard('box',{ boundingbox: [-width, 300, width, -300], keepaspectratio:true });
 turtle = board.create('turtle', [0,0], {strokeWidth:2, strokeColor: 'blue', arrow: {strokeWidth: 2, strokeColor: 'red'}});
 turtle.setPenSize(3);
+var victims = []
 
 
 // // TURTLE EXAMPLE
@@ -50,22 +51,26 @@ function processMovements(results) {
 
 function moveRobot(movements) {
    for (var i = 0; i < movements.length; i++) {
-      var movement = movements[i]
-      console.log(movement)
+      var movement = movements[i];
+      console.log(movement);
       if (movement[0] == "move") {
          if (movement[2] < 0) {
-            turtle.left(movement[2])
+            turtle.left(movement[2]);
          }
          else if (movement[2] > 0) {
-            turtle.right(movement[2])
+            turtle.right(movement[2]);
          }
          else if (movement[1] != 0) {
-            turtle.forward(movement[1])
-      }
+            turtle.forward(movement[1]);
+         }
+      } else if (movement[0] == "victim") {
+         let victim = board.create('point', [turtle.X(),turtle.Y()]);
+         victim.setLabel("Victim "+ (victims.length+1));
+         victims.push(victim)
+
       }
       
    }
 }
 // drawmap();
 getMovements();
-console.log("doot")

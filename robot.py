@@ -77,7 +77,7 @@ class Robot(BrickPiInterface):
             else: # If there is a wall, check if there is a victim.
                 if self.detect_victim():
                     print("Victim detected.")
-                    self.spin_medium_motor(-2000) # "Deploy" the "medical package"
+                    # self.spin_medium_motor(-2000) # "Deploy" the "medical package"
                     self.logaction("victim", mission=self.missionID, power=self.x, degrees=self.y) # Use the power column for the x value and the degrees column for the y value.
                 walls.append(False)
             self.turn(90)
