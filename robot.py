@@ -100,6 +100,7 @@ class Robot(BrickPiInterface):
                     print("Victim detected.")
                     self.spin_medium_motor(-2000) # "Deploy" the "medical package"
                     self.logaction("victim", mission=self.missionID, power=self.x, degrees=self.y) # Use the power column for the x value and the degrees column for the y value.
+                    time.sleep(2)
                 walls.append(False)
             self.turn(90)
         return walls
@@ -127,35 +128,35 @@ class Robot(BrickPiInterface):
         self.x = 0; self.y = 0; self.orientation = 0 # The y-axis is forwards and backwards and the x-axis is left and right. Left is negative, right is positive. Forwards is positive, backwards is negative.
         self.CurrentCommand = "search"
         self.missionID = missionID
+        doDrive = False
         while not GLOBALS.HEAD_HOME: # The loop will end when the user instructs the user to return to its origin.
+            if doDrive: # Occurs at the start of a loop (excluding the final loop), so that the return home code can work without having to loop back.
+                self.drive() # Move forward a square.
+                self.movements.append({"type": "drive", "value": 42.5})
             walls = self.search_square() # The robot will scan all 4 directions, and will be facing self.orientation when it is finished.
             if walls[0]: # Go forwards, then right, then left, then backwards, when there are multiple options. 
                 print("Going forwards")
-                self.drive() # Move forward a square.
-                self.movements.append({"type": "drive", "value": 42.5})
                 # Orientation doesn't change.
                 self.y += 1
+                doDrive = True
             elif walls[1]: # Turn right.
                 self.turn(90) # Turn 90 degrees.
                 self.orientation += 1 # Change the orientation.
-                self.drive()
                 self.x += 1
                 self.movements.append({"type": "turn", "value": 90})
-                self.movements.append({"type": "drive", "value": 42.5})
+                doDrive = True
             elif walls[3]: # walls[3] is the left wall.
                 self.turn_left(90) # Turn left the simple way.
                 self.orientation += 3 # Orientation can go over 3, as it is reset later.
-                self.drive()
                 self.x -= 1
                 self.movements.append({"type": "turn", "value": -90})
-                self.movements.append({"type": "drive", "value": 42.5})
+                doDrive = True
             elif walls[2]: # walls[2] is the backwards wall
                 self.turn(180)
                 self.orientation += 2
-                self.drive()
                 self.y -= 1
                 self.movements.append({"type": "turn", "value": 180})
-                self.movements.append({"type": "drive", "value": 42.5})
+                doDrive = True
             else:
                 print("Error: No walls found.") # Usually occurs when someone obstructs the sensor, and will cause the robot to take another scan.
             self.orientation = self.orientation % 4 # Ensure that the orientation is within the range [0,3].
