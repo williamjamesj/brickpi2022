@@ -37,7 +37,7 @@ class Robot(BrickPiInterface):
         """This function turns the robot a certain number of degrees. 
         It turns in a clockwise direction when the desired degrees are positive, and an anticlockwise direction when the desired degrees are negative. """
         actualDegrees = degrees # Save the requested degrees, so they can be logged later.
-        degrees += degrees*0.2 # This number can be changed based on the surface that the robot is travelling on. Carpet = 0.2
+        degrees -= degrees*0.08 # This number can be changed based on the surface that the robot is travelling on. Carpet = 0.2
         degrees = degrees*2
         self.CurrentCommand = "turn"
         self.reset_motors() # Motor A is the right motor, and motor D is the left motor.
@@ -52,6 +52,27 @@ class Robot(BrickPiInterface):
             pass
         end = time.time()
         self.logaction("move", power=100, degrees=actualDegrees, duration=end-start, mission=self.missionID) # Log the movement to the database, setting the duration to the time it took for the turn to be complete.
+        return
+    
+    def turn_left(self, degrees, power=100, speed=100):
+        """This function turns the robot a certain number of degrees. 
+        It turns in a clockwise direction when the desired degrees are positive, and an anticlockwise direction when the desired degrees are negative. """
+        actualDegrees = degrees # Save the requested degrees, so they can be logged later.
+        degrees += degrees*0.08 # This number can be changed based on the surface that the robot is travelling on. Carpet = 0.2
+        degrees = degrees*2
+        self.CurrentCommand = "turn"
+        self.reset_motors() # Motor A is the right motor, and motor D is the left motor.
+        start = time.time()
+        self.limits_and_positions(power, speed, -1*degrees-10, degrees+10) # Without the +10 and -10, the robot will become stuck, being unable to finish its turn. Degrees+2 is used to attempt to overshoot the necessary position, however the robot will stop turning when it reaches the desired position.
+        while not (self.BP.get_motor_encoder(self.BP.PORT_D) <= degrees*-1 and self.BP.get_motor_encoder(self.BP.PORT_A) >= degrees):
+            # if self.BP.get_motor_encoder(self.BP.PORT_D) >= degrees:
+            #     self.BP.set_motor_position(self.BP.PORT_D, 0)
+            # elif self.BP.get_motor_encoder(self.BP.PORT_A) <= -1*degrees:
+            #     self.BP.set_motor_position(self.BP.PORT_A, 0)
+            # The commented out code above would have the robot wait for both motors to reach the desired position, stopping one motor at a time. This did not function as intended.
+            pass
+        end = time.time()
+        self.logaction("move", power=100, degrees=360-actualDegrees, duration=end-start, mission=self.missionID) # Log the movement to the database, setting the duration to the time it took for the turn to be complete.
         return
     
     def drive(self, distance=42.5, power=100, speed=200): # 42.5 is approximately the size of a sector.
@@ -77,7 +98,7 @@ class Robot(BrickPiInterface):
             else: # If there is a wall, check if there is a victim.
                 if self.detect_victim():
                     print("Victim detected.")
-                    # self.spin_medium_motor(-2000) # "Deploy" the "medical package"
+                    self.spin_medium_motor(-2000) # "Deploy" the "medical package"
                     self.logaction("victim", mission=self.missionID, power=self.x, degrees=self.y) # Use the power column for the x value and the degrees column for the y value.
                 walls.append(False)
             self.turn(90)
@@ -122,7 +143,7 @@ class Robot(BrickPiInterface):
                 self.movements.append({"type": "turn", "value": 90})
                 self.movements.append({"type": "drive", "value": 42.5})
             elif walls[3]: # walls[3] is the left wall.
-                self.turn(270) # Turn left the simple way.
+                self.turn_left(90) # Turn left the simple way.
                 self.orientation += 3 # Orientation can go over 3, as it is reset later.
                 self.drive()
                 self.x -= 1
@@ -147,9 +168,11 @@ class Robot(BrickPiInterface):
             '''
             Detects a victim, based on their temperature or colour (because thats an acceptable way to discriminate between victims).
             '''
-            if GLOBALS.CAMERA.get_camera_colour((180, 180, 0), (255,255,255)): # If the victim is yellow.
-                return True
-            elif self.get_thermal_sensor() > 30: # If the victim is warm - ambient temperature assumed to be approximately 30 degrees.
+            # if CAMERA.get_camera_colour((170, 170, 0), (200,200,10)): # If the victim is yellow.
+            #     print("Colour")
+            #     return True
+            if self.get_thermal_sensor() > 27: # If the victim is warm - ambient temperature assumed to be approximately 24-25 degrees.
+                print("Temperature")
                 return True
             else:
                 return False
@@ -167,14 +190,17 @@ class Robot(BrickPiInterface):
 if __name__ == '__main__':
     logging.basicConfig(filename='logs/robot.log', level=logging.INFO)
     ROBOT = Robot(timelimit=10)  #10 second timelimit before
-    # CAMERA = CameraInterface()
-    # time.sleep(1)
-    # CAMERA.start()
-    # frame = CAMERA.get_frame()
+    CAMERA = CameraInterface()
+    time.sleep(1)
+    CAMERA.start()
+    frame = CAMERA.get_frame()
     try:
+        time.sleep(1)
         ROBOT.configure_sensors() #This takes 4 seconds
+        ROBOT.turn_left(90)
         # ROBOT.drive()
-        ROBOT.turn(90)
+        # ROBOT.detect_victim()
+        # ROBOT.turn(90)
         # ROBOT.search_maze()
     except KeyboardInterrupt as E:
         print(E)

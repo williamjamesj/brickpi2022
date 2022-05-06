@@ -251,6 +251,7 @@ def stop_mission():
         session["missionID"] = None
         flash("Mission saved successfully!", "success")
     return jsonify({"data":"Mission Ended."})
+
 @app.route("/admin", methods=["GET","POST"]) # Allows administrators to view users.
 def admin():
     if 'userid' in session:

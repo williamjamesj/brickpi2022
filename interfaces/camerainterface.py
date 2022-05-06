@@ -85,6 +85,7 @@ class CameraInterface(object):
 
         count = numpy.sum(numpy.nonzero(thresh))
         self.log("YELLOW PIXELS: " + str(count))
+        print(count)
         if count > 300: #more than 300 pixels are between the low and high color
             return True
         return False
