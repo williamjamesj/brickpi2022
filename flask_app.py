@@ -25,6 +25,10 @@ def logaction(form,power=0,degrees=0,duration=0,mission=0):
     GLOBALS.MAP.append([form,power,degrees,duration])
     return
 
+def clean_database(): # The clean_database() function checks if there are any missions that don't have an end time (endTime = Null), and sets the endTime to the current time.
+    GLOBALS.DATABASE.ModifyQuery("UPDATE missions SET endTime = ? WHERE endTime IS NULL", (int(time.time()),))
+    return
+
 @app.route("/mazeaccess", methods=['GET','POST'])
 def return_maze():
     return jsonify(GLOBALS.MAP)
@@ -38,25 +42,24 @@ def actionbackdoor():
 def check_login():
     exempt_page = request.path in EXEMPT_PATHS or request.path.startswith("/static") # Check if it is one of the pages that is allowed (login and 2fa especially, to avoid a loop) or if it is a static file.
     logged_in = 'userid' in session
-    if not (logged_in or exempt_page):
+    if not (logged_in or exempt_page): # To access a page, the user must either be logged in or be accessing a resource that does not require authentication.
         return redirect("/") # Redirect to the login if the user has not logged in.
     
 
-#create a login page
-@app.route('/', methods=['GET','POST'])
+@app.route('/', methods=['GET','POST']) # The index page for this project is the login page, as there should be no public facing functionality.
 def login():
-    if 'userid' in session:
+    if 'userid' in session: # If the user is already logged in, redirect to the main page.
         return redirect('/dashboard')
-    if request.method == "POST":
-        email = request.form.get("email")
+    if request.method == "POST": 
+        email = request.form.get("email") 
         userdetails = GLOBALS.DATABASE.ViewQuery("SELECT * FROM users WHERE email = ?", (email,))
-        if userdetails:
-            user = userdetails[0] #get first row in results
+        if userdetails: 
+            user = userdetails[0] # Get first row in results.
             correct_password = sha256_crypt.verify(request.form.get("password"), user['password'])
-            if correct_password:
+            if correct_password: # If the password matches the password hash from the database, proceed.
                 if user["OTPcode"]:
-                    session['tempuserid'] = user['userid']
-                    return redirect("/2fa")
+                    session['tempuserid'] = user['userid'] # The tempuserid session value identifies the user before they have verified their 2fa code.
+                    return redirect("/2fa") # If the user has configured two-factor authentication, redirect to the 2fa page.
                 session['userid'] = user['userid']
                 session['permission'] = user['permission']
                 session['name'] = user['name']
@@ -86,8 +89,8 @@ def robotload():
     if not GLOBALS.ROBOT: 
         log("FLASK APP: LOADING THE ROBOT")
         GLOBALS.ROBOT = robot.Robot(20, app.logger)
-        if GLOBALS.ROBOT.BP == "Give up all hope.":
-            return jsonify(sensordict)
+        if GLOBALS.ROBOT.BP == "Give up all hope.": # This variable is set whenever flask_app is not being run on the robot, such as on a local machine.
+            return jsonify(sensordict) # This stops errors when the flask app is not being run on the robot.
         GLOBALS.ROBOT.configure_sensors() #defaults have been provided but you can 
         GLOBALS.ROBOT.reconfig_IMU()
     if not GLOBALS.SOUND:
@@ -130,10 +133,10 @@ def sensors():
     data = {}
     if GLOBALS.ROBOT:
         data = GLOBALS.ROBOT.get_all_sensors()
-        temp = int(open("/sys/class/thermal/thermal_zone0/temp").read().rstrip())/1000
+        temp = int(open("/sys/class/thermal/thermal_zone0/temp").read().rstrip())/1000 # Retrives the temperature of the Pi's processor, which can be indicitive of problems relating to the robot.
         data["pitemp"] = temp
         data = GLOBALS.ROBOT.get_all_sensors()
-    return jsonify(data)
+    return jsonify(data) # Doesn't return a template, so the JSONified data can be recieved by AJAX, from the /sensor_view page.
 
 @app.route('/sensor_view')
 def sensor_view():
@@ -143,10 +146,9 @@ def sensor_view():
         temp = int(open("/sys/class/thermal/thermal_zone0/temp").read().rstrip())/1000
         data["pitemp"] = temp
     return render_template('sensor_view.html',int=int, data = data)
-# YOUR FLASK CODE------------------------------------------------------------------------
 
 @app.route("/finecontrol", methods=["GET","POST"])
-def finecontrol():
+def finecontrol(): # This page is just for testing the movement of the robot, and is not linked anywhere.
     if request.method == "POST":
         data = request.get_json()
         if data["action"] == "move" and GLOBALS.ROBOT:
@@ -166,7 +168,7 @@ def finecontrol():
 def shoot():
     data = {}
     if GLOBALS.ROBOT:
-        GLOBALS.ROBOT.spin_medium_motor(-2000)
+        GLOBALS.ROBOT.spin_medium_motor(-2000) # This value would fire the projectile multiple times, however only one projectile is typically loaded at a time.
     return jsonify(data)
 
 @app.route("/moveforward", methods=["GET","POST"])
@@ -210,7 +212,7 @@ def sensorview():
     data = None
     return render_template("sensorview.html",data=data)
 
-@app.route("/check_mission",methods=["POST"])
+@app.route("/check_mission",methods=["POST"]) # This function is important, as it allows the front-end to display whether or not a mission is in progress.
 def check_mission():
     if session["missionID"] is not None:
         return jsonify({"status":"mission"})
@@ -220,12 +222,12 @@ def check_mission():
 @app.route("/missions", methods=["GET","POST"]) # This is the view for the list of missions.
 def missions():
     data = GLOBALS.DATABASE.ViewQuery("SELECT missions.missionID, name, email, missions.userid, startTime, endTime, notes, location, COUNT(actionid) AS actions FROM (missions INNER JOIN users ON users.userid = missions.userID) LEFT JOIN actions on missions.missionID = actions.missionid GROUP BY missions.missionID ORDER BY missions.startTime DESC;")
-    return render_template("missions.html",data=data,datetime=datetime,int=int,str=str)
+    return render_template("missions.html",data=data,datetime=datetime,int=int,str=str) # Passes all of the data along to the front-end, along with the datetime, int and str functions to simplify display of this data.
 
 @app.route("/mission/<id>", methods=["GET","POST"]) # This is the view for an individual mission.
 def mission(id):
     data = GLOBALS.DATABASE.ViewQuery("SELECT * FROM (missions LEFT JOIN users ON users.userid = missions.userid) LEFT JOIN actions ON actions.missionid = missions.missionID WHERE missions.missionID = ?",(id,))
-    if request.method == "POST":
+    if request.method == "POST": # The POST request will be the user modifying details of the mission.
         location = request.form.get("location")
         notes = request.form.get("notes")
         if GLOBALS.DATABASE.ModifyQuery("UPDATE missions SET location = ?, notes = ? WHERE missionID = ?",(location,notes,id)):
@@ -233,7 +235,7 @@ def mission(id):
         else:
             flash("Mission update failed","danger")
         return redirect("/mission/"+id)
-    return render_template("missionview.html", data=data, datetime=datetime, int=int, str=str)
+    return render_template("missionview.html", data=data, datetime=datetime, int=int, str=str, round=round)
 
 @app.route("/start_mission", methods=["GET","POST"])
 def start_mission():
@@ -265,7 +267,7 @@ def admin():
 @app.route("/createuser", methods=["GET","POST"]) # Allows the admin to create new users.
 def createuser():
     if 'userid' in session:
-        if session['permission'] != 'admin':
+        if session['permission'] != 'admin': # Only an administrator can create a user, because it is not intended to be a publicly accessible service.
             return redirect('/dashboard')
     else:
         return redirect('/')
@@ -421,4 +423,5 @@ def logout():
 #---------------------------------------------------------------------------
 #main method called web server application
 if __name__ == '__main__':
+    clean_database()
     app.run(host='0.0.0.0', port=5000, debug=True, threaded=True) #runs a local server on port 5000

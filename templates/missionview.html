@@ -34,9 +34,15 @@
             <div class="card text-center" style="width: 100%;">
                 <div class="card-body">
                     {% if action["actiontype"] == "move" %}
-                        <p>Moved for {{action["actionduration"]}} seconds with a power of {{action["actionpower"]}}. </p>
-                    {% elif action[""] == "turn" %}
-                        <p>Turned {{action["actiondegrees"]}} degrees with a power of {{action["actionpower"]}}. </p>
+                        {% if action["actiondegrees"] == 0 %}
+                            <p>Moved for {{round(action["actionduration"],2)}} seconds with a power of {{action["actionpower"]}}. </p>
+                        {% else %}
+                            <p>Turned {{action["actiondegrees"]}} degrees with a power of {{action["actionpower"]}}. </p>
+                        {% endif %}
+                    {% elif action["actiontype"] == "victim" %}
+                        <p>Detected a victim, and deployed a rescue package at coordinates ({{action["actionpower"]}},{{action["actiondegrees"]}})</p>
+                    {% elif action["actiontype"] == "returnCommand" %}
+                        <p>Robot was instructed to return to the start. </p>
                     {% else %}
                         <p>{{data["actiontype"]}}</p>
                     {% endif %}

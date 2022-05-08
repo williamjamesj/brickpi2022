@@ -19234,3 +19234,319 @@ INFO:werkzeug:10.10.73.40 - - [06/May/2022 14:07:39] "[37mPOST /mazeaccess HTTP
 INFO:werkzeug:10.10.73.40 - - [06/May/2022 14:07:41] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
 INFO:werkzeug:10.10.73.40 - - [06/May/2022 14:07:43] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
 INFO:werkzeug:10.10.73.40 - - [06/May/2022 14:07:45] "[37mPOST /mazeaccess HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.174:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:22:23] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:22:24] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:22:24] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:22:24] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:22:24] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:22:25] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:22:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:22:40] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:22:40] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:22:41] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:22:41] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:22:41] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:22:41] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:22:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:22:46] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:22:46] "GET /2fa HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:22:47] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:22:47] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:22:47] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:22:47] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:22:47] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:22:47] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:05] "[32mPOST /2fa HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:05] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:05] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:06] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:06] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:06] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:06] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:06] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:06] "GET /static/js/mapping.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:06] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:06] "[36mGET /static/js/mission.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:06] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:06] "POST /check_mission HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:07] "POST /mazeaccess HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:08] "GET /admin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:08] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:09] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:09] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:09] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:09] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:09] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:23] "GET /accountsettings HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:23] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:23] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:24] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:24] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:24] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:24] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:25] "GET /admin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:26] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:26] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:26] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:26] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:26] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:26] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:25:12] "GET /admin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:25:13] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:25:13] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:25:13] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:25:13] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:25:13] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:25:13] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:25:41] "GET /admin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:25:42] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:25:42] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:25:42] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:25:42] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:25:42] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:25:42] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:25:46] "[35m[1mGET /sensor_view HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:25:47] "GET /sensor_view?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:25:47] "GET /sensor_view?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:25:47] "GET /sensor_view?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:25:47] "GET /sensor_view?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:25:51] "GET /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:25:51] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:25:52] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:25:52] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:25:52] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:25:52] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:25:52] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:26:02] "GET /mission/27 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:26:02] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:26:02] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:26:02] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:26:02] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:26:02] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:26:02] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:26:20] "GET /mission/27 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:26:20] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:26:20] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:26:20] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:26:20] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:26:20] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:26:20] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.174:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.174:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.174:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:30:43] "GET /mission/27 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:30:43] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:30:43] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:30:43] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:30:43] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:30:43] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:30:43] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:30:46] "GET /mission/27 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:30:46] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:30:47] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:30:47] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:30:47] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:30:47] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:30:47] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.174:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:32:06] "GET /mission/27 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:32:06] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:32:06] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:32:06] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:32:06] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:32:06] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:32:06] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:32:08] "GET /mission/27 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:32:08] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:32:08] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:32:08] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:32:08] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:32:08] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:32:08] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.174:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.174:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:09] "GET /mission/27 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:09] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:09] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:09] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:09] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:09] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:09] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:14] "GET /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:14] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:14] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:14] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:14] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:14] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:14] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:15] "GET /mission/27 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:15] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:15] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:15] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:15] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:15] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:15] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:44] "[32mPOST /mission/27 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:44] "GET /mission/27 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:45] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:45] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:45] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:45] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:45] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:45] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:50] "GET /mission/27 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:53] "GET /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:40:02] "GET /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:40:03] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:40:03] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:40:03] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:40:03] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:40:03] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:40:03] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:40:05] "GET /mission/27 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:40:05] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:40:05] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:40:06] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:40:06] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:40:06] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:40:06] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:31] "GET /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:31] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:31] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:31] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:31] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:31] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:31] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:32] "GET /mission/26 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:33] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:33] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:33] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:33] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:33] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:33] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:37] "GET /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:37] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:37] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:38] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:38] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:38] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:38] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:39] "GET /mission/25 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:40] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:40] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:40] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:40] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:40] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:40] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:44] "GET /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:44] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:44] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:44] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:44] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:44] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:44] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:46] "GET /mission/25 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:46] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:46] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:47] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:47] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:47] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:47] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:52] "GET /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:52] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:52] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:53] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:53] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:53] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:53] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:55] "GET /mission/24 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:55] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:55] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:55] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:55] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:55] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:55] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:57] "[35m[1mGET /sensor_view HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:57] "GET /sensor_view?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:57] "GET /sensor_view?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:57] "GET /sensor_view?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:57] "GET /sensor_view?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:59] "GET /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:42:00] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:42:00] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:42:00] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:42:00] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:42:00] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:42:00] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:43:26] "GET /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:43:26] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:43:26] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:43:26] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:43:26] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:43:26] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:43:26] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:43:27] "[35m[1mGET /mission/27 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:43:27] "GET /mission/27?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:43:27] "GET /mission/27?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:43:28] "GET /mission/27?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:43:28] "GET /mission/27?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:43:28] "GET /mission/27?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-784-143
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.174:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:43:48] "GET /mission/27 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:43:48] "[36mGET /static/css/zephyr.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:43:48] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:43:48] "[36mGET /static/js/navbar_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:43:48] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:43:48] "[36mGET /static/js/more_ajax.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:43:48] "[36mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\willi\\Documents\\GitHub\\brickpi2022\\robot.py', reloading
+INFO:werkzeug: * Restarting with stat

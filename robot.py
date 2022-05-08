@@ -108,7 +108,7 @@ class Robot(BrickPiInterface):
     def return_to_start(self):
         print("Returning home.")
         print(self.movements)
-        self.logaction("returnCommand",0,0,0,0)
+        self.logaction("returnCommand",0,0,0,self.missionID)
         self.CurrentCommand = "return"
         self.movements.reverse()
         print("180 Degree Turn")

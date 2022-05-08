@@ -34,6 +34,11 @@
               </li>
             </ul>
             <div class="d-flex navbar-nav">
+              {% if "permission" in session %}
+                {% if session["permission"] == "admin" %}
+                  <a class="nav-link" href="/admin" data-ol-has-click-handler="" id="accountsettings">Admin</a>
+                {% endif %}
+              {% endif %}
                   <a class="nav-link" href="/accountsettings" data-ol-has-click-handler="" id="accountsettings">Account Settings</a>
                   <a style="color: rgba(255, 255, 255, 0.55) !important" class="nav-link" href="/logout" data-ol-has-click-handler="" id="logout">Log out</a>
                   <button class="btn btn-secondary my-2 my-sm-0" type="button" onclick="shutdown();">Exit</button>
