@@ -227,6 +227,8 @@ def missions():
 @app.route("/mission/<id>", methods=["GET","POST"]) # This is the view for an individual mission.
 def mission(id):
     data = GLOBALS.DATABASE.ViewQuery("SELECT * FROM (missions LEFT JOIN users ON users.userid = missions.userid) LEFT JOIN actions ON actions.missionid = missions.missionID WHERE missions.missionID = ?",(id,))
+    victimCount = GLOBALS.DATABASE.ViewQuery("SELECT COUNT(*) AS victims FROM missions WHERE missionID = ?",(id,))[0]["victims"] # Uses SQL to count how many victims were saved.
+    print(victimCount)
     if request.method == "POST": # The POST request will be the user modifying details of the mission.
         location = request.form.get("location")
         notes = request.form.get("notes")
@@ -235,7 +237,7 @@ def mission(id):
         else:
             flash("Mission update failed","danger")
         return redirect("/mission/"+id)
-    return render_template("missionview.html", data=data, datetime=datetime, int=int, str=str, round=round)
+    return render_template("missionview.html", data=data, datetime=datetime, int=int, str=str, round=round, victimCount=victimCount)
 
 @app.route("/start_mission", methods=["GET","POST"])
 def start_mission():

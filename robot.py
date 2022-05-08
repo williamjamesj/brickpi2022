@@ -91,13 +91,11 @@ class Robot(BrickPiInterface):
     def search_square(self):
         walls = [] # 0 is forwards, 1 is right, 2 is backwards, 3 is left
         for wall in range(4):
-            print(wall)
             ultrasonic = self.get_ultra_sensor()
             if ultrasonic > 30: # Checks if there is a wall in this direction.
                 walls.append(True) # If there is not a wall, add True to the list.
             else: # If there is a wall, check if there is a victim.
                 if self.detect_victim():
-                    print("Victim detected.")
                     self.spin_medium_motor(-2000) # "Deploy" the "medical package"
                     self.logaction("victim", mission=self.missionID, power=self.x, degrees=self.y) # Use the power column for the x value and the degrees column for the y value.
                     time.sleep(2)
@@ -106,20 +104,15 @@ class Robot(BrickPiInterface):
         return walls
     
     def return_to_start(self):
-        print("Returning home.")
-        print(self.movements)
         self.logaction("returnCommand",0,0,0,self.missionID)
         self.CurrentCommand = "return"
         self.movements.reverse()
-        print("180 Degree Turn")
         self.turn(180)
         for movement in self.movements:
             if movement["type"] == "turn":
                 self.turn((360-movement["value"])%360) # Turns the opposite direction to what it did previously.
-                print("Turning: ", (360-movement["value"])%360, "degrees.")
             elif movement["type"] == "drive":
                 self.drive(movement["value"])
-                print("Driving.")
         self.turn(180)
         self.movements = []
         return
@@ -135,7 +128,6 @@ class Robot(BrickPiInterface):
                 self.movements.append({"type": "drive", "value": 42.5})
             walls = self.search_square() # The robot will scan all 4 directions, and will be facing self.orientation when it is finished.
             if walls[0]: # Go forwards, then right, then left, then backwards, when there are multiple options. 
-                print("Going forwards")
                 # Orientation doesn't change.
                 self.y += 1
                 doDrive = True
@@ -173,7 +165,6 @@ class Robot(BrickPiInterface):
             #     print("Colour")
             #     return True
             if self.get_thermal_sensor() > 27: # If the victim is warm - ambient temperature assumed to be approximately 24-25 degrees.
-                print("Temperature")
                 return True
             else:
                 return False
@@ -207,8 +198,6 @@ if __name__ == '__main__':
         print(E)
         ROBOT.stop_all()
         ROBOT.safe_exit()
-        print("Keyboard Interrupt")
-
     # ROBOT.turn(ROBOT.left,20)
     # ROBOT.stop_all()
     # time.sleep(1)

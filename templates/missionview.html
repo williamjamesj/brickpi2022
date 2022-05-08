@@ -4,6 +4,11 @@
     <h1>Mission at {{data[0]["location"] or "Unknown Location"}}</h1>
     <h6>Robot Operator: <a href='mailto:{{data[0]["email"]}}'>{{data[0]["name"]}}</a> Duration: {{str(datetime.timedelta(seconds=int(data[0]["endTime"] or 1646886023)-int(data[0]["startTime"] or 1646886023)))}}</h6>
     <h6>Started on {{datetime.datetime.fromtimestamp(data[0]["startTime"] or 0)}}. Ended on {{datetime.datetime.fromtimestamp(data[0]["endTime"] or 0)}}.</h6>
+    {% if victimCount == 1 %}
+        <h6>1 victim saved.</h6>
+    {% else %}
+        <h6>{{victimCount}} victims saved.</h6>
+    {% endif %}
     <h4>Medical Notes</h4>
     <p>{{data[0]["notes"] or "No notes have been left for this mission."}}</p>
     <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#editmodal">Edit Details</button>
